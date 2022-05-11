@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://haoqinchen.github.io/"/>
-  <updated>2022-05-05T03:20:44.915Z</updated>
+  <updated>2022-05-11T14:09:20.092Z</updated>
   <id>https://haoqinchen.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>无人机基础物理概念</title>
+    <link href="https://haoqinchen.github.io/2.html"/>
+    <id>https://haoqinchen.github.io/2.html</id>
+    <published>2022-05-11T09:00:00.000Z</published>
+    <updated>2022-05-11T14:09:20.092Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本文对无人机飞行的一些基本概念进行梳理记录，动力学方程相关暂不涉及。&lt;/p&gt;
+&lt;h1 id=&quot;简单的垂直与水平分析&quot;&gt;&lt;a href=&quot;#简单的垂直与水平分析&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="UAV" scheme="https://haoqinchen.github.io/categories/UAV/"/>
+    
+    
+      <category term="动力学" scheme="https://haoqinchen.github.io/tags/%E5%8A%A8%E5%8A%9B%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>博客首文</title>
     <link href="https://haoqinchen.github.io/1.html"/>
     <id>https://haoqinchen.github.io/1.html</id>
     <published>2022-05-05T02:20:00.000Z</published>
-    <updated>2022-05-05T03:20:44.915Z</updated>
+    <updated>2022-05-11T03:41:45.993Z</updated>
     
     <summary type="html">
     
