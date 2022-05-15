@@ -56,6 +56,7 @@
     src: url('https://cdn.jsdelivr.net/gh/small-rose/small-rose.github.io/box/font/hl.ttf');
 }
 
+
 /** 表示全局使用，如果不想全局使用不要添加该段 */
 body{
     font-family: 'hl';
