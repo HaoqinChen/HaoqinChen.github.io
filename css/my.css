@@ -51,3 +51,19 @@
 .github-badge .bg-lightgrey, .github-badge .bg-lightgray {
 	background-color: #9f9f9f !important;
 }
+@font-face{
+    font-family: 'hl';
+    src: url('https://cdn.jsdelivr.net/gh/small-rose/small-rose.github.io/box/font/hl.ttf');
+}
+
+/** 表示全局使用，如果不想全局使用不要添加该段 */
+body{
+    font-family: 'hl';
+}
+
+
+/* 可以局部使用，建议添加 */
+.diyFont{
+    font-family: 'hl';
+}
+

@@ -538,7 +538,7 @@
     </div>
 </div>
 <script>
-// 每天切换 banner 图.  Switch banner image every day.
+// 每小时切换 banner 图.  Switch banner image every hour.
 $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
 </script>
     </div>
@@ -960,7 +960,7 @@ $(function () {
 
 
     
-    <script src="/libs/others/clicklove.js"></script>
+    <script src="/libs/others/explosion.min.js"></script>    
     
 
     
@@ -968,12 +968,16 @@ $(function () {
     
 
     <!-- 雪花特效 -->
-    
-    <script type="text/javascript" src="/libs/others/snow.js"></script>
-    
+    <!--  -->
 
    <!--单击显示文字-->
-   <script type="text/javascript" src="/js/click_show_text.js"></script> 
+   <!-- <script type="text/javascript" src="/js/click_show_text.js"></script>  -->
+   
+   <!-- 星星礼花跟随 -->
+   <script src="/js/lihua.js"></script>
+   <script src="/js/cursor.js"></script>
+
+
 
    <!--动态线条背景-->
    <script type="text/javascript"
@@ -982,7 +986,7 @@ $(function () {
 
    <script async src =“ https://cdn.jsdelivr.net/npm/perfops-rom”> </ script>
 
-  <!--自定义看板娘-->
+  // <!--自定义看板娘-->
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
   <script src="/live2d-widget/autoload.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
