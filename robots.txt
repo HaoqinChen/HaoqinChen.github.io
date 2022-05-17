@@ -9,6 +9,6 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
-Sitemap: https://xxxxx.cn/sitemap.xml
-Sitemap: https://xxxxx.cn/baidusitemap.xml
+Sitemap: https://haoqinchen.github.io/sitemap.xml
+Sitemap: https://haoqinchen.github.io/baidusitemap.xml
 
