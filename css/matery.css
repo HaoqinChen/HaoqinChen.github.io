@@ -318,9 +318,9 @@ mark {
     background-image: linear-gradient(to right, #3fd9ff 0%, #5637c6 100%);
     opacity: 0.7;
 }
-
+/*#0f9d58 */
 .text-color {
-    color: #0f9d58 !important;
+    color: #5637c6 !important; 
 }
 
 .white-color {
@@ -332,7 +332,7 @@ mark {
     position: fixed;
     bottom: 0;
     z-index: 300;
-    background: linear-gradient(to right, #bf30ac 0%, #0f9d58 100%);
+    background: linear-gradient(to right, #bf30ac 0%, #5637c6 100%);
     opacity: 0.7;
 }
 
