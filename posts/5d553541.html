@@ -17,7 +17,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>无人机基础物理概念 | Haoqin`s Blog</title>
-    <link rel="icon" type="image/svg+xml" href="https://s-gz-3816-tuchuang.oss.dogecdn.com/fish32.svg">
+    <link rel="icon" type="image/svg+xml" href="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/fish32.svg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -699,7 +699,7 @@
             <div id="articleContent">
                 <p>本文对无人机飞行的一些基本概念进行梳理记录，动力学方程相关暂不涉及。</p>
 <h1 id="简单的垂直与水平分析"><a href="#简单的垂直与水平分析" class="headerlink" title="简单的垂直与水平分析"></a>简单的垂直与水平分析</h1><h2 id="Vertical-Motion"><a href="#Vertical-Motion" class="headerlink" title="Vertical Motion"></a>Vertical Motion</h2><p>四旋翼无人机的旋翼工作产生升力，升力与重力相等时，合力为零，此时无人机处于悬停状态（<strong>hover</strong>）。<br>增大无人机四旋翼推力（速度），可以实现无人机爬升（<strong>climb</strong>）。<br>减小无人机四旋翼推力（速度），可以实现无人机下降（<strong>descend</strong>）。</p>
-<h2 id="Turning-or-Rotating"><a href="#Turning-or-Rotating" class="headerlink" title="Turning or Rotating"></a>Turning or Rotating</h2><p>无人机的旋转与各旋翼的旋转方向和旋转速度相关，两个相邻的电机以相反的方向旋转，两个相反的电机沿同一方向旋转。角动力值可以用<strong>角速度乘以惯性矩</strong>得到。<img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205212120854.png" alt><br>红色的旋翼呈逆时针旋转，绿色的旋翼呈顺时针旋转，如图所示。当1和3同时减小，2和4增大，保持无人机的升力依旧等于重力，实现无人机方向的改变</p>
+<h2 id="Turning-or-Rotating"><a href="#Turning-or-Rotating" class="headerlink" title="Turning or Rotating"></a>Turning or Rotating</h2><p>无人机的旋转与各旋翼的旋转方向和旋转速度相关，两个相邻的电机以相反的方向旋转，两个相反的电机沿同一方向旋转。角动力值可以用<strong>角速度乘以惯性矩</strong>得到。<br><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205212120854.png" alt><br>红色的旋翼呈逆时针旋转，绿色的旋翼呈顺时针旋转，如图所示。当1和3同时减小，2和4增大，保持无人机的升力依旧等于重力，实现无人机方向的改变</p>
 <h1 id="空间姿态与位置"><a href="#空间姿态与位置" class="headerlink" title="空间姿态与位置"></a>空间姿态与位置</h1><h2 id="基本描述"><a href="#基本描述" class="headerlink" title="基本描述"></a>基本描述</h2><p>欧拉角是描述旋转的一种方式，那姿态角呢？姿态角属于欧拉角的一种特殊形式，我们一般定义姿态角为<strong>偏航（Yaw），俯仰（Pitch），横滚（Roll）</strong>。在不同的载体坐标系里，姿态角对应也不一样。<br>四旋翼无人机有6个自由度，分别为前后、上下、左右移动，横滚、俯仰、偏航旋转，而控制是从四个方面来进行的：升降通道（Thrust），横滚角（Roll）控制通道，俯仰角控制通道（Pitch）和偏航角控制通道（Yaw）。<br>下面三张动图呈现的是前后、左右、旋转的效果：</p>
 <p><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205211652933.gif" alt><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205211652934.gif" alt><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205211652935.gif" alt></p>
 <h2 id="运动姿态实现"><a href="#运动姿态实现" class="headerlink" title="运动姿态实现"></a>运动姿态实现</h2><p>以无人机质心为原O，正前方为X轴正方向，右侧方为Y轴正方向，竖直向上为Z轴正方向建立机体坐标系，分析各种运动姿态原理，如图所示<br><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205212123000.png" alt></p>
