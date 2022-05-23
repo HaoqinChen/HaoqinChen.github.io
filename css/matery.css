@@ -632,10 +632,10 @@ header .go-back i {
     top: 0;
     content: "";
 }
-
+/* 首页标题颜色及诗词（各文章标题）颜色*/
 .bg-cover .container {
     position: relative;
-    color: #fff;
+    color: #29b6f6;
     z-index: 2;
 }
 
@@ -651,7 +651,7 @@ header .go-back i {
     font-size: 1.25rem;
     font-weight: 300;
     line-height: 1.4em;
-    color: #eee;
+    color: #d500f9;
 }
 
 .bg-cover .post-title {

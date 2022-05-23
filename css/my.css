@@ -61,10 +61,7 @@
     src: url('https://cdn.jsdelivr.net/gh/small-rose/small-rose.github.io/box/font/GuDianMingChaoTi.otf');
 }
 
-来源: 斯莫笔记
-文章作者: Small-Rose
-文章链接: https://notes.zhangxiaocai.cn/posts/8f5c11d2.html
-本文章著作权归作者所有，任何形式的转载都请注明出处。
+
 /* 修改首页轮播的标题大小 */
 @media only screen and (max-width: 601px) {
     .bg-cover .title {
