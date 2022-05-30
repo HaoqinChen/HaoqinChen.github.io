@@ -648,10 +648,10 @@ header .go-back i {
 }
 
 .bg-cover .description {
-    font-size: 1.25rem;
-    font-weight: 300;
+    font-size: 2rem;
+    font-weight: 450;
     line-height: 1.4em;
-    color: #d500f9;
+    color: #fafafa;
 }
 
 .bg-cover .post-title {
