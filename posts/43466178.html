@@ -4,13 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="1.1 Introduction to Aerial Robotics, 好好学习，天天向上">
+    <meta name="keywords" content="1. Introduction to Aerial Robotics, 好好学习，天天向上">
     <meta name="baidu-site-verification" content="code-PTVUufeCmu">
     <meta name="google-site-verification" content="H_OAfeXJS2dhmFZs88LTRApIS-Jv57k7vLIZVtbvViQ">
-    <meta name="description" content="Robotics: Aerial Robotics是由宾夕法尼亚大学Vijay Kuma开展的无人机课程，本文是1.1节介绍部分的学习记录。
-无人机常见的几种称呼：
-
-Unmanned Aerial Vehicles(UAV)，无人驾驶飞机">
+    <meta name="description" content="Robotics: Aerial Robotics是由宾夕法尼亚大学Vijay Kuma开展的无人机课程，本文是1.1节 introduction 和1.2节 Energetics and System Design 的学习内容记录。
+1.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +16,7 @@ Unmanned Aerial Vehicles(UAV)，无人驾驶飞机">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>1.1 Introduction to Aerial Robotics | Haoqin`s Blog</title>
+    <title>1. Introduction to Aerial Robotics | Haoqin`s Blog</title>
     <link rel="icon" type="image/svg+xml" href="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/fish32.svg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -411,6 +409,13 @@ Unmanned Aerial Vehicles(UAV)，无人驾驶飞机">
         </a>
     </li>
     
+    <li class="hide-on-med-and-down">
+        <a href="/contact" class="waves-effect waves-light">
+            
+            <span>留言板</span>
+        </a>
+    </li>
+    
     <li>
         <a href="#searchModal" class="modal-trigger waves-effect waves-light">
             <i id="searchIcon" class="fa fa-search" title="搜索"></i>
@@ -490,6 +495,15 @@ Unmanned Aerial Vehicles(UAV)，无人驾驶飞机">
             </a>
         </li>
         
+        <li>
+            <a href="/contact" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                留言板
+            </a>
+        </li>
+        
         
     </ul>
 </div>
@@ -505,13 +519,13 @@ Unmanned Aerial Vehicles(UAV)，无人驾驶飞机">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/31.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        1.1 Introduction to Aerial Robotics
+                        1. Introduction to Aerial Robotics
                     </div>
                 </div>
             </div>
@@ -655,7 +669,7 @@ Unmanned Aerial Vehicles(UAV)，无人驾驶飞机">
 
            <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-30
+                    2022-06-07
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -669,7 +683,7 @@ Unmanned Aerial Vehicles(UAV)，无人驾驶飞机">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    548
+                    665
                 </div>
                 
 
@@ -686,8 +700,8 @@ Unmanned Aerial Vehicles(UAV)，无人驾驶飞机">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><a href="https://www.coursera.org/learn/robotics-flight/home/week/1" target="_blank" rel="noopener">Robotics: Aerial Robotics</a>是由宾夕法尼亚大学Vijay Kuma开展的无人机课程，本文是1.1节介绍部分的学习记录。</p>
-<p><strong>无人机</strong>常见的几种称呼：</p>
+                <p><a href="https://www.coursera.org/learn/robotics-flight/home/week/1" target="_blank" rel="noopener">Robotics: Aerial Robotics</a>是由宾夕法尼亚大学Vijay Kuma开展的无人机课程，本文是1.1节 introduction 和1.2节 Energetics and System Design 的学习内容记录。</p>
+<h1 id="1-1-introduction"><a href="#1-1-introduction" class="headerlink" title="1.1 introduction"></a>1.1 introduction</h1><p><strong>无人机</strong>常见的几种称呼：</p>
 <ul>
 <li>Unmanned Aerial Vehicles(UAV)，无人驾驶飞机</li>
 <li>Drone，无人机</li>
@@ -710,6 +724,11 @@ Unmanned Aerial Vehicles(UAV)，无人驾驶飞机">
 </ul>
 <p>习题部分：<br><strong>Q:</strong> An Inertial Measurement Unit (IMU) is an important sensor used in aerial robotics. A typical IMU will contain an accelerometer and a rate gyro. Which of the following information does a robot get from an IMU? (Select all that apply. Choose only quantities that are directly reported by the IMU. Do not include quantities that can be computed from the IMU measurements but cannot be obtained directly. Additional research to find information about IMUs is allowed and encouraged!)<br><strong>A:</strong> Linear acceleration, Angular velocity</p>
 <p><strong>Q:</strong>  What does Simultaneous Localization And Mapping (SLAM) software do? (Select all that applies.)<br><strong>A:</strong> Estimates the location of features in the environment;  Estimates the position and orientation of the robot with respect to the environment</p>
+<h1 id="1-2-Energetics-and-System-Design"><a href="#1-2-Energetics-and-System-Design" class="headerlink" title="1.2 Energetics and System Design"></a>1.2 Energetics and System Design</h1><p>Basic Mechanics</p>
+<ul>
+<li>电机旋转产生推力( thrust force ) 抵消无人机自身重力的存在，同时电机的旋转产生的阻力需要电机去客服，推力和阻力都跟速度存在一个二次方程的关系。<br><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/06/202206072204744.png" alt></li>
+<li>电机悬停时存在的合力和合力矩的情况，质心确定，各旋翼的推力与到质心的距离构成了力矩。<br><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/06/202206072209846.png" alt></li>
+</ul>
 
             </div>
             <hr />
@@ -868,7 +887,7 @@ Unmanned Aerial Vehicles(UAV)，无人驾驶飞机">
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《1.1 Introduction to Aerial Robotics》
+                    《1. Introduction to Aerial Robotics》
                 </span> 由
             <a xmlns:cc="http://creativecommons.org/ns#" href="/posts/43466178.html" property="cc:attributionName"
                rel="cc:attributionURL">
@@ -906,6 +925,252 @@ Unmanned Aerial Vehicles(UAV)，无人驾驶飞机">
    
 
     
+    <style>
+    .waline-card {
+        margin: 1.5rem auto;
+    }
+    .waline-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #waline p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+    #waline blockquote p {
+        text-indent: 0.2rem;
+    }
+    #waline a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    #waline img {
+        max-width: 100%;
+        cursor: pointer;
+    }
+    #waline ol li {
+        list-style-type: decimal;
+    }
+    #waline ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+    #waline ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+    #waline ul li {
+        list-style-type: disc;
+    }
+    #waline ul ul li {
+        list-style-type: circle;
+    }
+    #waline table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+    #waline table, th, td {
+        border: 0;
+    }
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+    #waline table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+    #waline table td {
+        min-width: 80px;
+    }
+    #waline h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+    #waline h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+    #waline h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+    #waline h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+    #waline h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+    #waline h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+    #waline p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    #waline hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+    #waline blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+    #waline pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+    #waline code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+    #waline pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+    #waline pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+    #waline code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+    #waline [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+    #waline b,
+    strong {
+        font-weight: bold;
+    }
+    #waline dfn {
+        font-style: italic;
+    }
+    #waline small {
+        font-size: 85%;
+    }
+    #waline cite {
+        font-style: normal;
+    }
+    #waline mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+    #waline table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+    #waline table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+    #waline table td {
+        min-width: 80px;
+    }
+    #waline [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+  </style>
+  
+  <div class="card waline-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+       
+    </div>
+    <div id="waline" class="card-content" style="display: grid">
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+  />
+
+  <div id="waline"></div>
+  <script>
+const locale = {
+  nick: '昵称',
+  nickError: '昵称不能少于3个字符',
+  mail: '邮箱',
+  mailError: '请填写正确的邮件地址',
+  link: '网址（选填）',
+  placeholder: '来评论吧！可以不用登录，填下昵称和邮箱吧，方便收到回复；审核后就会显示的~~',
+  sofa: '来发评论吧~',
+  submit: '提交',
+  reply: '回复',
+  cancelReply: '取消回复',
+  comment: '评论',
+  more: '加载更多...',
+  preview: '预览',
+  emoji: '表情',
+  uploadImage: '上传图片',
+  seconds: '秒前',
+  minutes: '分钟前',
+  hours: '小时前',
+  days: '天前',
+  now: '刚刚',
+  uploading: '正在上传',
+  login: '登录',
+  logout: '退出',
+  admin: '博主',
+  word: '字',
+  wordHint: '评论字数应在 $0 到 $1 字之间！\n当前字数：$2',
+};
+    Waline.init({
+      el: '#waline',
+      serverURL: 'https://waline-silk-eta.vercel.app',
+      avatar: 'monsterid' ,
+      locale,
+    });
+  </script>
+
+
+
+    
 
     
 
@@ -921,9 +1186,9 @@ Unmanned Aerial Vehicles(UAV)，无人驾驶飞机">
                     <div class="card-image">
                         
                         
-                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/13.jpg" class="responsive-img" alt="1.1 Introduction to Aerial Robotics">
+                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/31.jpg" class="responsive-img" alt="1. Introduction to Aerial Robotics">
                         
-                        <span class="card-title">1.1 Introduction to Aerial Robotics</span>
+                        <span class="card-title">1. Introduction to Aerial Robotics</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -975,7 +1240,7 @@ Unmanned Aerial Vehicles(UAV)，无人驾驶飞机">
                     <div class="card-image">
                         
                         
-                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/10.jpg" class="responsive-img" alt="专利基础知识">
+                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/9.jpg" class="responsive-img" alt="专利基础知识">
                         
                         <span class="card-title">专利基础知识</span>
                     </div>
@@ -1163,7 +1428,7 @@ Unmanned Aerial Vehicles(UAV)，无人驾驶飞机">
            <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
            
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">3.5k
+            <span class="white-color">3.6k
              丨            
           
 
@@ -1188,8 +1453,12 @@ Unmanned Aerial Vehicles(UAV)，无人驾驶飞机">
 
        
   <br>
+
 <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/icp.png">
-        <a href="https://beian.miit.gov.cn/"  style="color:#ffffff;vertical-align: text-bottom;" target="_blank"> 粤ICP备2022065613号-1</a>
+        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011302003572"  style="color:#ffffff;vertical-align: text-bottom;" target="_blank"> 粤公网安备 44011302003572号</a>
+		 
+
+        &nbsp&nbsp&nbsp&nbsp<a href="https://beian.miit.gov.cn/"  style="color:#ffffff;vertical-align: text-bottom;" target="_blank"> 粤ICP备2022065613号-1</a>
 
     </div>        
 
@@ -1199,12 +1468,12 @@ Unmanned Aerial Vehicles(UAV)，无人驾驶飞机">
       <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
     </div>
     <div class="github-badge">
-      <a style="color: #fff" rel="license" href="https://github.com/" target="_blank" title="静态网页托管于 GitHub Pages 和 Vercel">
-      <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub & Vercel</span></a>
+      <a style="color: #fff" rel="license" href="https://github.com/" target="_blank" title="静态网页托管于 GitHub Pages">
+      <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub</span></a>
     </div>
     <div class="github-badge">
-      <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
-      <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr</span></a>
+      <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr & DogeCloud提供 CDN 加速服务">
+      <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr & DogeCloud</span></a>
     </div>
     <div class="github-badge">
         <a style="color: #fff" rel="license" href="https://github.com/blinkfox/hexo-theme-matery/" target="_blank" title="站点使用 Matery 主题">
@@ -1215,7 +1484,7 @@ Unmanned Aerial Vehicles(UAV)，无人驾驶飞机">
       <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">3.5k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">3.6k</span>
     </div>
  </footer>
 

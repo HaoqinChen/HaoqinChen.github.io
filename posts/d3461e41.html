@@ -413,6 +413,13 @@
         </a>
     </li>
     
+    <li class="hide-on-med-and-down">
+        <a href="/contact" class="waves-effect waves-light">
+            
+            <span>留言板</span>
+        </a>
+    </li>
+    
     <li>
         <a href="#searchModal" class="modal-trigger waves-effect waves-light">
             <i id="searchIcon" class="fa fa-search" title="搜索"></i>
@@ -492,6 +499,15 @@
             </a>
         </li>
         
+        <li>
+            <a href="/contact" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                留言板
+            </a>
+        </li>
+        
         
     </ul>
 </div>
@@ -507,7 +523,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/9.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -914,6 +930,252 @@
    
 
     
+    <style>
+    .waline-card {
+        margin: 1.5rem auto;
+    }
+    .waline-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #waline p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+    #waline blockquote p {
+        text-indent: 0.2rem;
+    }
+    #waline a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    #waline img {
+        max-width: 100%;
+        cursor: pointer;
+    }
+    #waline ol li {
+        list-style-type: decimal;
+    }
+    #waline ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+    #waline ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+    #waline ul li {
+        list-style-type: disc;
+    }
+    #waline ul ul li {
+        list-style-type: circle;
+    }
+    #waline table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+    #waline table, th, td {
+        border: 0;
+    }
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+    #waline table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+    #waline table td {
+        min-width: 80px;
+    }
+    #waline h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+    #waline h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+    #waline h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+    #waline h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+    #waline h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+    #waline h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+    #waline p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    #waline hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+    #waline blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+    #waline pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+    #waline code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+    #waline pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+    #waline pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+    #waline code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+    #waline [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+    #waline b,
+    strong {
+        font-weight: bold;
+    }
+    #waline dfn {
+        font-style: italic;
+    }
+    #waline small {
+        font-size: 85%;
+    }
+    #waline cite {
+        font-style: normal;
+    }
+    #waline mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+    #waline table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+    #waline table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+    #waline table td {
+        min-width: 80px;
+    }
+    #waline [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+  </style>
+  
+  <div class="card waline-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+       
+    </div>
+    <div id="waline" class="card-content" style="display: grid">
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+  />
+
+  <div id="waline"></div>
+  <script>
+const locale = {
+  nick: '昵称',
+  nickError: '昵称不能少于3个字符',
+  mail: '邮箱',
+  mailError: '请填写正确的邮件地址',
+  link: '网址（选填）',
+  placeholder: '来评论吧！可以不用登录，填下昵称和邮箱吧，方便收到回复；审核后就会显示的~~',
+  sofa: '来发评论吧~',
+  submit: '提交',
+  reply: '回复',
+  cancelReply: '取消回复',
+  comment: '评论',
+  more: '加载更多...',
+  preview: '预览',
+  emoji: '表情',
+  uploadImage: '上传图片',
+  seconds: '秒前',
+  minutes: '分钟前',
+  hours: '小时前',
+  days: '天前',
+  now: '刚刚',
+  uploading: '正在上传',
+  login: '登录',
+  logout: '退出',
+  admin: '博主',
+  word: '字',
+  wordHint: '评论字数应在 $0 到 $1 字之间！\n当前字数：$2',
+};
+    Waline.init({
+      el: '#waline',
+      serverURL: 'https://waline-silk-eta.vercel.app',
+      avatar: 'monsterid' ,
+      locale,
+    });
+  </script>
+
+
+
+    
 
     
 
@@ -928,9 +1190,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/13.jpg" class="responsive-img" alt="1.1 Introduction to Aerial Robotics">
+                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/31.jpg" class="responsive-img" alt="1. Introduction to Aerial Robotics">
                         
-                        <span class="card-title">1.1 Introduction to Aerial Robotics</span>
+                        <span class="card-title">1. Introduction to Aerial Robotics</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -981,7 +1243,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/5.jpg" class="responsive-img" alt="无人机基础物理概念">
+                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/6.jpg" class="responsive-img" alt="无人机基础物理概念">
                         
                         <span class="card-title">无人机基础物理概念</span>
                     </div>
@@ -1188,7 +1450,7 @@
            <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
            
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">3.5k
+            <span class="white-color">3.6k
              丨            
           
 
@@ -1213,8 +1475,12 @@
 
        
   <br>
+
 <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/icp.png">
-        <a href="https://beian.miit.gov.cn/"  style="color:#ffffff;vertical-align: text-bottom;" target="_blank"> 粤ICP备2022065613号-1</a>
+        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011302003572"  style="color:#ffffff;vertical-align: text-bottom;" target="_blank"> 粤公网安备 44011302003572号</a>
+		 
+
+        &nbsp&nbsp&nbsp&nbsp<a href="https://beian.miit.gov.cn/"  style="color:#ffffff;vertical-align: text-bottom;" target="_blank"> 粤ICP备2022065613号-1</a>
 
     </div>        
 
@@ -1224,12 +1490,12 @@
       <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
     </div>
     <div class="github-badge">
-      <a style="color: #fff" rel="license" href="https://github.com/" target="_blank" title="静态网页托管于 GitHub Pages 和 Vercel">
-      <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub & Vercel</span></a>
+      <a style="color: #fff" rel="license" href="https://github.com/" target="_blank" title="静态网页托管于 GitHub Pages">
+      <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub</span></a>
     </div>
     <div class="github-badge">
-      <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
-      <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr</span></a>
+      <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr & DogeCloud提供 CDN 加速服务">
+      <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr & DogeCloud</span></a>
     </div>
     <div class="github-badge">
         <a style="color: #fff" rel="license" href="https://github.com/blinkfox/hexo-theme-matery/" target="_blank" title="站点使用 Matery 主题">
@@ -1240,7 +1506,7 @@
       <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">3.5k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">3.6k</span>
     </div>
  </footer>
 
