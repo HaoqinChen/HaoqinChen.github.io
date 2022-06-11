@@ -511,22 +511,22 @@
 
 /* 针对全局的使用 */
 body{
-    font-family: "HarmonyOS_Regular" !important;
+    font-family: "HarmonyOS_Regular" ;
 }
 
 /* 针对元素的class属性里包含 mytitle 的使用 */
-/* .mytitle {
-    font-family: 'ming' !important;
-} */
+.mytitle {
+    font-family: 'HarmonyOS_Regular' !important;
+} 
 
 /* 针对元素的id属性等于 main-content 的使用 */
 
-/* #main-content{
- font-family: 'YaHei';
+ #main-content{
+ font-family:  'HarmonyOS_Regular' !important;
 }
 
 .diyFont{
-    font-family: 'hl';
-} */
+    font-family:  'HarmonyOS_Regular' !important;
+} 
 
 

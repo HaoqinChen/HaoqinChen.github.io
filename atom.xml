@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://haoqin.vip/"/>
-  <updated>2022-06-07T14:09:12.271Z</updated>
+  <updated>2022-06-11T12:34:42.733Z</updated>
   <id>https://haoqin.vip/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>blog优化</title>
+    <link href="https://haoqin.vip/posts/ca708840.html"/>
+    <id>https://haoqin.vip/posts/ca708840.html</id>
+    <published>2022-06-11T13:00:00.000Z</published>
+    <updated>2022-06-11T12:34:42.733Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本文主要是记录博客网站搭建过程中遇到的各种问题以及如何进行修改，集中在主题修改和网站加速这些部分，还是踩了不少坑的，记录下来方便查询。&lt;/p&gt;
+&lt;h1 id=&quot;hexo博客：&quot;&gt;&lt;a href=&quot;#hexo博客：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://haoqin.vip/categories/Blog/"/>
+    
+    
+      <category term="matery" scheme="https://haoqin.vip/tags/matery/"/>
+    
+      <category term="网站" scheme="https://haoqin.vip/tags/%E7%BD%91%E7%AB%99/"/>
+    
+  </entry>
   
   <entry>
     <title>1. Introduction to Aerial Robotics</title>
