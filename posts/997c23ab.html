@@ -4,13 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="博客首文, 好好学习，天天向上">
+    <meta name="keywords" content="无人机实操基本操作, 好好学习，天天向上">
     <meta name="baidu-site-verification" content="code-PTVUufeCmu">
     <meta name="google-site-verification" content="H_OAfeXJS2dhmFZs88LTRApIS-Jv57k7vLIZVtbvViQ">
-    <meta name="description" content="前言
-爱折腾的心可能是我搭建博客的主因吧，看到师兄和网上其他人的博客，心中就冒出了自己也搭建一个博客的想法，有了想法，就会去做。
-
-搭建博客的过程还是有点曲折的，环境的搭建其实还好，hexo博客搭建网上的教程挺多的。而主题的选择这里游离于偷">
+    <meta name="description" content="本文主要是根据21年在成都进行P450的实操培训文稿组织而成的，主要是进行定点飞行，指点飞行，圆框跟踪，室内避障这四个基本模块的操作。
+实操步骤定点飞行地面站qcg连接飞机（连接wifi，添加通讯），nomachine连接板载计算机（ip地">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>博客首文 | Haoqin`s Blog</title>
+    <title>无人机实操基本操作 | Haoqin`s Blog</title>
     <link rel="icon" type="image/svg+xml" href="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/fish32.svg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -521,13 +519,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/36.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        博客首文
+                        无人机实操基本操作
                     </div>
                 </div>
             </div>
@@ -638,8 +636,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/闲谈/" target="_blank">
-                            <span class="chip bg-color">闲谈</span>
+                        <a href="/tags/实操/" target="_blank">
+                            <span class="chip bg-color">实操</span>
                         </a>
                         
                     </div>
@@ -650,8 +648,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/Blog/" class="post-category" target="_blank">
-                            Blog
+                        <a href="/categories/UAV/" class="post-category" target="_blank">
+                            UAV
                         </a>
                         
                     </div>
@@ -662,12 +660,12 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-05-05
+                    2022-06-15
                 </div>
 
            <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-17
+                    2022-06-15
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -681,14 +679,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    398
+                    891
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
                 
@@ -698,23 +696,28 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul>
-<li><p>爱折腾的心可能是我搭建博客的主因吧，看到师兄和网上其他人的博客，心中就冒出了自己也搭建一个博客的想法，有了想法，就会去做。</p>
+                <p>本文主要是根据21年在成都进行P450的实操培训文稿组织而成的，主要是进行<strong>定点飞行，指点飞行，圆框跟踪，室内避障</strong>这四个基本模块的操作。</p>
+<h1 id="实操步骤"><a href="#实操步骤" class="headerlink" title="实操步骤"></a>实操步骤</h1><h2 id="定点飞行"><a href="#定点飞行" class="headerlink" title="定点飞行"></a>定点飞行</h2><p>地面站qcg连接飞机（连接wifi，添加通讯），nomachine连接板载计算机（ip地址可以根据查询电脑ip地址来判断），终端输入启动脚本，检查飞机各项数据（手动移动无人机的位置，查看终端无人机的位置数据是否有对应的变化）。</p>
+<p>遥控器定点飞行，遥控器swc开关拨到中间挡，进入定点模式，左手遥控杆向右下方解锁，左手摇杆前后控制油门，左右控制航向；右手摇杆前后控制前后飞行，左右控制左右飞行。降落时，左手摇杆向后，油门慢慢降低，飞机降落进入怠速，上锁。（紧急关闭或者怠速油门依旧最下，切换到自稳模式上锁）,最后全部杆都应拨上。</p>
+<h2 id="指点飞行"><a href="#指点飞行" class="headerlink" title="指点飞行"></a>指点飞行</h2><p>   终端启动基本vio脚本，检查飞机各项数据，再启动控制脚本，选择控制方式，一般为命令输入控制方式0。输入1，输出起飞指令，遥控器在定点模式（<strong>swc杆拨到中间</strong>）下解锁，然后切换到offboard模式（<strong>swd杆拨下</strong>），飞机起飞。</p>
+<p>   输入4，进入move模式，选择子模式，常用XYZ—POS空间位置控制；选择坐标系，有惯性坐标系和机体坐标系，然后输入xyz和航向角的信息，飞机到达指定位置。</p>
+<p>   降落时，操控遥控器退出offboard模式，油门慢慢降低，飞机降落进入怠速，上锁。</p>
+<h2 id="圆框跟踪"><a href="#圆框跟踪" class="headerlink" title="圆框跟踪"></a>圆框跟踪</h2><p>   终端启动基本vio脚本，检查飞机各项数据，再启动跟踪脚本。调整单目摄像头向正前方，新的终端内输入指令显示图像检测内容。控制终端输入1起飞指令。</p>
+<p>   遥控器在定点模式下解锁，然后切换到offboard模式，飞机起飞。飞机起飞稳定后，控制终端输入1，执行跟踪指令。</p>
+<p>   降落时，操控遥控器退出offboard模式，油门慢慢降低，飞机降落进入怠速，上锁。</p>
+<h2 id="室内避障"><a href="#室内避障" class="headerlink" title="室内避障"></a>室内避障</h2><p>启动指令roslaunch p450_experiment astar_onboard.launch，检查飞机各项数据；再启动避障指令，在终端输入0选择命令控制模式，输入1起飞指令。</p>
+<p>遥控器在定点模式下解锁，然后切换到offboard模式，飞机起飞。飞机起飞稳定后，在rviz界面中选择3D NavGoal，界面中选择一个点作为目标点，系统会自动生成路径并沿着该路径飞行。</p>
+<p>降落时，操控遥控器退出offboard模式，油门慢慢降低，飞机降落进入怠速，上锁。</p>
+<h1 id="实操环节个人心得"><a href="#实操环节个人心得" class="headerlink" title="实操环节个人心得"></a>实操环节个人心得</h1><ul>
+<li><p>每次执行新的任务时，都应该对飞控执行reboot指令，确保飞控处于正常的状态。飞机解锁前，也应该在地面站中查看飞机的位置，模式等是否为自己所需要的状态。</p>
 </li>
-<li><p>搭建博客的过程还是有点曲折的，环境的搭建其实还好，hexo博客搭建网上的教程挺多的。而主题的选择这里游离于偷懒和自己动手之间，反复横跳浪费了不少的时间。</p>
-<p>主题最后参考了MUYIio的github项目，对其中的个人信息等部分进行修改得到了现在的博客，这个过程还是有点麻烦的，因为有些他修改的地方你不一定知道修改了哪里，很容易各种地方报错。</p>
+<li><p>飞机降落，应该在定点模式下进行，在确保飞机上锁后方可解锁油门。</p>
 </li>
-<li><p><strong>MUYIio对应博客教程地址：</strong></p>
+<li><p>单目相机无法识别时，可以通过拔插单目相机的方法来解决。</p>
+</li>
+<li><p>遥控器操控较敏感时，需要注意拨动的力度，两个手指轻轻拨动。</p>
 </li>
 </ul>
-<p><a href="https://www.yshawlon.cn/1.html" title="Github + Hexo 搭建个人博客超详细教程" target="_blank" rel="noopener">《Github + Hexo 搭建个人博客超详细教程》</a>   ( By   yzhao )</p>
-<ul>
-<li><p>现在博客的想法也很简单，记录自己的学习上的相关东西，相当于一个变相的笔记整理；然后记录一下自己生活工作中遇到的问题的处理方法，记录一些生活的瞬间和感悟。</p>
-<p>不过还是想法，能不能做到也挺难说的，毕竟人比较懒，喜欢折腾，但坚持总是不易的。</p>
-</li>
-</ul>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>初学者搭建博客还是老老实实按着教程来吧，个性化的东西可以慢慢来，走捷径一堆报错也难搞~</p>
-<p>希望自己能够有所坚持，不要荒废这个博客，好好学习，天天向上！</p>
 
             </div>
             <hr />
@@ -873,9 +876,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《博客首文》
+                    《无人机实操基本操作》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/posts/71e2287b.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/posts/997c23ab.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 CHQ
             </a> 采用
@@ -1163,29 +1166,30 @@ const locale = {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/5d553541.html">
+                <a href="/posts/997c23ab.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/6.jpg" class="responsive-img" alt="无人机基础物理概念">
+                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/36.jpg" class="responsive-img" alt="无人机实操基本操作">
                         
-                        <span class="card-title">无人机基础物理概念</span>
+                        <span class="card-title">无人机实操基本操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            对无人机飞行的相关物理概念进行梳理
+                            记录无人机培训的实操基本操作
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-05-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1198,11 +1202,12 @@ const locale = {
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/动力学/" target="_blank">
-                        <span class="chip bg-color">动力学</span>
+                    <a href="/tags/实操/" target="_blank">
+                        <span class="chip bg-color">实操</span>
                     </a>
                     
                 </div>
@@ -1213,27 +1218,27 @@ const locale = {
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/71e2287b.html">
+                <a href="/posts/ca708840.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/9.jpg" class="responsive-img" alt="博客首文">
+                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/13.jpg" class="responsive-img" alt="blog日常踩坑">
                         
-                        <span class="card-title">博客首文</span>
+                        <span class="card-title">blog日常踩坑</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            首文闲谈
+                            博客搭建过程的优化修改
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-05-05
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-11
                             </span>
                         <span class="publish-author">
                             
@@ -1247,12 +1252,15 @@ const locale = {
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/闲谈/" target="_blank">
-                        <span class="chip bg-color">闲谈</span>
+                    <a href="/tags/matery/" target="_blank">
+                        <span class="chip bg-color">matery</span>
+                    </a>
+                    
+                    <a href="/tags/网站/" target="_blank">
+                        <span class="chip bg-color">网站</span>
                     </a>
                     
                 </div>

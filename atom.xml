@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://haoqin.vip/"/>
-  <updated>2022-06-12T02:38:29.502Z</updated>
+  <updated>2022-06-15T03:03:43.687Z</updated>
   <id>https://haoqin.vip/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>无人机实操基本操作</title>
+    <link href="https://haoqin.vip/posts/997c23ab.html"/>
+    <id>https://haoqin.vip/posts/997c23ab.html</id>
+    <published>2022-06-15T03:00:00.000Z</published>
+    <updated>2022-06-15T03:03:43.687Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本文主要是根据21年在成都进行P450的实操培训文稿组织而成的，主要是进行&lt;strong&gt;定点飞行，指点飞行，圆框跟踪，室内避障&lt;/strong&gt;这四个基本模块的操作。&lt;/p&gt;
+&lt;h1 id=&quot;实操步骤&quot;&gt;&lt;a href=&quot;#实操步骤&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="UAV" scheme="https://haoqin.vip/categories/UAV/"/>
+    
+    
+      <category term="实操" scheme="https://haoqin.vip/tags/%E5%AE%9E%E6%93%8D/"/>
+    
+  </entry>
   
   <entry>
     <title>blog日常踩坑</title>
