@@ -4,13 +4,12 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="blog日常踩坑, 好好学习，天天向上">
+    <meta name="keywords" content="概率论及数理统计的基本概念, 好好学习，天天向上">
     <meta name="baidu-site-verification" content="code-PTVUufeCmu">
     <meta name="google-site-verification" content="H_OAfeXJS2dhmFZs88LTRApIS-Jv57k7vLIZVtbvViQ">
-    <meta name="description" content="本文主要是记录博客网站搭建过程中遇到的各种问题以及如何进行修改，集中在主题修改和网站加速这些部分，还是踩了不少坑的，记录下来方便查询。
-hexo博客：
-hexo 官方配置，可以详细看到hexo博客如何配置
-url跟站点地图相关，需要填写gi">
+    <meta name="description" content="概率论基本定义
+样本点$\omega$的全体结果构成的集合成为样本空间，记为$\Omega$,即$\Omega=\lbrace \omega \rbrace$.
+随机变量定义：在样本空间$\Omega$上的实值函数$X=X(\omega)$">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +17,7 @@ url跟站点地图相关，需要填写gi">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>blog日常踩坑 | Haoqin`s Blog</title>
+    <title>概率论及数理统计的基本概念 | Haoqin`s Blog</title>
     <link rel="icon" type="image/svg+xml" href="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/fish32.svg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -521,13 +520,13 @@ url跟站点地图相关，需要填写gi">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/14.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        blog日常踩坑
+                        概率论及数理统计的基本概念
                     </div>
                 </div>
             </div>
@@ -638,12 +637,8 @@ url跟站点地图相关，需要填写gi">
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/matery/" target="_blank">
-                            <span class="chip bg-color">matery</span>
-                        </a>
-                        
-                        <a href="/tags/网站/" target="_blank">
-                            <span class="chip bg-color">网站</span>
+                        <a href="/tags/数理统计/" target="_blank">
+                            <span class="chip bg-color">数理统计</span>
                         </a>
                         
                     </div>
@@ -654,8 +649,8 @@ url跟站点地图相关，需要填写gi">
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/Blog/" class="post-category" target="_blank">
-                            Blog
+                        <a href="/categories/学科/" class="post-category" target="_blank">
+                            学科
                         </a>
                         
                     </div>
@@ -666,12 +661,12 @@ url跟站点地图相关，需要填写gi">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-06-11
+                    2022-06-24
                 </div>
 
            <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-06-12
+                    2022-06-24
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -692,7 +687,7 @@ url跟站点地图相关，需要填写gi">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
                 
@@ -702,44 +697,40 @@ url跟站点地图相关，需要填写gi">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>本文主要是记录博客网站搭建过程中遇到的各种问题以及如何进行修改，集中在主题修改和网站加速这些部分，还是踩了不少坑的，记录下来方便查询。</p>
-<h1 id="hexo博客："><a href="#hexo博客：" class="headerlink" title="hexo博客："></a><strong>hexo博客：</strong></h1><ul>
-<li><a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">hexo 官方配置</a>，可以详细看到hexo博客如何配置</li>
-<li>url跟站点地图相关，需要填写github page网址或者自定义域名</li>
-<li>blog文件放在source的<code>_posts</code>文件夹中，在obsidian中将该文件夹作为库打开，子文件夹不影响md文件最后的发布。</li>
-<li>permalink网页永久链接，影响网页发布的地址，网页发布可以在<code>public</code>文件夹中看到，采用把网页放在<code>posts</code>文件夹中，并结合<code>abbrlink</code>重命名，简洁方便</li>
-<li>hexo迁移，可直接复制整个文件过去，然后确保<code>node.js</code>和<code>git</code>成功安装，随便找个文件夹在 <code>git bash</code> 中执行 <code>npm install -g hexo-cli</code>，这一步是安装<code>hexo</code>。执行<code>hexo init</code>(这一步已经复制了也许不用)，与github进行ssh就不讲了。可以将之前的.deploy_git和.git文件删除，执行<code>hexo cl &amp;&amp; hexo g &amp;&amp; hexo s</code> 进行预览</li>
+                <h1 id="概率论"><a href="#概率论" class="headerlink" title="概率论"></a>概率论</h1><h2 id="基本定义"><a href="#基本定义" class="headerlink" title="基本定义"></a>基本定义</h2><ul>
+<li>样本点$\omega$的全体结果构成的集合成为样本空间，记为$\Omega$,即$\Omega=\lbrace \omega \rbrace$.</li>
+<li>随机变量定义：在样本空间$\Omega$上的实值函数$X=X(\omega)$,$\omega\in \Omega$，称$X(\omega)$为随机变量，简记$X$</li>
+<li>分布函数定义：对于任意实数x，记函数$F(x)={X\leq x},-\infty&lt;x&lt;+\infty$，称$F(x)$为随机变量$X$的分布函数</li>
+<li>离散型随机变量：设离散型随机变量X的可能取值是$x_1,x_2,\cdots,x_n,\cdots$，$X$取各可能值的概率为:$$P{X=x_k}=p_k,k=1,2,\cdots$$</li>
+<li>随机型随机变量：如果对随机变量$X$的分布函数$F(x)$，存在一个非负可积函数$f(x)$，使得对任意实数$x$，都有$$F\left ( x \right ) =\int_{-\infty}^{x} f\left ( t \right ) dt,-\infty &lt; x&lt;+\infty$$称$X$为连续型随机变量，函数$f(x)$为$X$的概率密度</li>
 </ul>
-<h1 id="matery主题："><a href="#matery主题：" class="headerlink" title="matery主题："></a><strong>matery主题：</strong></h1><ul>
-<li>在<a href="https://www.materialpalette.com/colors" target="_blank" rel="noopener">Material Design Colors </a>中进行颜色的选择，自定义网页各部分的颜色</li>
-<li>live2d需要在主题source中添加live2d-widget文件夹，对应layout文件夹中layout.ejs添加依赖等，根据自己的需要修改<code>autoload.js</code>文件的cdn路径</li>
-<li><code>\themes\matery\source\css\matery.css</code>网页颜色等进行修改：<code>.bg-cover.container</code>和<code>bg-cover .description</code>对应首页标题及诗词（文章标题）颜色</li>
-<li>评论系统的添加，<a href="https://cimoc.cn/2022/02/16/hexo-next-valine-leancloud/#%E4%B8%80%E3%80%81%E6%B3%A8%E5%86%8C" target="_blank" rel="noopener">Hexo-Next/Matery 基于 LearnCloud 添加 Valine 评论系统 | Cimoc</a></li>
-<li>使用了主题旧版本，所以没有文章更新日期，bg-cover-content.ejs和zh-CN.yml中添加更新日期对应内容。</li>
-<li>从安全性和方便性的角度出发，将valine换成waline，方便操作，将waline.ejs中的内容替代到valine.ejs中。具体配置可以参考[快速上手 | Waline]和<a href="https://hubojing.github.io/2022/01/14/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BAWaline%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" target="_blank" rel="noopener">博客更换为Waline评论系统 | 靖待的技术博客 </a></li>
-<li>鸿蒙字体的引入，在<code>my.css</code>文件中粘贴鸿蒙字体对应css文件，全局引用。<a href="https://gahotx.cn/posts/13a9d850.html" target="_blank" rel="noopener">免费商用字体-HarmonyOS Sans | Gahotx’s blog</a></li>
-<li>https网站不可以引用http的资源</li>
+<h2 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h2><ul>
+<li><strong>定义</strong>：设X是随机变量，如果数学期望$E{[X-E(x)]^2}E{[X−E(x)]2}$存在，则称之为X的方差，记作D(X)，即  $$D(X)=E{[X-E(X)]^2}D(X)=E{[X−E(X)]^2}$$</li>
+<li>方差计算公式：$D(X)=E(X^2)−[E(X)]^2$</li>
+<li>设X是随机变量，a和b是常数，则有  $D(aX+b)=a^2D(X)$</li>
+<li>设随机变量X和Y相互独立，则有  $D(X\pm Y)=D(X)+D(Y)$</li>
 </ul>
-<h1 id="网站加速："><a href="#网站加速：" class="headerlink" title="网站加速："></a><strong>网站加速：</strong></h1><ul>
-<li>将 cdn.jsdelivr.net 更换为 fastly.jsdelivr.net———<a href="https://www.hurbai.com/jishu/697" target="_blank" rel="noopener">jsdelivr cdn 挂了不能访问替代方案 - 大灰hurbai</a></li>
-<li>看起来挺方便的，还没有尝试，<a href="https://github.com/PipecraftNet/jsdelivr-auto-fallback" target="_blank" rel="noopener">GitHub - PipecraftNet/jsdelivr-auto-fallback: 修复 cdn.jsdelivr.net 无法访问的问题</a></li>
-<li>（已放弃，免费但不够方便）项目中静态文件替换,使用阿里云<a href="https://unicloud.dcloud.net.cn/" target="_blank" rel="noopener">uniCloud云存储</a>— <a href="https://blog.csdn.net/weixin_45525272/article/details/124820135" target="_blank" rel="noopener">jsdelivr cdn大陆挂了不能访问替代方案_流楚丶格念的博客-CSDN博客</a></li>
-<li>github图床外网访问慢，使用dogecloud存储空间作为图床</li>
-<li>github可以直接登录vercel，进行仓库导入，部署到vercel（速度跟github page五五开）</li>
-<li>vercel国内速度堪忧，自定义域名后尝试cloudflare加速</li>
-<li><a href="https://cloud.tencent.com/developer/article/1926007" target="_blank" rel="noopener">腾讯云静态网站托管</a>，国内打开速度很快，静态网站托管天然支持 CDN 加速，流量的费用是0.21/GB，自定义域名需要备案支持。</li>
-<li><a href="https://gahotx.cn/posts/78431b52.html" target="_blank" rel="noopener">教你如何“榨干”免费的多吉云 | Gahotx’s blog</a>，使用多吉云加速网站</li>
-<li>网站进行cdn加速，多次出现Forward Loop Detect提示，怀疑是重定向问题，将网页域名绑定为二级域名，暂时解决了。<a href="https://www.zywvvd.com/notes/hexo/website/7-hexo-speed-up/hexo-speed-up/" target="_blank" rel="noopener">Hexo -7- Github源七牛云CDN加速教程（详细） - 又见苍岚</a></li>
+<h2 id="正态分布"><a href="#正态分布" class="headerlink" title="正态分布"></a>正态分布</h2><p>X∼N(μ,σ2)，其分布函数为  $$F(x)=\frac{1}{\sqrt{2\pi}\sigma}\int^x_{-\infty}e^{-\frac{(t-\mu)^2}{2\sigma^2}}dt$$</p>
+<h1 id="数理统计"><a href="#数理统计" class="headerlink" title="数理统计"></a>数理统计</h1><h2 id="基本定义-1"><a href="#基本定义-1" class="headerlink" title="基本定义"></a>基本定义</h2><p>如果$X_1,X_2,\cdots,X_n$相互独立且都与总体X同分布，则称$X_1,X_2,\cdots,X_n$为来自总体的简单随机样本，简称为<u>样本</u>。$n$为样本容量，样本的具体观测值$x_1,x_2,\cdots,x_n$称为<u>样本值</u>，或称总体$X$的$n$个独立观测值</p>
+<h2 id="数字特征"><a href="#数字特征" class="headerlink" title="数字特征"></a>数字特征</h2><p>设$X_1,X_2,\cdots,X_n$是来自总体X的样本，则称</p>
+<ol>
+<li>样本均值 $\bar{X}=\frac{1}{n}\sum\limits^n_{i=1}X_i$</li>
+<li>样本方差 $S^2=\frac{1}{n-1}\sum\limits^n_{i=1}(X_i-\bar{X})^2$（有些书认为这个是修正样本方差）<br>样本标准差 $S=\sqrt{\frac{1}{n-1}\sum\limits^n_{i=1}(X_i-\bar{X})^2}$</li>
+<li>样本k阶原点距 $A_k=\frac{1}{n}\sum\limits^n_{i=1}X^k_i,k=1,2,A_1=\bar{X}$</li>
+<li>样本k阶中心距 $B_k=\frac{1}{n}\sum\limits^n_{i=1}(X_i-\bar{X})^k,k=1,2,B_2=\frac{n-1}{n}S^2\neq S^2$<h2 id="chi-2-分布"><a href="#chi-2-分布" class="headerlink" title="$\chi^2$分布"></a>$\chi^2$分布</h2>设随机变量$X_1,X_2,\cdots,X_n$相互独立且均服从标准正态分布$N(0,1)$，则称随机变量$\chi^2=X^2_1+X^2_2+\cdots+X^2_n$服从自由度为$n$的$\chi^2$分布，记作$\chi^2\sim\chi^2(n)$.性质有：</li>
+<li>设$\chi^2\sim\chi^2(n)$，对给定的$a(0&lt;a&lt;1)$，称满足条件  $$P{\chi^2&gt;\chi^2_\alpha(n)}=\int^{+\infty}_{\chi^2_\alpha(n)}f(x)dx=\alpha$$的点$\chi^2_\alpha(n)$为$\chi^2(n)$分布上$\alpha$和$n$，$\chi^2_\alpha(n)$通常通过查表求得</li>
+<li>设$\chi^2\sim\chi^2(n)$，则$E(\chi^2)=n,D(\chi^2)=2n$</li>
+<li>设$\chi^2_1\sim\chi^2(n_1),\chi^2_2\sim\chi^2(n_2)$，且$\chi^2_1$和$\chi^2_2$相互独立，则$\chi^2_1+\chi^2_2\sim\chi^2(n_1+n_2)$<h2 id="t分布"><a href="#t分布" class="headerlink" title="t分布"></a>t分布</h2>设随机变量X和Y相互独立，$且X\sim N(0,1),Y\sim \chi^2(n)$，则称随机变量$$T=\frac{X}{\sqrt{Y/n}}$$服从自由度为n的t分布，记作$T\sim t(n)$</li>
+</ol>
+<ul>
+<li>t分布的概率密度f(x)是偶函数，即f(x)=f(-x)，且当n充分大时，t(n)分布近似于N(0,1)分布 <h2 id="F分布"><a href="#F分布" class="headerlink" title="F分布"></a>F分布</h2>设随机变量X和Y相互独立，且$X\sim \chi^2(n_1),Y\sim\chi^2(n_2)$，则称随机变量  $$F=\frac{X/n_1}{Y/n_2}$$服从自由度为$(n_1,n_2)$的F分布，记作$F\sim F(n_1,n_2)$，其中$n_1$和$n_2$分别称为第一自由度和第二自由度<br>如果$F\sim F(n_1,n_2)$，则$\frac{1}{F}\sim F(n_2,n_1)$，且有  $$F_{1-\alpha}(n_1,n_2)=\frac{1}{F_\alpha(n_2,n_1)}$$<h2 id="正态分布抽样"><a href="#正态分布抽样" class="headerlink" title="正态分布抽样"></a>正态分布抽样</h2>设总体$X\sim N(\mu,\sigma^2),X_1,X_2,\cdots,X_n$是来自总体的样本，样本均值为$\bar{X}$，样本方差为$S^2$ ，则有：</li>
 </ul>
-<h1 id="网站域名："><a href="#网站域名：" class="headerlink" title="网站域名："></a><strong>网站域名：</strong></h1><ul>
-<li>谷歌站点添加失败，放弃网址前缀，采用域名dns验证</li>
-<li>阿里云购买域名，进行备案发现需要有云服务支持（3个月服务器等）</li>
-<li>腾讯每日特价服务器30元/3月，购买服务器进行备案，腾讯备案服务体验不错，最后一步备案承诺书需要按手印</li>
-<li>使用cloudflare加速，因此使用cloudflare管理域名解析（改用多吉云加速后放弃此方法）</li>
-<li>备案期间，域名需要暂停解析，停止访问，选择导出dns解析文件，等待备案完成。</li>
-<li>icp备案在6月1日拿到，也算作个儿童节礼物，备案需要一个星期到10天左右。</li>
-<li>公安备案域名，广州本地备案速度快（2-3天），有问题会驳回的，注意看下备案平台的通知信息。注意上传照片规范性，网站类型选择了非交互式及开通www服务，希望无问题。</li>
-</ul>
+<ol>
+<li>$\bar{X}\sim N(\mu,\frac{\sigma^2}{n}),U=\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}\sim N(0,1)$</li>
+<li>$\bar{X}$与$S^2$相互独立，且$\chi^2=\frac{(n-1)^2S^2}{\sigma^2}\sim \chi^2(n-1)$</li>
+<li>$T=\frac{\bar{X}-\mu}{S/\sqrt{n}}\sim t(n-1)$</li>
+<li>$\chi^2=\frac{1}{\sigma^2}\sum\limits^n_{i=1}(X_i-\mu)^2\sim \chi^2(n)$</li>
+</ol>
 
             </div>
             <hr />
@@ -898,9 +889,9 @@ url跟站点地图相关，需要填写gi">
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《blog日常踩坑》
+                    《概率论及数理统计的基本概念》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/posts/ca708840.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/posts/53e3ff53.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 CHQ
             </a> 采用
@@ -1188,9 +1179,60 @@ const locale = {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/53e3ff53.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/14.jpg" class="responsive-img" alt="概率论及数理统计的基本概念">
+                        
+                        <span class="card-title">概率论及数理统计的基本概念</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            数理统计笔记，也许就一篇
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/学科/" class="post-category" target="_blank">
+                                    学科
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/数理统计/" target="_blank">
+                        <span class="chip bg-color">数理统计</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/posts/997c23ab.html">
                     <div class="card-image">
@@ -1208,9 +1250,9 @@ const locale = {
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1228,59 +1270,6 @@ const locale = {
                     
                     <a href="/tags/实操/" target="_blank">
                         <span class="chip bg-color">实操</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/43466178.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/29.jpg" class="responsive-img" alt="1. Introduction to Aerial Robotics">
-                        
-                        <span class="card-title">1. Introduction to Aerial Robotics</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            无人机介绍
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-05-28
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/UAV/" class="post-category" target="_blank">
-                                    UAV
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Robotics-Aerial-Robotics/" target="_blank">
-                        <span class="chip bg-color">Robotics:Aerial Robotics</span>
-                    </a>
-                    
-                    <a href="/tags/course/" target="_blank">
-                        <span class="chip bg-color">course</span>
                     </a>
                     
                 </div>
@@ -1426,6 +1415,25 @@ const locale = {
     
 
 </main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
 
 
     <footer class="page-footer bg-color">
