@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://haoqin.vip/"/>
-  <updated>2022-06-24T07:01:32.069Z</updated>
+  <updated>2022-08-13T09:06:01.624Z</updated>
   <id>https://haoqin.vip/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ROS概念及命令行工具</title>
+    <link href="https://haoqin.vip/posts/67892806.html"/>
+    <id>https://haoqin.vip/posts/67892806.html</id>
+    <published>2022-08-13T03:00:00.000Z</published>
+    <updated>2022-08-13T09:06:01.624Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;ROS：Robot Operating
+        
+      
+    
+    </summary>
+    
+      <category term="ROS" scheme="https://haoqin.vip/categories/ROS/"/>
+    
+    
+      <category term="课程" scheme="https://haoqin.vip/tags/%E8%AF%BE%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>概率论及数理统计的基本概念</title>
