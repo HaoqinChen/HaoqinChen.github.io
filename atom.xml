@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://haoqin.vip/"/>
-  <updated>2022-08-17T12:02:41.597Z</updated>
+  <updated>2022-08-20T13:25:44.726Z</updated>
   <id>https://haoqin.vip/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ROS工作及通信机制</title>
+    <link href="https://haoqin.vip/posts/bf62b2d6.html"/>
+    <id>https://haoqin.vip/posts/bf62b2d6.html</id>
+    <published>2022-08-20T13:00:00.000Z</published>
+    <updated>2022-08-20T13:25:44.726Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;ROS具有一套自己的工作流程，其文件体系依托在工作空间中，开发的流程如下图所示。&lt;br&gt;&lt;img src=&quot;https://image.haoqin.vip/2022/08/202208201040585.png&quot; alt&gt;&lt;br&gt;如果是 python
+        
+      
+    
+    </summary>
+    
+      <category term="ROS" scheme="https://haoqin.vip/categories/ROS/"/>
+    
+    
+      <category term="课程" scheme="https://haoqin.vip/tags/%E8%AF%BE%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>P450无人机</title>
     <link href="https://haoqin.vip/posts/f59f5b40.html"/>
     <id>https://haoqin.vip/posts/f59f5b40.html</id>
     <published>2022-08-17T12:00:00.000Z</published>
-    <updated>2022-08-17T12:02:41.597Z</updated>
+    <updated>2022-08-17T12:04:31.151Z</updated>
     
     <summary type="html">
     
@@ -47,7 +73,7 @@
     <link href="https://haoqin.vip/posts/67892806.html"/>
     <id>https://haoqin.vip/posts/67892806.html</id>
     <published>2022-08-13T03:00:00.000Z</published>
-    <updated>2022-08-13T11:52:01.462Z</updated>
+    <updated>2022-08-18T03:31:28.551Z</updated>
     
     <summary type="html">
     

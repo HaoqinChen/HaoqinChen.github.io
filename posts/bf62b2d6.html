@@ -4,11 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="无人机实操基本操作, 好好学习，天天向上">
+    <meta name="keywords" content="ROS工作及通信机制, 好好学习，天天向上">
     <meta name="baidu-site-verification" content="code-PTVUufeCmu">
     <meta name="google-site-verification" content="H_OAfeXJS2dhmFZs88LTRApIS-Jv57k7vLIZVtbvViQ">
-    <meta name="description" content="本文主要是根据21年在成都进行P450的实操培训文稿组织而成的，主要是进行定点飞行，指点飞行，圆框跟踪，室内避障这四个基本模块的操作。
-实操步骤定点飞行地面站qcg连接飞机（连接wifi，添加通讯），nomachine连接板载计算机（ip地">
+    <meta name="description" content="ROS具有一套自己的工作流程，其文件体系依托在工作空间中，开发的流程如下图所示。如果是 python 代码则不需要配置编译规则。
+工作空间工作空间（Workspace）：存放工程开发相关文件的文件夹。类似一个IDE（例如Pycharm）新建">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>无人机实操基本操作 | Haoqin`s Blog</title>
+    <title>ROS工作及通信机制 | Haoqin`s Blog</title>
     <link rel="icon" type="image/svg+xml" href="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/fish32.svg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -519,13 +519,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/31.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        无人机实操基本操作
+                        ROS工作及通信机制
                     </div>
                 </div>
             </div>
@@ -636,8 +636,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/实操/" target="_blank">
-                            <span class="chip bg-color">实操</span>
+                        <a href="/tags/课程/" target="_blank">
+                            <span class="chip bg-color">课程</span>
                         </a>
                         
                     </div>
@@ -648,8 +648,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/UAV/" class="post-category" target="_blank">
-                            UAV
+                        <a href="/categories/ROS/" class="post-category" target="_blank">
+                            ROS
                         </a>
                         
                     </div>
@@ -660,12 +660,12 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-06-15
+                    2022-08-20
                 </div>
 
            <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-06-15
+                    2022-08-20
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -679,14 +679,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    891
+                    2.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    9 分
                 </div>
                 
                 
@@ -696,28 +696,218 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>本文主要是根据21年在成都进行P450的实操培训文稿组织而成的，主要是进行<strong>定点飞行，指点飞行，圆框跟踪，室内避障</strong>这四个基本模块的操作。</p>
-<h1 id="实操步骤"><a href="#实操步骤" class="headerlink" title="实操步骤"></a>实操步骤</h1><h2 id="定点飞行"><a href="#定点飞行" class="headerlink" title="定点飞行"></a>定点飞行</h2><p>地面站qcg连接飞机（连接wifi，添加通讯），nomachine连接板载计算机（ip地址可以根据查询电脑ip地址来判断），终端输入启动脚本，检查飞机各项数据（手动移动无人机的位置，查看终端无人机的位置数据是否有对应的变化）。</p>
-<p>遥控器定点飞行，遥控器swc开关拨到中间挡，进入定点模式，左手遥控杆向右下方解锁，左手摇杆前后控制油门，左右控制航向；右手摇杆前后控制前后飞行，左右控制左右飞行。降落时，左手摇杆向后，油门慢慢降低，飞机降落进入怠速，上锁。（紧急关闭或者怠速油门依旧最下，切换到自稳模式上锁）,最后全部杆都应拨上。</p>
-<h2 id="指点飞行"><a href="#指点飞行" class="headerlink" title="指点飞行"></a>指点飞行</h2><p>   终端启动基本vio脚本，检查飞机各项数据，再启动控制脚本，选择控制方式，一般为命令输入控制方式0。输入1，输出起飞指令，遥控器在定点模式（<strong>swc杆拨到中间</strong>）下解锁，然后切换到offboard模式（<strong>swd杆拨下</strong>），飞机起飞。</p>
-<p>   输入4，进入move模式，选择子模式，常用XYZ—POS空间位置控制；选择坐标系，有惯性坐标系和机体坐标系，然后输入xyz和航向角的信息，飞机到达指定位置。</p>
-<p>   降落时，操控遥控器退出offboard模式，油门慢慢降低，飞机降落进入怠速，上锁。</p>
-<h2 id="圆框跟踪"><a href="#圆框跟踪" class="headerlink" title="圆框跟踪"></a>圆框跟踪</h2><p>   终端启动基本vio脚本，检查飞机各项数据，再启动跟踪脚本。调整单目摄像头向正前方，新的终端内输入指令显示图像检测内容。控制终端输入1起飞指令。</p>
-<p>   遥控器在定点模式下解锁，然后切换到offboard模式，飞机起飞。飞机起飞稳定后，控制终端输入1，执行跟踪指令。</p>
-<p>   降落时，操控遥控器退出offboard模式，油门慢慢降低，飞机降落进入怠速，上锁。</p>
-<h2 id="室内避障"><a href="#室内避障" class="headerlink" title="室内避障"></a>室内避障</h2><p>启动指令roslaunch p450_experiment astar_onboard.launch，检查飞机各项数据；再启动避障指令，在终端输入0选择命令控制模式，输入1起飞指令。</p>
-<p>遥控器在定点模式下解锁，然后切换到offboard模式，飞机起飞。飞机起飞稳定后，在rviz界面中选择3D NavGoal，界面中选择一个点作为目标点，系统会自动生成路径并沿着该路径飞行。</p>
-<p>降落时，操控遥控器退出offboard模式，油门慢慢降低，飞机降落进入怠速，上锁。</p>
-<h1 id="实操环节个人心得"><a href="#实操环节个人心得" class="headerlink" title="实操环节个人心得"></a>实操环节个人心得</h1><ul>
-<li><p>每次执行新的任务时，都应该对飞控执行reboot指令，确保飞控处于正常的状态。飞机解锁前，也应该在地面站中查看飞机的位置，模式等是否为自己所需要的状态。</p>
-</li>
-<li><p>飞机降落，应该在定点模式下进行，在确保飞机上锁后方可解锁油门。</p>
-</li>
-<li><p>单目相机无法识别时，可以通过拔插单目相机的方法来解决。</p>
-</li>
-<li><p>遥控器操控较敏感时，需要注意拨动的力度，两个手指轻轻拨动。</p>
+                <p>ROS具有一套自己的工作流程，其文件体系依托在工作空间中，开发的流程如下图所示。<br><img src="https://image.haoqin.vip/2022/08/202208201040585.png" alt><br>如果是 python 代码则不需要配置编译规则。</p>
+<h1 id="工作空间"><a href="#工作空间" class="headerlink" title="工作空间"></a>工作空间</h1><p><strong>工作空间</strong>（Workspace）：存放工程开发相关文件的文件夹。类似一个IDE（例如Pycharm）新建一个工程，就是一个工作空间。包含4个文件夹：</p>
+<ul>
+<li>src：<strong>代码空间</strong>（Source Space）：放置功能包代码</li>
+<li>build：<strong>编译空间</strong>（Build Space）：编译过程中产生的中间文件，不用过多关注</li>
+<li>devel：<strong>开发空间</strong>（Development Space）：放置编译生成的可执行文件、库、脚本</li>
+<li>install：<strong>安装空间</strong>（Install Space）：存放可执行文件，与上面有一定重复<h2 id="创建工作空间"><a href="#创建工作空间" class="headerlink" title="创建工作空间"></a>创建工作空间</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#创建工作空间指令</span>
+<span class="token function">mkdir</span> -p ~/catkin_ws/src
+<span class="token function">cd</span> ~/catkin_ws/src
+catkin_init_workspace<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+我们先创建一个src文件夹，然后进入该文件夹<br>第3行<code>catkin_init_workspace</code>意为将当前文件夹变为工作空间，使其拥有工作空间的属性<br>注：“~/”意为当前用户名目录；“-p”意为递归创建目录，即直接创建多级目录。<br>src文件夹即代码空间，不能自行用别的名称代替</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#编译空的工作空间</span>
+<span class="token function">cd</span> ~/catkin_ws/  
+catkin_make <span class="token comment" spellcheck="true">#将src里的源码进行了编译</span>
+<span class="token comment" spellcheck="true">#生成了build和devel两个新文件夹，devel存放了编译完成的内容</span>
+
+<span class="token comment" spellcheck="true">#设置环境变量</span>
+<span class="token function">source</span> devel/setup.bash
+
+<span class="token comment" spellcheck="true">#如果要生成install文件夹</span>
+catkin_make <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>为了不每次打开终端都设置环境变量（即都执行一遍 <code>$ source devel/setup.bash</code>），可以把这句话添加到系统环境变量<code>.bashrc</code> 中。</p>
+<ol>
+<li>通过 <code>$ sudo vim ~/.bashrc</code> 打开<code>.bashrc</code> 文件。</li>
+<li>在文件最后添加：<code>source ~/catkin_ws/devel/setup.bash</code></li>
+<li>保存，关闭。<h2 id="创建功能包"><a href="#创建功能包" class="headerlink" title="创建功能包"></a>创建功能包</h2></li>
+</ol>
+<ul>
+<li><strong>功能包</strong>是放置ROS源码的最小单元。<br><img src="https://image.haoqin.vip/2022/08/202208201111649.png" alt></li>
+</ul>
+<p>1, <strong>package</strong>文件夹为功能包，也就是我们开发ROS工程主要编辑的地方<br>2, <strong>package</strong>文件夹下<strong>package.xml</strong>文件主要是描述整个功能包的属性。<br>3, <strong>package</strong>文件夹下<strong>CMakeLists.txt</strong>文件主要作用是描述整个功能包的编译规则，依赖库等等。<br>4, <strong>package</strong>文件夹下的<strong>src</strong>文件夹为功能包源文件所在。<br>5, <strong>package</strong>文件夹下的<strong>include</strong>文件夹为功能包源文件的头文件所在。<br>6, <strong>package</strong>文件夹下的<strong>script</strong>文件夹为python脚本和bash脚本所在，即无需编译即可运行的文件。<br>7, <strong>package</strong>文件夹下的<strong>launch</strong>文件夹为launch文件所在<br>8, <strong>package</strong>文件夹下的<strong>msg</strong>文件夹为msg文件所在<br>9, <strong>package</strong>文件夹下的<strong>srv</strong>文件夹为srv文件所在<br>9, <strong>package</strong>文件夹下的<strong>action</strong>文件夹为action文件所在</p>
+<ul>
+<li>上面我们创建了一个空的工作空间，src文件夹里面没写东西，现在我们创建一个自己的功能包。  注意同一工作空间下，不允许存在同名功能包；不同工作空间下，允许存在同名功能包。<br>指令格式：<code>catkin_create_pkg &lt;package_name&gt; [depend1] [depend2] [depend3]</code><br><code>&lt;package_name&gt;</code>为包名<br><code>[depend]</code>为依赖，即指明编译的时候需要ROS中的其他功能包，如需要调用python、C++库，就要指明rospy、roscpp。<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">cd</span> ~/catkin_ws/src 
+<span class="token comment" spellcheck="true"># 创建一个名叫learning_communication的功能包  </span>
+<span class="token comment" spellcheck="true"># 这个功能包实现的接口有python接口，C++接口，标准定义的消息与服务接口</span>
+catkin_create_pkg learning_communication rospy roscpp std_msgs std_srvs
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
+<h1 id="编译功能包"><a href="#编译功能包" class="headerlink" title="编译功能包"></a>编译功能包</h1><p>cd ~/catkin_ws<br>catkin_make<br>source ~/catkin_ws/devel/setup.bash</p>
+<pre><code># Topic 通信机制
+![](https://image.haoqin.vip/2022/08/202208202024525.png)
+
+
+## 发布者Publisher
+-   初始化ROS节点
+-   向ROS Master注册节点信息，包括发布的话题名和话题中的消息类型
+-   创建消息数据
+-   按照一定的频率循环发布消息
+```c++
+/**  
+ * 该例程将发布chatter话题，消息类型String  
+ */  
+
+// 字符串的流的数据转换  
+#include &lt;sstream&gt;  
+// 包含ros头文件，一般都会写  
+#include &quot;ros/ros.h&quot;  
+// 后面会用到ROS中string的消息类型  
+#include &quot;std_msgs/String.h&quot;  
+
+int main(int argc, char **argv)  
+{  
+    // ROS节点初始化，声明节点名，这个名字不能和其他节点重名  
+    ros::init(argc, argv, &quot;string_publisher&quot;);  
+
+    // 创建节点句柄，完成ROS核心资源的管理。  
+    // 在节点初始化和关闭一节中,使用句柄管理节点的内部引用,使启动和关闭一个节点变得简单。  
+
+    ros::NodeHandle n;  
+
+    // 创建一个Publisher，发布名为chatter的topic，消息类型为std_msgs::String。  
+    // 在ros::Publisher类下实例化一个chatter_pub对象。  
+    // 1000表示缓冲区大小，超过1000会把时间戳最老的删除掉。  
+    // advertise( ) 返回一个 Publisher 对象。 通过调用对象的 publish( )函数可以在这个topic上发布 message。  
+    ros::Publisher chatter_pub = n.advertise&lt;std_msgs::String&gt;(&quot;chatter&quot;, 1000);  
+
+    // 设置循环的频率  
+    // loop_rate()是ros::Rate类可定制频率的函数，接受一个int型参数，通过调用主函数末尾的上来sleep（）函数，将该参数置为发布频率。  
+    ros::Rate loop_rate(10);  
+
+    int count = 0;  
+
+    // ros::ok()会设置一个SIGINT监听，函数返回True，仅当以下四种情况发生时，该函数返回False：  
+　　 // 1. SIGINT被触发（Ctrl+c）  
+　　 // 2.被另一同名节点踢出  
+　　 // 3.函数ros::shutdown（）被程序另一部分调用  
+　　 // 4.程序所有句柄被销毁  
+    while (ros::ok())  
+    {  
+        // 初始化std_msgs::String类型的消息  
+        std_msgs::String msg;  
+        // 初始化字符串流  
+        std::stringstream ss;  
+        // 把信息放到字节流里  
+        ss &lt;&lt; &quot;hello world &quot; &lt;&lt; count;  
+        // msg中的data是存储信息的，直接赋值  
+        msg.data = ss.str();  
+
+        // 发布消息  
+        // 输出一个字符串变量,ROS_INFO其实就是printf  
+        // c_str()：将C++的string转化为C的字符串数组，c_str()生成一个const char *指针，指向字符串的首地址。  
+        ROS_INFO(&quot;%s&quot;, msg.data.c_str());  
+        // 通过调用对象的 publish( )函数发布数据  
+        chatter_pub.publish(msg);  
+
+        // 按照循环频率延时  
+        loop_rate.sleep();  
+        ++count;  
+    }  
+
+    return 0;  
+}</code></pre><p>这个cpp文件创建在src文件夹下,有了源码之后需要在CMakeLists.txt中添加<strong>编译规则：</strong></p>
+<pre class="line-numbers language-CMAKE"><code class="language-CMAKE"># 设置需要编译的代码和生成的可执行文件  
+# 让string_publish.cpp这个cpp文件编译生成string_publish  
+add_executable(string_publisher src/string_publisher.cpp)  
+# 设置string_publisher与库catkin_LIBRARIES的连接  
+target_link_libraries(string_publisher ${catkin_LIBRARIES})
+
+# 后面的Subscriber也是如此
+add_executable(string_subscriber src/string_subscriber.cpp)  
+target_link_libraries(string_subscriber ${catkin_LIBRARIES})
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>回到工作空间目录，执行<strong>编译</strong>.</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">cd</span> ~/catkin_ws  
+$ catkin_make  
+
+<span class="token comment" spellcheck="true"># 配置系统环境变量后这步可以省略  </span>
+$ <span class="token function">source</span> devel/setup.bash  
+
+$ roscore  
+$ rosrun learning_communication string_publisher  
+$ rosrun learning_communication string_subscriber<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><strong>python</strong>的源代码，放在功能包文件夹下的scripts目录下的。<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 该例程将发布turtle1/cmd_vel话题，消息类型geometry_msgs::Twist</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+<p>import rospy<br>from geometry_msgs.msg import Twist</p>
+<p>def velocity_publisher():<br>    # ROS节点初始化<br>    rospy.init_node(‘velocity_publisher’, anonymous=True)<br><br>    # 创建一个Publisher，发布名为/turtle1/cmd_vel的topic，消息类型为geometry_msgs::Twist，队列长度10<br>    turtle_vel_pub = rospy.Publisher(‘/turtle1/cmd_vel’, Twist, queue_size=10)<br><br>    #设置循环的频率<br>    rate = rospy.Rate(10)<br><br>    while not rospy.is_shutdown():<br>        # 初始化geometry_msgs::Twist类型的消息<br>        vel_msg = Twist()<br>        vel_msg.linear.x = 0.5<br>        vel_msg.angular.z = 0.2<br><br>        # 发布消息<br>        turtle_vel_pub.publish(vel_msg)<br>        rospy.loginfo(“Publsh turtle velocity command[%0.2f m/s, %0.2f rad/s]”,<br>                vel_msg.linear.x, vel_msg.angular.z)<br><br>        # 按照循环频率延时<br>        rate.sleep()</p>
+<p>if <strong>name</strong> == ‘<strong>main</strong>‘:<br>    try:<br>        velocity_publisher()<br>    except rospy.ROSInterruptException:<br>        pass</p>
+<pre><code>需要打开py文件的**可执行权限**。
+## 订阅者Subscriber
+-   初始化ROS节点
+-   订阅需要的话题
+-   循环等待话题消息，接收到消息后进入回调函数
+-   在回调函数中完成消息处理
+```C++
+/**  
+ * 该例程将订阅chatter话题，消息类型String  
+ */  
+
+// ros头文件  
+#include &quot;ros/ros.h&quot;  
+// 后面会用到ROS中string的消息类型  
+#include &quot;std_msgs/String.h&quot;  
+
+// 接收到订阅的消息后，会进入消息回调函数  
+// 定义一个指针常量的引用msg  
+void chatterCallback(const std_msgs::String::ConstPtr&amp; msg)  
+{  
+    // 将接收到的消息打印出来  
+    ROS_INFO(&quot;I heard: [%s]&quot;, msg-&gt;data.c_str());  
+}  
+
+int main(int argc, char **argv)  
+{  
+    // 初始化ROS节点  
+    ros::init(argc, argv, &quot;string_subscriber&quot;);  
+
+    // 创建节点句柄  
+    ros::NodeHandle n;  
+
+    // 创建一个Subscriber，订阅名为chatter的topic，注册回调函数chatterCallback  
+    ros::Subscriber sub = n.subscribe(&quot;chatter&quot;, 1000, chatterCallback);  
+
+    // 循环等待回调函数  
+    // spin本身的循环条件就是ros::ok()  
+    ros::spin();  
+
+    return 0;  
+}
+</code></pre><p>配置<strong>编译规则和环境变量</strong>，进行<strong>编译</strong>。</p>
+<ul>
+<li>python版本<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 该例程将订阅/turtle1/pose话题，消息类型turtlesim::Pose</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+<p>import rospy<br>from turtlesim.msg import Pose</p>
+<p>def poseCallback(msg):<br>    rospy.loginfo(“Turtle pose: x:%0.6f, y:%0.6f”, msg.x, msg.y)</p>
+<p>def pose_subscriber():<br>    # ROS节点初始化<br>    rospy.init_node(‘pose_subscriber’, anonymous=True)<br><br>    # 创建一个Subscriber，订阅名为/turtle1/pose的topic，注册回调函数poseCallback<br>    rospy.Subscriber(“/turtle1/pose”, Pose, poseCallback)<br><br>    # 循环等待回调函数<br>    rospy.spin()</p>
+<p>if <strong>name</strong> == ‘<strong>main</strong>‘:<br>    pose_subscriber()</p>
+<pre><code>## 消息
+我们通过自定义msg文件来自定义话题消息。在功能包根目录下新建文件夹msg，并`touch Person.msg`,文件内容
+```msg
+string name  
+uint8 age  
+uint8 sex  
+
+uint8 unknown = 0  
+uint8 male    = 1  
+uint8 female  = 2</code></pre><p>在package.xml中添加功能包依赖：</p>
+<pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build_depend</span><span class="token punctuation">></span></span>message_generation<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build_depend</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exec_depend</span><span class="token punctuation">></span></span>message_runtime<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exec_depend</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>build_depend为编译依赖，这里依赖的是一个会动态产生message的功能包<br>exer_depend为执行依赖，这里依赖的是一个动态runtime运行的功能包</p>
+<p>在CMakeLists.txt中添加编译选项：</p>
+<ol>
+<li><code>find_package(…… message_generation)</code></li>
+<li>添加：<code>add_message_files(FILES PersonMsg.msg)</code> 和 <code>generate_messages(DEPENDENCIES std_msgs)</code>（前一句话是编译生成头文件，后一句话是调用了 ros 的标准数据类型）</li>
+<li><code>catkin_package(…… message_runtime)</code><br>回到根目录，编译<code>catkin_make</code>,编译完成后，我们可以在devel/include/learning_topic/ 下找到这个C++的头文件</li>
+</ol>
+<h1 id="Service通信机制"><a href="#Service通信机制" class="headerlink" title="Service通信机制"></a>Service通信机制</h1><p><img src="https://image.haoqin.vip/2022/08/202208202123416.png" alt><br>详细步骤懒得摘录了，跟Topic机制有一定的<strong>类似</strong>。直接见<a href="https://hljmssjg.github.io/2022/01/01/ROS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B003/#4-1-%E8%AF%B7%E6%B1%82-%E6%9C%8D%E5%8A%A1-Hello-worl" target="_blank" rel="noopener">ROS学习笔记 03 ROS通信编程 | 孙健耕的博客</a></p>
 
             </div>
             <hr />
@@ -876,9 +1066,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《无人机实操基本操作》
+                    《ROS工作及通信机制》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/posts/997c23ab.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/posts/bf62b2d6.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 CHQ
             </a> 采用
@@ -1166,46 +1356,48 @@ const locale = {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/53e3ff53.html">
+                <a href="/posts/bf62b2d6.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/15.jpg" class="responsive-img" alt="概率论及数理统计的基本概念">
+                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/31.jpg" class="responsive-img" alt="ROS工作及通信机制">
                         
-                        <span class="card-title">概率论及数理统计的基本概念</span>
+                        <span class="card-title">ROS工作及通信机制</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数理统计笔记，也许就一篇
+                            ROS工作空间及通信相关介绍
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-08-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/学科/" class="post-category" target="_blank">
-                                    学科
+                            <a href="/categories/ROS/" class="post-category" target="_blank">
+                                    ROS
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/数理统计/" target="_blank">
-                        <span class="chip bg-color">数理统计</span>
+                    <a href="/tags/课程/" target="_blank">
+                        <span class="chip bg-color">课程</span>
                     </a>
                     
                 </div>
@@ -1219,31 +1411,31 @@ const locale = {
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/ca708840.html">
+                <a href="/posts/f59f5b40.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/16.jpg" class="responsive-img" alt="blog日常踩坑">
+                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/34.jpg" class="responsive-img" alt="P450无人机">
                         
-                        <span class="card-title">blog日常踩坑</span>
+                        <span class="card-title">P450无人机</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            博客搭建过程的优化修改
+                            P450的相关组成及文档等
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-11
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-08-17
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Blog/" class="post-category" target="_blank">
-                                    Blog
+                            <a href="/categories/UAV/" class="post-category" target="_blank">
+                                    UAV
                                 </a>
                             
                             
@@ -1253,12 +1445,8 @@ const locale = {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/matery/" target="_blank">
-                        <span class="chip bg-color">matery</span>
-                    </a>
-                    
-                    <a href="/tags/网站/" target="_blank">
-                        <span class="chip bg-color">网站</span>
+                    <a href="/tags/P450/" target="_blank">
+                        <span class="chip bg-color">P450</span>
                     </a>
                     
                 </div>
