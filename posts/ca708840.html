@@ -545,7 +545,7 @@ url跟站点地图相关，需要填写gi">
 
            <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-06-12
+                    2022-08-21
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -559,14 +559,14 @@ url跟站点地图相关，需要填写gi">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
                 
@@ -602,6 +602,49 @@ url跟站点地图相关，需要填写gi">
 <li>从安全性和方便性的角度出发，将valine换成waline，方便操作，将waline.ejs中的内容替代到valine.ejs中。具体配置可以参考[快速上手 | Waline]和<a target="_blank" rel="noopener" href="https://hubojing.github.io/2022/01/14/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BAWaline%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">博客更换为Waline评论系统 | 靖待的技术博客 </a></li>
 <li>鸿蒙字体的引入，在<code>my.css</code>文件中粘贴鸿蒙字体对应css文件，全局引用。<a target="_blank" rel="noopener" href="https://gahotx.cn/posts/13a9d850.html">免费商用字体-HarmonyOS Sans | Gahotx’s blog</a></li>
 <li>https网站不可以引用http的资源</li>
+<li>代码块更新操作<br>  1、在hexo根目录执行<code>npm uninstall hexo-prism-plugin</code>卸载原有的插件<br>  2、hexo的配置为：<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">highlight</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">auto_detect</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">tab_replace</span><span class="token punctuation">:</span> <span class="token string">''</span>
+  <span class="token key atrule">wrap</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">hljs</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token key atrule">prismjs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">preprocess</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">tab_replace</span><span class="token punctuation">:</span> <span class="token string">''</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+3、主题进行相关配置：<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">code</span><span class="token punctuation">:</span>
+  <span class="token key atrule">lang</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment"># 代码块是否显示名称</span>
+  <span class="token key atrule">copy</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment"># 代码块是否可复制</span>
+  <span class="token key atrule">shrink</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment"># 代码块是否可以收缩</span>
+  <span class="token key atrule">break</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment"># 代码是否折行</span>
+  
+  <span class="token key atrule">css</span><span class="token punctuation">:</span>
+	<span class="token key atrule">prism</span><span class="token punctuation">:</span> /libs/prism/prism.min.css
+  <span class="token key atrule">js</span><span class="token punctuation">:</span>
+    <span class="token key atrule">prism</span><span class="token punctuation">:</span> /libs/prism/prism.min.js
+    <span class="token key atrule">codeblock</span><span class="token punctuation">:</span> /libs/codeBlock/codeBlockFuction.js
+    <span class="token key atrule">codelang</span><span class="token punctuation">:</span> /libs/codeBlock/codeLang.js
+    <span class="token key atrule">codecopy</span><span class="token punctuation">:</span> /libs/codeBlock/codeCopy.js
+    <span class="token key atrule">codeshrink</span><span class="token punctuation">:</span> /libs/codeBlock/codeShrink.js<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+4、在主题的libs文件夹中添加codeBlock和prism文件夹；<br>5、_partial文件夹中添加codeblock.ejs文件，若原有post.ejs中有相关配置进行删除<br>6、对post-detail.ejs进行配置：<pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"> <span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%</span><span class="token language-javascript"> <span class="token keyword">if</span> <span class="token punctuation">(</span>config<span class="token punctuation">.</span>prismjs <span class="token operator">&amp;&amp;</span> config<span class="token punctuation">.</span>prismjs<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> </span><span class="token delimiter punctuation">%></span></span>
+        <span class="token comment">&lt;!-- 是否加载使用自带的 prismjs. --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> <span class="token function">url_for</span><span class="token punctuation">(</span>theme<span class="token punctuation">.</span>libs<span class="token punctuation">.</span>css<span class="token punctuation">.</span>prism<span class="token punctuation">)</span> </span><span class="token delimiter punctuation">%></span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%</span><span class="token language-javascript"> <span class="token punctuation">&#125;</span> </span><span class="token delimiter punctuation">%></span></span>
+
+
+        <span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%</span><span class="token language-javascript"> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>code<span class="token punctuation">.</span>break<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> </span><span class="token delimiter punctuation">%></span></span>
+        <span class="token comment">&lt;!-- 代码块折行 --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+            <span class="token selector">code[class*="language-"], pre[class*="language-"]</span> <span class="token punctuation">&#123;</span> <span class="token property">white-space</span><span class="token punctuation">:</span> pre-wrap <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+        </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+        <span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%</span><span class="token language-javascript"> <span class="token punctuation">&#125;</span> </span><span class="token delimiter punctuation">%></span></span>
+
+<span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/codeblock'</span><span class="token punctuation">)</span> </span><span class="token delimiter punctuation">%></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+</li>
 </ul>
 <h1 id="网站加速："><a href="#网站加速：" class="headerlink" title="网站加速："></a><strong>网站加速：</strong></h1><ul>
 <li>将 cdn.jsdelivr.net 更换为 fastly.jsdelivr.net———<a target="_blank" rel="noopener" href="https://www.hurbai.com/jishu/697">jsdelivr cdn 挂了不能访问替代方案 - 大灰hurbai</a></li>
@@ -1345,7 +1388,7 @@ const locale = {
            <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
            
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">11.1k
+            <span class="white-color">11.4k
              丨            
           
 
@@ -1401,7 +1444,7 @@ const locale = {
       <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">11.1k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">11.4k</span>
     </div>
  </footer>
 
