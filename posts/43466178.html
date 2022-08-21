@@ -2,11 +2,11 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="1. Introduction to Aerial Robotics, 好好学习，天天向上">
-    <meta name="baidu-site-verification" content="code-PTVUufeCmu">
-    <meta name="google-site-verification" content="H_OAfeXJS2dhmFZs88LTRApIS-Jv57k7vLIZVtbvViQ">
+    <meta name="baidu-site-verification" content="code-PTVUufeCmu" />
+    <meta name="google-site-verification" content="H_OAfeXJS2dhmFZs88LTRApIS-Jv57k7vLIZVtbvViQ" />
     <meta name="description" content="Robotics: Aerial Robotics是由宾夕法尼亚大学Vijay Kuma开展的无人机课程，本文是1.1节 introduction 和1.2节 Energetics and System Design 的学习内容记录。
 1.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,7 +27,12 @@
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
     <style type="text/css">
-        
+        code[class*="language-"],
+            pre[class*="language-"] {
+                white-space: pre !important;
+            }
+
+            
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
@@ -71,7 +76,7 @@
         })();
     </script>
 
-    <meta name="baidu-site-verification" content>
+    <meta name="baidu-site-verification" content="" />
 
 
 
@@ -206,138 +211,7 @@
     };
     loaded();
 })()
- </script><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><style type="text/css" lang="css">
-    #loading-container{
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-height: 100vh;
-        width: 100vw;
-        z-index: 9999;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #FFF;
-        text-align: center;
-        /* loaderҳ����ʧ���ý����ķ�ʽ*/
-        -webkit-transition: opacity 1s ease;
-        -moz-transition: opacity 1s ease;
-        -o-transition: opacity 1s ease;
-        transition: opacity 1s ease;
-    }
-    .loading-image{
-        width: 120px;
-        height: 50px;
-        transform: translate(-50%);
-    }
-
-    .loading-image div:nth-child(2) {
-        -webkit-animation: pacman-balls 1s linear 0s infinite;
-        animation: pacman-balls 1s linear 0s infinite
-    }
-
-    .loading-image div:nth-child(3) {
-        -webkit-animation: pacman-balls 1s linear .33s infinite;
-        animation: pacman-balls 1s linear .33s infinite
-    }
-
-    .loading-image div:nth-child(4) {
-        -webkit-animation: pacman-balls 1s linear .66s infinite;
-        animation: pacman-balls 1s linear .66s infinite
-    }
-
-    .loading-image div:nth-child(5) {
-        -webkit-animation: pacman-balls 1s linear .99s infinite;
-        animation: pacman-balls 1s linear .99s infinite
-    }
-
-   .loading-image div:first-of-type {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
-        animation: rotate_pacman_half_up .5s 0s infinite;
-    }
-    .loading-image div:nth-child(2) {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
-        animation: rotate_pacman_half_down .5s 0s infinite;
-        margin-top: -50px;
-    }
-    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-
-    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-
-    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-
-    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-
-
-    .loading-image div:nth-child(3),
-    .loading-image div:nth-child(4),
-    .loading-image div:nth-child(5),
-    .loading-image div:nth-child(6){
-        background-color: #49b1f5;
-        width: 15px;
-        height: 15px;
-        border-radius: 100%;
-        margin: 2px;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        transform: translateY(-6.25px);
-        top: 25px;
-        left: 100px;
-    }
-    .loading-text{
-        margin-bottom: 20vh;
-        text-align: center;
-        color: #2c3e50;
-        font-size: 2rem;
-        box-sizing: border-box;
-        padding: 0 10px;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    @media only screen and (max-width: 500px) {
-         .loading-text{
-            font-size: 1.5rem;
-         }
-    }
-    .fadeout {
-        opacity: 0;
-        filter: alpha(opacity=0);
-    }
-    /* logo���ֶ��� */
-    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
-    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
- </style>
- <script>
-(function () {
-    const loaded = function(){
-       setTimeout(function(){
-            const loader = document.getElementById("loading-container");
-            loader.className="fadeout" ;//ʹ�ý����ķ�������loading page
-            // document.getElementById("body-wrap").style.display="flex";
-            setTimeout(function(){
-                loader.style.display="none";
-            },1000); 
-        },1000);//ǿ����ʾloading page 1s  
-    };
-    loaded();
-})()
- </script></head>
+ </script><meta name="generator" content="Hexo 6.0.0"></head>
 
 
  <div id="loading-container">
@@ -519,7 +393,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/28.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/34.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -700,7 +574,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><a href="https://www.coursera.org/learn/robotics-flight/home/week/1" target="_blank" rel="noopener">Robotics: Aerial Robotics</a>是由宾夕法尼亚大学Vijay Kuma开展的无人机课程，本文是1.1节 introduction 和1.2节 Energetics and System Design 的学习内容记录。</p>
+                <p><a target="_blank" rel="noopener" href="https://www.coursera.org/learn/robotics-flight/home/week/1">Robotics: Aerial Robotics</a>是由宾夕法尼亚大学Vijay Kuma开展的无人机课程，本文是1.1节 introduction 和1.2节 Energetics and System Design 的学习内容记录。</p>
 <h1 id="1-1-introduction"><a href="#1-1-introduction" class="headerlink" title="1.1 introduction"></a>1.1 introduction</h1><p><strong>无人机</strong>常见的几种称呼：</p>
 <ul>
 <li>Unmanned Aerial Vehicles(UAV)，无人驾驶飞机</li>
@@ -719,15 +593,15 @@
 <ul>
 <li>目的是能够获得位置与速度的可靠估计</li>
 <li>良好的环境：实验室中使用运动捕捉相机，其要点是通过挂载在机器人上的反射标记，相机可以估计每个反射标记的位置；外部环境下使用GPS</li>
-<li>一般采用其它传感器完成这一过程，如相机和激光测距仪。传感器给出障碍物的距离。同时无人机具有惯性测量单元（IMU),能够估计其由一个位置到另一个位置的运动，得到△x，即获取坐标信息并估计运动，完成实时定位和地图构建<img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205281005517.png" alt></li>
+<li>一般采用其它传感器完成这一过程，如相机和激光测距仪。传感器给出障碍物的距离。同时无人机具有惯性测量单元（IMU),能够估计其由一个位置到另一个位置的运动，得到△x，即获取坐标信息并估计运动，完成实时定位和地图构建<img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205281005517.png" alt=""></li>
 <li>在仅有一个相机的情况下，需要使用路标进行指示，比如在地毯上出现的AprilTag路标。</li>
 </ul>
 <p>习题部分：<br><strong>Q:</strong> An Inertial Measurement Unit (IMU) is an important sensor used in aerial robotics. A typical IMU will contain an accelerometer and a rate gyro. Which of the following information does a robot get from an IMU? (Select all that apply. Choose only quantities that are directly reported by the IMU. Do not include quantities that can be computed from the IMU measurements but cannot be obtained directly. Additional research to find information about IMUs is allowed and encouraged!)<br><strong>A:</strong> Linear acceleration, Angular velocity</p>
 <p><strong>Q:</strong>  What does Simultaneous Localization And Mapping (SLAM) software do? (Select all that applies.)<br><strong>A:</strong> Estimates the location of features in the environment;  Estimates the position and orientation of the robot with respect to the environment</p>
 <h1 id="1-2-Energetics-and-System-Design"><a href="#1-2-Energetics-and-System-Design" class="headerlink" title="1.2 Energetics and System Design"></a>1.2 Energetics and System Design</h1><p>Basic Mechanics</p>
 <ul>
-<li>电机旋转产生推力( thrust force ) 抵消无人机自身重力的存在，同时电机的旋转产生的阻力需要电机去客服，推力和阻力都跟速度存在一个二次方程的关系。<br><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/06/202206072204744.png" alt></li>
-<li>电机悬停时存在的合力和合力矩的情况，质心确定，各旋翼的推力与到质心的距离构成了力矩。<br><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/06/202206072209846.png" alt></li>
+<li>电机旋转产生推力( thrust force ) 抵消无人机自身重力的存在，同时电机的旋转产生的阻力需要电机去客服，推力和阻力都跟速度存在一个二次方程的关系。<br><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/06/202206072204744.png" alt=""></li>
+<li>电机悬停时存在的合力和合力矩的情况，质心确定，各旋翼的推力与到质心的距离构成了力矩。<br><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/06/202206072209846.png" alt=""></li>
 </ul>
 
             </div>
@@ -878,7 +752,7 @@
         </p>
         
             <div class="center-align">
-                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
                     <img alt=""
                          style="border-width:0"
                          src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
@@ -893,7 +767,7 @@
                rel="cc:attributionURL">
                 CHQ
             </a> 采用
-            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+            <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
                 知识共享署名 4.0 国际许可协议
             </a>进行许可。
         
@@ -1185,7 +1059,7 @@ const locale = {
                     <div class="card-image">
                         
                         
-                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/16.jpg" class="responsive-img" alt="blog日常踩坑">
+                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/10.jpg" class="responsive-img" alt="blog日常踩坑">
                         
                         <span class="card-title">blog日常踩坑</span>
                     </div>
@@ -1219,7 +1093,7 @@ const locale = {
                         <span class="chip bg-color">matery</span>
                     </a>
                     
-                    <a href="/tags/网站/" target="_blank">
+                    <a href="/tags/%E7%BD%91%E7%AB%99/" target="_blank">
                         <span class="chip bg-color">网站</span>
                     </a>
                     
@@ -1238,7 +1112,7 @@ const locale = {
                     <div class="card-image">
                         
                         
-                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/6.jpg" class="responsive-img" alt="专利基础知识">
+                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/12.jpg" class="responsive-img" alt="专利基础知识">
                         
                         <span class="card-title">专利基础知识</span>
                     </div>
@@ -1268,7 +1142,7 @@ const locale = {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/专利/" target="_blank">
+                    <a href="/tags/%E4%B8%93%E5%88%A9/" target="_blank">
                         <span class="chip bg-color">专利</span>
                     </a>
                     
@@ -1426,7 +1300,7 @@ const locale = {
            <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
            
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">11k
+            <span class="white-color">11.1k
              丨            
           
 
@@ -1482,7 +1356,7 @@ const locale = {
       <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">11k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">11.1k</span>
     </div>
  </footer>
 

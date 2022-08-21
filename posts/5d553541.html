@@ -2,11 +2,11 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="无人机基础物理概念, 好好学习，天天向上">
-    <meta name="baidu-site-verification" content="code-PTVUufeCmu">
-    <meta name="google-site-verification" content="H_OAfeXJS2dhmFZs88LTRApIS-Jv57k7vLIZVtbvViQ">
+    <meta name="baidu-site-verification" content="code-PTVUufeCmu" />
+    <meta name="google-site-verification" content="H_OAfeXJS2dhmFZs88LTRApIS-Jv57k7vLIZVtbvViQ" />
     <meta name="description" content="本文对无人机飞行的一些基本概念进行梳理记录，动力学方程相关暂不涉及。
 简单的垂直与水平分析Vertical Motion四旋翼无人机的旋翼工作产生升力，升力与重力相等时，合力为零，此时无人机处于悬停状态（hover）。增大无人机四旋翼推力（">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,7 +27,12 @@
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
     <style type="text/css">
-        
+        code[class*="language-"],
+            pre[class*="language-"] {
+                white-space: pre !important;
+            }
+
+            
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
@@ -71,7 +76,7 @@
         })();
     </script>
 
-    <meta name="baidu-site-verification" content>
+    <meta name="baidu-site-verification" content="" />
 
 
 
@@ -206,138 +211,7 @@
     };
     loaded();
 })()
- </script><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><style type="text/css" lang="css">
-    #loading-container{
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-height: 100vh;
-        width: 100vw;
-        z-index: 9999;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #FFF;
-        text-align: center;
-        /* loaderҳ����ʧ���ý����ķ�ʽ*/
-        -webkit-transition: opacity 1s ease;
-        -moz-transition: opacity 1s ease;
-        -o-transition: opacity 1s ease;
-        transition: opacity 1s ease;
-    }
-    .loading-image{
-        width: 120px;
-        height: 50px;
-        transform: translate(-50%);
-    }
-
-    .loading-image div:nth-child(2) {
-        -webkit-animation: pacman-balls 1s linear 0s infinite;
-        animation: pacman-balls 1s linear 0s infinite
-    }
-
-    .loading-image div:nth-child(3) {
-        -webkit-animation: pacman-balls 1s linear .33s infinite;
-        animation: pacman-balls 1s linear .33s infinite
-    }
-
-    .loading-image div:nth-child(4) {
-        -webkit-animation: pacman-balls 1s linear .66s infinite;
-        animation: pacman-balls 1s linear .66s infinite
-    }
-
-    .loading-image div:nth-child(5) {
-        -webkit-animation: pacman-balls 1s linear .99s infinite;
-        animation: pacman-balls 1s linear .99s infinite
-    }
-
-   .loading-image div:first-of-type {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
-        animation: rotate_pacman_half_up .5s 0s infinite;
-    }
-    .loading-image div:nth-child(2) {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
-        animation: rotate_pacman_half_down .5s 0s infinite;
-        margin-top: -50px;
-    }
-    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-
-    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-
-    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-
-    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-
-
-    .loading-image div:nth-child(3),
-    .loading-image div:nth-child(4),
-    .loading-image div:nth-child(5),
-    .loading-image div:nth-child(6){
-        background-color: #49b1f5;
-        width: 15px;
-        height: 15px;
-        border-radius: 100%;
-        margin: 2px;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        transform: translateY(-6.25px);
-        top: 25px;
-        left: 100px;
-    }
-    .loading-text{
-        margin-bottom: 20vh;
-        text-align: center;
-        color: #2c3e50;
-        font-size: 2rem;
-        box-sizing: border-box;
-        padding: 0 10px;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    @media only screen and (max-width: 500px) {
-         .loading-text{
-            font-size: 1.5rem;
-         }
-    }
-    .fadeout {
-        opacity: 0;
-        filter: alpha(opacity=0);
-    }
-    /* logo���ֶ��� */
-    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
-    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
- </style>
- <script>
-(function () {
-    const loaded = function(){
-       setTimeout(function(){
-            const loader = document.getElementById("loading-container");
-            loader.className="fadeout" ;//ʹ�ý����ķ�������loading page
-            // document.getElementById("body-wrap").style.display="flex";
-            setTimeout(function(){
-                loader.style.display="none";
-            },1000); 
-        },1000);//ǿ����ʾloading page 1s  
-    };
-    loaded();
-})()
- </script></head>
+ </script><meta name="generator" content="Hexo 6.0.0"></head>
 
 
  <div id="loading-container">
@@ -519,7 +393,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/3.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -636,7 +510,7 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/动力学/" target="_blank">
+                        <a href="/tags/%E5%8A%A8%E5%8A%9B%E5%AD%A6/" target="_blank">
                             <span class="chip bg-color">动力学</span>
                         </a>
                         
@@ -698,16 +572,16 @@
             <div id="articleContent">
                 <p>本文对无人机飞行的一些基本概念进行梳理记录，动力学方程相关暂不涉及。</p>
 <h1 id="简单的垂直与水平分析"><a href="#简单的垂直与水平分析" class="headerlink" title="简单的垂直与水平分析"></a>简单的垂直与水平分析</h1><h2 id="Vertical-Motion"><a href="#Vertical-Motion" class="headerlink" title="Vertical Motion"></a>Vertical Motion</h2><p>四旋翼无人机的旋翼工作产生升力，升力与重力相等时，合力为零，此时无人机处于悬停状态（<strong>hover</strong>）。<br>增大无人机四旋翼推力（速度），可以实现无人机爬升（<strong>climb</strong>）。<br>减小无人机四旋翼推力（速度），可以实现无人机下降（<strong>descend</strong>）。</p>
-<h2 id="Turning-or-Rotating"><a href="#Turning-or-Rotating" class="headerlink" title="Turning or Rotating"></a>Turning or Rotating</h2><p>无人机的旋转与各旋翼的旋转方向和旋转速度相关，两个相邻的电机以相反的方向旋转，两个相反的电机沿同一方向旋转。角动力值可以用<strong>角速度乘以惯性矩</strong>得到。<br><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205212120854.png" alt><br>红色的旋翼呈逆时针旋转，绿色的旋翼呈顺时针旋转，如图所示。当1和3同时减小，2和4增大，保持无人机的升力依旧等于重力，实现无人机方向的改变</p>
+<h2 id="Turning-or-Rotating"><a href="#Turning-or-Rotating" class="headerlink" title="Turning or Rotating"></a>Turning or Rotating</h2><p>无人机的旋转与各旋翼的旋转方向和旋转速度相关，两个相邻的电机以相反的方向旋转，两个相反的电机沿同一方向旋转。角动力值可以用<strong>角速度乘以惯性矩</strong>得到。<br><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205212120854.png" alt=""><br>红色的旋翼呈逆时针旋转，绿色的旋翼呈顺时针旋转，如图所示。当1和3同时减小，2和4增大，保持无人机的升力依旧等于重力，实现无人机方向的改变</p>
 <h1 id="空间姿态与位置"><a href="#空间姿态与位置" class="headerlink" title="空间姿态与位置"></a>空间姿态与位置</h1><h2 id="基本描述"><a href="#基本描述" class="headerlink" title="基本描述"></a>基本描述</h2><p>欧拉角是描述旋转的一种方式，那姿态角呢？姿态角属于欧拉角的一种特殊形式，我们一般定义姿态角为<strong>偏航（Yaw），俯仰（Pitch），横滚（Roll）</strong>。在不同的载体坐标系里，姿态角对应也不一样。<br>四旋翼无人机有6个自由度，分别为前后、上下、左右移动，横滚、俯仰、偏航旋转，而控制是从四个方面来进行的：升降通道（Thrust），横滚角（Roll）控制通道，俯仰角控制通道（Pitch）和偏航角控制通道（Yaw）。<br>下面三张动图呈现的是前后、左右、旋转的效果：</p>
-<p><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205211652933.gif" alt><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205211652934.gif" alt><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205211652935.gif" alt></p>
-<h2 id="运动姿态实现"><a href="#运动姿态实现" class="headerlink" title="运动姿态实现"></a>运动姿态实现</h2><p>以无人机质心为原O，正前方为X轴正方向，右侧方为Y轴正方向，竖直向上为Z轴正方向建立机体坐标系，分析各种运动姿态原理，如图所示<br><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205212123000.png" alt></p>
+<p><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205211652933.gif" alt=""><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205211652934.gif" alt=""><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205211652935.gif" alt=""></p>
+<h2 id="运动姿态实现"><a href="#运动姿态实现" class="headerlink" title="运动姿态实现"></a>运动姿态实现</h2><p>以无人机质心为原O，正前方为X轴正方向，右侧方为Y轴正方向，竖直向上为Z轴正方向建立机体坐标系，分析各种运动姿态原理，如图所示<br><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205212123000.png" alt=""></p>
 <p>升降运动：在图a中，同时增大无人机四个旋翼转速，使得总升力大于无人机整体重量后无人机将沿着Z轴垂直上升，反之，减小四个旋翼转速使总升力小于无人机自身重量后，无人机将垂直降落。在无外界干扰的情况下当总升力等于机体重量时无人机将保持悬停。</p>
 <p>前后运动（<strong>pitch</strong>）：如图b所示，3、4号旋翼转速增大，1、2号旋翼转速保持，前后升力差会导致无人机出现“前低后高”的姿态，旋翼推力在<strong>X轴正方向的分力</strong>将驱动无人机前进；同理当1、2号旋翼转速增大，3、4号旋翼转速不变时无人机将会后退。</p>
 <p>左右移动（<strong>roll</strong>）：与前后移动原理相同，在图c中，1、4号旋翼转速增大时无人机向左移动，2、3号旋翼转速增大时无人机向右移动。</p>
 <p>偏航运动（<strong>yaw</strong>）：如图d所示，当一对正转旋翼与一对反转旋翼转速相同时，产生的扭矩则相互抵消，无人机不旋转。和当1、3号旋翼转速增大而2、4号旋翼转速不变时，1、3号旋翼对机体产生的扭矩大于2、4号旋翼的反扭矩，因此无人机将绕Z轴进行逆时针旋转；反之，当2、4号旋翼转速大于1、3号旋翼转速时，无人机将绕Z轴顺时针旋转。</p>
-<h2 id="讲解视频"><a href="#讲解视频" class="headerlink" title="讲解视频"></a>讲解视频</h2><p>在MATLAB关于无人机仿真和控制的学习内容–<a href="https://www.youtube.com/watch?v=hGcGPUqB67Q" target="_blank" rel="noopener">Drone Simulation and Control, Part 1: Setting Up the Control Problem - YouTube</a>中，对无人机控制的基本框架进行一个简要介绍，涉及控制器、执行器以及传感器，中间融入算法和预期目标等。<img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205212254120.png" alt><br>视频中尤其重点介绍了无人机几种姿态（pitch, roll, yaw, thrust) 的演示过程，讲解得通俗易懂。视频中还说明无人机同向螺旋桨为何要对向放置，涉及重心以及偏航的问题。在讲解无人机左右平移时，展示了图片，说明螺旋桨推力分解为抵消重力的分力和左右移动的分力，对上文的一个图示补充。<img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205212257273.png" alt></p>
-<h1 id="参考内容"><a href="#参考内容" class="headerlink" title="参考内容"></a>参考内容</h1><p>Jared Maltos，<a href="http://ffden-2.phys.uaf.edu/webproj/211_fall_2018/J-Rod_Maltos/physics_4th.html" target="_blank" rel="noopener">The Flight Physics of Quadcopter Drones</a><br>Rhett Allain，<a href="https://www.wired.com/2017/05/the-physics-of-drones/" target="_blank" rel="noopener">How Do Drones Fly? Physics, of Course!</a><br>田家大院院士，<a href="https://zhuanlan.zhihu.com/p/353334071" target="_blank" rel="noopener">旋翼无人机的飞行原理是什么？</a><br>MATLAB，<a href="https://www.youtube.com/watch?v=hGcGPUqB67Q" target="_blank" rel="noopener">Drone Simulation and Control, Part 1: Setting Up the Control Problem - YouTube</a></p>
+<h2 id="讲解视频"><a href="#讲解视频" class="headerlink" title="讲解视频"></a>讲解视频</h2><p>在MATLAB关于无人机仿真和控制的学习内容–<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=hGcGPUqB67Q">Drone Simulation and Control, Part 1: Setting Up the Control Problem - YouTube</a>中，对无人机控制的基本框架进行一个简要介绍，涉及控制器、执行器以及传感器，中间融入算法和预期目标等。<img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205212254120.png" alt=""><br>视频中尤其重点介绍了无人机几种姿态（pitch, roll, yaw, thrust) 的演示过程，讲解得通俗易懂。视频中还说明无人机同向螺旋桨为何要对向放置，涉及重心以及偏航的问题。在讲解无人机左右平移时，展示了图片，说明螺旋桨推力分解为抵消重力的分力和左右移动的分力，对上文的一个图示补充。<img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205212257273.png" alt=""></p>
+<h1 id="参考内容"><a href="#参考内容" class="headerlink" title="参考内容"></a>参考内容</h1><p>Jared Maltos，<a target="_blank" rel="noopener" href="http://ffden-2.phys.uaf.edu/webproj/211_fall_2018/J-Rod_Maltos/physics_4th.html">The Flight Physics of Quadcopter Drones</a><br>Rhett Allain，<a target="_blank" rel="noopener" href="https://www.wired.com/2017/05/the-physics-of-drones/">How Do Drones Fly? Physics, of Course!</a><br>田家大院院士，<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/353334071">旋翼无人机的飞行原理是什么？</a><br>MATLAB，<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=hGcGPUqB67Q">Drone Simulation and Control, Part 1: Setting Up the Control Problem - YouTube</a></p>
 
             </div>
             <hr />
@@ -857,7 +731,7 @@
         </p>
         
             <div class="center-align">
-                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
                     <img alt=""
                          style="border-width:0"
                          src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
@@ -872,7 +746,7 @@
                rel="cc:attributionURL">
                 CHQ
             </a> 采用
-            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+            <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
                 知识共享署名 4.0 国际许可协议
             </a>进行许可。
         
@@ -1164,7 +1038,7 @@ const locale = {
                     <div class="card-image">
                         
                         
-                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/6.jpg" class="responsive-img" alt="专利基础知识">
+                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/12.jpg" class="responsive-img" alt="专利基础知识">
                         
                         <span class="card-title">专利基础知识</span>
                     </div>
@@ -1194,7 +1068,7 @@ const locale = {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/专利/" target="_blank">
+                    <a href="/tags/%E4%B8%93%E5%88%A9/" target="_blank">
                         <span class="chip bg-color">专利</span>
                     </a>
                     
@@ -1213,7 +1087,7 @@ const locale = {
                     <div class="card-image">
                         
                         
-                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/12.jpg" class="responsive-img" alt="博客首文">
+                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/6.jpg" class="responsive-img" alt="博客首文">
                         
                         <span class="card-title">博客首文</span>
                     </div>
@@ -1243,7 +1117,7 @@ const locale = {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/闲谈/" target="_blank">
+                    <a href="/tags/%E9%97%B2%E8%B0%88/" target="_blank">
                         <span class="chip bg-color">闲谈</span>
                     </a>
                     
@@ -1420,7 +1294,7 @@ const locale = {
            <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
            
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">11k
+            <span class="white-color">11.1k
              丨            
           
 
@@ -1476,7 +1350,7 @@ const locale = {
       <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">11k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">11.1k</span>
     </div>
  </footer>
 

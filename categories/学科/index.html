@@ -2,11 +2,11 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="分类: 学科, 好好学习，天天向上">
-    <meta name="baidu-site-verification" content="code-PTVUufeCmu">
-    <meta name="google-site-verification" content="H_OAfeXJS2dhmFZs88LTRApIS-Jv57k7vLIZVtbvViQ">
+    <meta name="baidu-site-verification" content="code-PTVUufeCmu" />
+    <meta name="google-site-verification" content="H_OAfeXJS2dhmFZs88LTRApIS-Jv57k7vLIZVtbvViQ" />
     <meta name="description" content="分类: 学科 | Haoqin`s Blog">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -26,7 +26,12 @@
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
     <style type="text/css">
-        
+        code[class*="language-"],
+            pre[class*="language-"] {
+                white-space: pre !important;
+            }
+
+            
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
@@ -70,7 +75,7 @@
         })();
     </script>
 
-    <meta name="baidu-site-verification" content>
+    <meta name="baidu-site-verification" content="" />
 
 
 
@@ -205,138 +210,7 @@
     };
     loaded();
 })()
- </script><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><style type="text/css" lang="css">
-    #loading-container{
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-height: 100vh;
-        width: 100vw;
-        z-index: 9999;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #FFF;
-        text-align: center;
-        /* loaderҳ����ʧ���ý����ķ�ʽ*/
-        -webkit-transition: opacity 1s ease;
-        -moz-transition: opacity 1s ease;
-        -o-transition: opacity 1s ease;
-        transition: opacity 1s ease;
-    }
-    .loading-image{
-        width: 120px;
-        height: 50px;
-        transform: translate(-50%);
-    }
-
-    .loading-image div:nth-child(2) {
-        -webkit-animation: pacman-balls 1s linear 0s infinite;
-        animation: pacman-balls 1s linear 0s infinite
-    }
-
-    .loading-image div:nth-child(3) {
-        -webkit-animation: pacman-balls 1s linear .33s infinite;
-        animation: pacman-balls 1s linear .33s infinite
-    }
-
-    .loading-image div:nth-child(4) {
-        -webkit-animation: pacman-balls 1s linear .66s infinite;
-        animation: pacman-balls 1s linear .66s infinite
-    }
-
-    .loading-image div:nth-child(5) {
-        -webkit-animation: pacman-balls 1s linear .99s infinite;
-        animation: pacman-balls 1s linear .99s infinite
-    }
-
-   .loading-image div:first-of-type {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
-        animation: rotate_pacman_half_up .5s 0s infinite;
-    }
-    .loading-image div:nth-child(2) {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
-        animation: rotate_pacman_half_down .5s 0s infinite;
-        margin-top: -50px;
-    }
-    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-
-    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-
-    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-
-    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-
-
-    .loading-image div:nth-child(3),
-    .loading-image div:nth-child(4),
-    .loading-image div:nth-child(5),
-    .loading-image div:nth-child(6){
-        background-color: #49b1f5;
-        width: 15px;
-        height: 15px;
-        border-radius: 100%;
-        margin: 2px;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        transform: translateY(-6.25px);
-        top: 25px;
-        left: 100px;
-    }
-    .loading-text{
-        margin-bottom: 20vh;
-        text-align: center;
-        color: #2c3e50;
-        font-size: 2rem;
-        box-sizing: border-box;
-        padding: 0 10px;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    @media only screen and (max-width: 500px) {
-         .loading-text{
-            font-size: 1.5rem;
-         }
-    }
-    .fadeout {
-        opacity: 0;
-        filter: alpha(opacity=0);
-    }
-    /* logo���ֶ��� */
-    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
-    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
- </style>
- <script>
-(function () {
-    const loaded = function(){
-       setTimeout(function(){
-            const loader = document.getElementById("loading-container");
-            loader.className="fadeout" ;//ʹ�ý����ķ�������loading page
-            // document.getElementById("body-wrap").style.display="flex";
-            setTimeout(function(){
-                loader.style.display="none";
-            },1000); 
-        },1000);//ǿ����ʾloading page 1s  
-    };
-    loaded();
-})()
- </script></head>
+ </script><meta name="generator" content="Hexo 6.0.0"></head>
 
 
  <div id="loading-container">
@@ -558,20 +432,20 @@ $('.bg-cover').css('background-image', 'url(https://s-gz-3816-tuchuang.oss.dogec
                 
                 
                 
-                <a href="/categories/UAV/" title="UAV: 5">
+                <a href="/categories/Blog/" title="Blog: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F9EBEA;">UAV
-                        <span class="tag-length">5</span>
+                            style="background-color: #F9EBEA;">Blog
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/Blog/" title="Blog: 2">
+                <a href="/categories/UAV/" title="UAV: 5">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F5EEF8;">Blog
-                        <span class="tag-length">2</span>
+                            style="background-color: #F5EEF8;">UAV
+                        <span class="tag-length">5</span>
                     </span>
                 </a>
                 
@@ -585,7 +459,7 @@ $('.bg-cover').css('background-image', 'url(https://s-gz-3816-tuchuang.oss.dogec
                 </a>
                 
                 
-                <a href="/categories/学科/" title="学科: 1">
+                <a href="/categories/%E5%AD%A6%E7%A7%91/" title="学科: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
                             style="background-color: #E8F8F5;">学科
@@ -610,7 +484,7 @@ $('.bg-cover').css('background-image', 'url(https://s-gz-3816-tuchuang.oss.dogec
                         <div class="card-image tag-image">
                             
                             
-                            <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/15.jpg" class="responsive-img" alt="概率论及数理统计的基本概念">
+                            <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/9.jpg" class="responsive-img" alt="概率论及数理统计的基本概念">
                             
                             <span class="card-title">概率论及数理统计的基本概念</span>
                         </div>
@@ -629,7 +503,7 @@ $('.bg-cover').css('background-image', 'url(https://s-gz-3816-tuchuang.oss.dogec
                                 
                                 <i class="fa fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/学科/" class="post-category" target="_blank">
+                                <a href="/categories/%E5%AD%A6%E7%A7%91/" class="post-category" target="_blank">
                                     学科
                                 </a>
                                 
@@ -641,7 +515,7 @@ $('.bg-cover').css('background-image', 'url(https://s-gz-3816-tuchuang.oss.dogec
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/数理统计/" target="_blank">
+                        <a href="/tags/%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" target="_blank">
                             <span class="chip bg-color">数理统计</span>
                         </a>
                         
@@ -664,7 +538,7 @@ $('.bg-cover').css('background-image', 'url(https://s-gz-3816-tuchuang.oss.dogec
            <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
            
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">11k
+            <span class="white-color">11.1k
              丨            
           
 
@@ -720,7 +594,7 @@ $('.bg-cover').css('background-image', 'url(https://s-gz-3816-tuchuang.oss.dogec
       <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">11k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">11.1k</span>
     </div>
  </footer>
 

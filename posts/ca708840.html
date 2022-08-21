@@ -2,11 +2,11 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="blog日常踩坑, 好好学习，天天向上">
-    <meta name="baidu-site-verification" content="code-PTVUufeCmu">
-    <meta name="google-site-verification" content="H_OAfeXJS2dhmFZs88LTRApIS-Jv57k7vLIZVtbvViQ">
+    <meta name="baidu-site-verification" content="code-PTVUufeCmu" />
+    <meta name="google-site-verification" content="H_OAfeXJS2dhmFZs88LTRApIS-Jv57k7vLIZVtbvViQ" />
     <meta name="description" content="本文主要是记录博客网站搭建过程中遇到的各种问题以及如何进行修改，集中在主题修改和网站加速这些部分，还是踩了不少坑的，记录下来方便查询。
 hexo博客：
 hexo 官方配置，可以详细看到hexo博客如何配置
@@ -29,7 +29,12 @@ url跟站点地图相关，需要填写gi">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
     <style type="text/css">
-        
+        code[class*="language-"],
+            pre[class*="language-"] {
+                white-space: pre !important;
+            }
+
+            
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
@@ -73,7 +78,7 @@ url跟站点地图相关，需要填写gi">
         })();
     </script>
 
-    <meta name="baidu-site-verification" content>
+    <meta name="baidu-site-verification" content="" />
 
 
 
@@ -208,138 +213,7 @@ url跟站点地图相关，需要填写gi">
     };
     loaded();
 })()
- </script><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><style type="text/css" lang="css">
-    #loading-container{
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-height: 100vh;
-        width: 100vw;
-        z-index: 9999;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #FFF;
-        text-align: center;
-        /* loaderҳ����ʧ���ý����ķ�ʽ*/
-        -webkit-transition: opacity 1s ease;
-        -moz-transition: opacity 1s ease;
-        -o-transition: opacity 1s ease;
-        transition: opacity 1s ease;
-    }
-    .loading-image{
-        width: 120px;
-        height: 50px;
-        transform: translate(-50%);
-    }
-
-    .loading-image div:nth-child(2) {
-        -webkit-animation: pacman-balls 1s linear 0s infinite;
-        animation: pacman-balls 1s linear 0s infinite
-    }
-
-    .loading-image div:nth-child(3) {
-        -webkit-animation: pacman-balls 1s linear .33s infinite;
-        animation: pacman-balls 1s linear .33s infinite
-    }
-
-    .loading-image div:nth-child(4) {
-        -webkit-animation: pacman-balls 1s linear .66s infinite;
-        animation: pacman-balls 1s linear .66s infinite
-    }
-
-    .loading-image div:nth-child(5) {
-        -webkit-animation: pacman-balls 1s linear .99s infinite;
-        animation: pacman-balls 1s linear .99s infinite
-    }
-
-   .loading-image div:first-of-type {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
-        animation: rotate_pacman_half_up .5s 0s infinite;
-    }
-    .loading-image div:nth-child(2) {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
-        animation: rotate_pacman_half_down .5s 0s infinite;
-        margin-top: -50px;
-    }
-    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-
-    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-
-    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-
-    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-
-
-    .loading-image div:nth-child(3),
-    .loading-image div:nth-child(4),
-    .loading-image div:nth-child(5),
-    .loading-image div:nth-child(6){
-        background-color: #49b1f5;
-        width: 15px;
-        height: 15px;
-        border-radius: 100%;
-        margin: 2px;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        transform: translateY(-6.25px);
-        top: 25px;
-        left: 100px;
-    }
-    .loading-text{
-        margin-bottom: 20vh;
-        text-align: center;
-        color: #2c3e50;
-        font-size: 2rem;
-        box-sizing: border-box;
-        padding: 0 10px;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    @media only screen and (max-width: 500px) {
-         .loading-text{
-            font-size: 1.5rem;
-         }
-    }
-    .fadeout {
-        opacity: 0;
-        filter: alpha(opacity=0);
-    }
-    /* logo���ֶ��� */
-    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
-    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
- </style>
- <script>
-(function () {
-    const loaded = function(){
-       setTimeout(function(){
-            const loader = document.getElementById("loading-container");
-            loader.className="fadeout" ;//ʹ�ý����ķ�������loading page
-            // document.getElementById("body-wrap").style.display="flex";
-            setTimeout(function(){
-                loader.style.display="none";
-            },1000); 
-        },1000);//ǿ����ʾloading page 1s  
-    };
-    loaded();
-})()
- </script></head>
+ </script><meta name="generator" content="Hexo 6.0.0"></head>
 
 
  <div id="loading-container">
@@ -521,7 +395,7 @@ url跟站点地图相关，需要填写gi">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/10.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -642,7 +516,7 @@ url跟站点地图相关，需要填写gi">
                             <span class="chip bg-color">matery</span>
                         </a>
                         
-                        <a href="/tags/网站/" target="_blank">
+                        <a href="/tags/%E7%BD%91%E7%AB%99/" target="_blank">
                             <span class="chip bg-color">网站</span>
                         </a>
                         
@@ -704,32 +578,32 @@ url跟站点地图相关，需要填写gi">
             <div id="articleContent">
                 <p>本文主要是记录博客网站搭建过程中遇到的各种问题以及如何进行修改，集中在主题修改和网站加速这些部分，还是踩了不少坑的，记录下来方便查询。</p>
 <h1 id="hexo博客："><a href="#hexo博客：" class="headerlink" title="hexo博客："></a><strong>hexo博客：</strong></h1><ul>
-<li><a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">hexo 官方配置</a>，可以详细看到hexo博客如何配置</li>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration.html">hexo 官方配置</a>，可以详细看到hexo博客如何配置</li>
 <li>url跟站点地图相关，需要填写github page网址或者自定义域名</li>
 <li>blog文件放在source的<code>_posts</code>文件夹中，在obsidian中将该文件夹作为库打开，子文件夹不影响md文件最后的发布。</li>
 <li>permalink网页永久链接，影响网页发布的地址，网页发布可以在<code>public</code>文件夹中看到，采用把网页放在<code>posts</code>文件夹中，并结合<code>abbrlink</code>重命名，简洁方便</li>
 <li>hexo迁移，可直接复制整个文件过去，然后确保<code>node.js</code>和<code>git</code>成功安装，随便找个文件夹在 <code>git bash</code> 中执行 <code>npm install -g hexo-cli</code>，这一步是安装<code>hexo</code>。执行<code>hexo init</code>(这一步已经复制了也许不用)，与github进行ssh就不讲了。可以将之前的.deploy_git和.git文件删除，执行<code>hexo cl &amp;&amp; hexo g &amp;&amp; hexo s</code> 进行预览</li>
 </ul>
 <h1 id="matery主题："><a href="#matery主题：" class="headerlink" title="matery主题："></a><strong>matery主题：</strong></h1><ul>
-<li>在<a href="https://www.materialpalette.com/colors" target="_blank" rel="noopener">Material Design Colors </a>中进行颜色的选择，自定义网页各部分的颜色</li>
+<li>在<a target="_blank" rel="noopener" href="https://www.materialpalette.com/colors">Material Design Colors </a>中进行颜色的选择，自定义网页各部分的颜色</li>
 <li>live2d需要在主题source中添加live2d-widget文件夹，对应layout文件夹中layout.ejs添加依赖等，根据自己的需要修改<code>autoload.js</code>文件的cdn路径</li>
 <li><code>\themes\matery\source\css\matery.css</code>网页颜色等进行修改：<code>.bg-cover.container</code>和<code>bg-cover .description</code>对应首页标题及诗词（文章标题）颜色</li>
-<li>评论系统的添加，<a href="https://cimoc.cn/2022/02/16/hexo-next-valine-leancloud/#%E4%B8%80%E3%80%81%E6%B3%A8%E5%86%8C" target="_blank" rel="noopener">Hexo-Next/Matery 基于 LearnCloud 添加 Valine 评论系统 | Cimoc</a></li>
+<li>评论系统的添加，<a target="_blank" rel="noopener" href="https://cimoc.cn/2022/02/16/hexo-next-valine-leancloud/#%E4%B8%80%E3%80%81%E6%B3%A8%E5%86%8C">Hexo-Next/Matery 基于 LearnCloud 添加 Valine 评论系统 | Cimoc</a></li>
 <li>使用了主题旧版本，所以没有文章更新日期，bg-cover-content.ejs和zh-CN.yml中添加更新日期对应内容。</li>
-<li>从安全性和方便性的角度出发，将valine换成waline，方便操作，将waline.ejs中的内容替代到valine.ejs中。具体配置可以参考[快速上手 | Waline]和<a href="https://hubojing.github.io/2022/01/14/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BAWaline%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" target="_blank" rel="noopener">博客更换为Waline评论系统 | 靖待的技术博客 </a></li>
-<li>鸿蒙字体的引入，在<code>my.css</code>文件中粘贴鸿蒙字体对应css文件，全局引用。<a href="https://gahotx.cn/posts/13a9d850.html" target="_blank" rel="noopener">免费商用字体-HarmonyOS Sans | Gahotx’s blog</a></li>
+<li>从安全性和方便性的角度出发，将valine换成waline，方便操作，将waline.ejs中的内容替代到valine.ejs中。具体配置可以参考[快速上手 | Waline]和<a target="_blank" rel="noopener" href="https://hubojing.github.io/2022/01/14/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BAWaline%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">博客更换为Waline评论系统 | 靖待的技术博客 </a></li>
+<li>鸿蒙字体的引入，在<code>my.css</code>文件中粘贴鸿蒙字体对应css文件，全局引用。<a target="_blank" rel="noopener" href="https://gahotx.cn/posts/13a9d850.html">免费商用字体-HarmonyOS Sans | Gahotx’s blog</a></li>
 <li>https网站不可以引用http的资源</li>
 </ul>
 <h1 id="网站加速："><a href="#网站加速：" class="headerlink" title="网站加速："></a><strong>网站加速：</strong></h1><ul>
-<li>将 cdn.jsdelivr.net 更换为 fastly.jsdelivr.net———<a href="https://www.hurbai.com/jishu/697" target="_blank" rel="noopener">jsdelivr cdn 挂了不能访问替代方案 - 大灰hurbai</a></li>
-<li>看起来挺方便的，还没有尝试，<a href="https://github.com/PipecraftNet/jsdelivr-auto-fallback" target="_blank" rel="noopener">GitHub - PipecraftNet/jsdelivr-auto-fallback: 修复 cdn.jsdelivr.net 无法访问的问题</a></li>
-<li>（已放弃，免费但不够方便）项目中静态文件替换,使用阿里云<a href="https://unicloud.dcloud.net.cn/" target="_blank" rel="noopener">uniCloud云存储</a>— <a href="https://blog.csdn.net/weixin_45525272/article/details/124820135" target="_blank" rel="noopener">jsdelivr cdn大陆挂了不能访问替代方案_流楚丶格念的博客-CSDN博客</a></li>
+<li>将 cdn.jsdelivr.net 更换为 fastly.jsdelivr.net———<a target="_blank" rel="noopener" href="https://www.hurbai.com/jishu/697">jsdelivr cdn 挂了不能访问替代方案 - 大灰hurbai</a></li>
+<li>看起来挺方便的，还没有尝试，<a target="_blank" rel="noopener" href="https://github.com/PipecraftNet/jsdelivr-auto-fallback">GitHub - PipecraftNet/jsdelivr-auto-fallback: 修复 cdn.jsdelivr.net 无法访问的问题</a></li>
+<li>（已放弃，免费但不够方便）项目中静态文件替换,使用阿里云<a target="_blank" rel="noopener" href="https://unicloud.dcloud.net.cn/">uniCloud云存储</a>— <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45525272/article/details/124820135">jsdelivr cdn大陆挂了不能访问替代方案_流楚丶格念的博客-CSDN博客</a></li>
 <li>github图床外网访问慢，使用dogecloud存储空间作为图床</li>
 <li>github可以直接登录vercel，进行仓库导入，部署到vercel（速度跟github page五五开）</li>
 <li>vercel国内速度堪忧，自定义域名后尝试cloudflare加速</li>
-<li><a href="https://cloud.tencent.com/developer/article/1926007" target="_blank" rel="noopener">腾讯云静态网站托管</a>，国内打开速度很快，静态网站托管天然支持 CDN 加速，流量的费用是0.21/GB，自定义域名需要备案支持。</li>
-<li><a href="https://gahotx.cn/posts/78431b52.html" target="_blank" rel="noopener">教你如何“榨干”免费的多吉云 | Gahotx’s blog</a>，使用多吉云加速网站</li>
-<li>网站进行cdn加速，多次出现Forward Loop Detect提示，怀疑是重定向问题，将网页域名绑定为二级域名，暂时解决了。<a href="https://www.zywvvd.com/notes/hexo/website/7-hexo-speed-up/hexo-speed-up/" target="_blank" rel="noopener">Hexo -7- Github源七牛云CDN加速教程（详细） - 又见苍岚</a></li>
+<li><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1926007">腾讯云静态网站托管</a>，国内打开速度很快，静态网站托管天然支持 CDN 加速，流量的费用是0.21/GB，自定义域名需要备案支持。</li>
+<li><a target="_blank" rel="noopener" href="https://gahotx.cn/posts/78431b52.html">教你如何“榨干”免费的多吉云 | Gahotx’s blog</a>，使用多吉云加速网站</li>
+<li>网站进行cdn加速，多次出现Forward Loop Detect提示，怀疑是重定向问题，将网页域名绑定为二级域名，暂时解决了。<a target="_blank" rel="noopener" href="https://www.zywvvd.com/notes/hexo/website/7-hexo-speed-up/hexo-speed-up/">Hexo -7- Github源七牛云CDN加速教程（详细） - 又见苍岚</a></li>
 </ul>
 <h1 id="网站域名："><a href="#网站域名：" class="headerlink" title="网站域名："></a><strong>网站域名：</strong></h1><ul>
 <li>谷歌站点添加失败，放弃网址前缀，采用域名dns验证</li>
@@ -889,7 +763,7 @@ url跟站点地图相关，需要填写gi">
         </p>
         
             <div class="center-align">
-                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
                     <img alt=""
                          style="border-width:0"
                          src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
@@ -904,7 +778,7 @@ url跟站点地图相关，需要填写gi">
                rel="cc:attributionURL">
                 CHQ
             </a> 采用
-            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+            <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
                 知识共享署名 4.0 国际许可协议
             </a>进行许可。
         
@@ -1196,7 +1070,7 @@ const locale = {
                     <div class="card-image">
                         
                         
-                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/3.jpg" class="responsive-img" alt="无人机实操基本操作">
+                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/33.jpg" class="responsive-img" alt="无人机实操基本操作">
                         
                         <span class="card-title">无人机实操基本操作</span>
                     </div>
@@ -1226,7 +1100,7 @@ const locale = {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/实操/" target="_blank">
+                    <a href="/tags/%E5%AE%9E%E6%93%8D/" target="_blank">
                         <span class="chip bg-color">实操</span>
                     </a>
                     
@@ -1245,7 +1119,7 @@ const locale = {
                     <div class="card-image">
                         
                         
-                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/28.jpg" class="responsive-img" alt="1. Introduction to Aerial Robotics">
+                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/34.jpg" class="responsive-img" alt="1. Introduction to Aerial Robotics">
                         
                         <span class="card-title">1. Introduction to Aerial Robotics</span>
                     </div>
@@ -1437,7 +1311,7 @@ const locale = {
            <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
            
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">11k
+            <span class="white-color">11.1k
              丨            
           
 
@@ -1493,7 +1367,7 @@ const locale = {
       <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">11k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">11.1k</span>
     </div>
  </footer>
 

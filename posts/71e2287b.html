@@ -2,11 +2,11 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="博客首文, 好好学习，天天向上">
-    <meta name="baidu-site-verification" content="code-PTVUufeCmu">
-    <meta name="google-site-verification" content="H_OAfeXJS2dhmFZs88LTRApIS-Jv57k7vLIZVtbvViQ">
+    <meta name="baidu-site-verification" content="code-PTVUufeCmu" />
+    <meta name="google-site-verification" content="H_OAfeXJS2dhmFZs88LTRApIS-Jv57k7vLIZVtbvViQ" />
     <meta name="description" content="前言
 爱折腾的心可能是我搭建博客的主因吧，看到师兄和网上其他人的博客，心中就冒出了自己也搭建一个博客的想法，有了想法，就会去做。
 
@@ -29,7 +29,12 @@
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
     <style type="text/css">
-        
+        code[class*="language-"],
+            pre[class*="language-"] {
+                white-space: pre !important;
+            }
+
+            
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
@@ -73,7 +78,7 @@
         })();
     </script>
 
-    <meta name="baidu-site-verification" content>
+    <meta name="baidu-site-verification" content="" />
 
 
 
@@ -208,138 +213,7 @@
     };
     loaded();
 })()
- </script><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><style type="text/css" lang="css">
-    #loading-container{
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-height: 100vh;
-        width: 100vw;
-        z-index: 9999;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #FFF;
-        text-align: center;
-        /* loaderҳ����ʧ���ý����ķ�ʽ*/
-        -webkit-transition: opacity 1s ease;
-        -moz-transition: opacity 1s ease;
-        -o-transition: opacity 1s ease;
-        transition: opacity 1s ease;
-    }
-    .loading-image{
-        width: 120px;
-        height: 50px;
-        transform: translate(-50%);
-    }
-
-    .loading-image div:nth-child(2) {
-        -webkit-animation: pacman-balls 1s linear 0s infinite;
-        animation: pacman-balls 1s linear 0s infinite
-    }
-
-    .loading-image div:nth-child(3) {
-        -webkit-animation: pacman-balls 1s linear .33s infinite;
-        animation: pacman-balls 1s linear .33s infinite
-    }
-
-    .loading-image div:nth-child(4) {
-        -webkit-animation: pacman-balls 1s linear .66s infinite;
-        animation: pacman-balls 1s linear .66s infinite
-    }
-
-    .loading-image div:nth-child(5) {
-        -webkit-animation: pacman-balls 1s linear .99s infinite;
-        animation: pacman-balls 1s linear .99s infinite
-    }
-
-   .loading-image div:first-of-type {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
-        animation: rotate_pacman_half_up .5s 0s infinite;
-    }
-    .loading-image div:nth-child(2) {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
-        animation: rotate_pacman_half_down .5s 0s infinite;
-        margin-top: -50px;
-    }
-    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-
-    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-
-    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-
-    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-
-
-    .loading-image div:nth-child(3),
-    .loading-image div:nth-child(4),
-    .loading-image div:nth-child(5),
-    .loading-image div:nth-child(6){
-        background-color: #49b1f5;
-        width: 15px;
-        height: 15px;
-        border-radius: 100%;
-        margin: 2px;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        transform: translateY(-6.25px);
-        top: 25px;
-        left: 100px;
-    }
-    .loading-text{
-        margin-bottom: 20vh;
-        text-align: center;
-        color: #2c3e50;
-        font-size: 2rem;
-        box-sizing: border-box;
-        padding: 0 10px;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    @media only screen and (max-width: 500px) {
-         .loading-text{
-            font-size: 1.5rem;
-         }
-    }
-    .fadeout {
-        opacity: 0;
-        filter: alpha(opacity=0);
-    }
-    /* logo���ֶ��� */
-    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
-    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
- </style>
- <script>
-(function () {
-    const loaded = function(){
-       setTimeout(function(){
-            const loader = document.getElementById("loading-container");
-            loader.className="fadeout" ;//ʹ�ý����ķ�������loading page
-            // document.getElementById("body-wrap").style.display="flex";
-            setTimeout(function(){
-                loader.style.display="none";
-            },1000); 
-        },1000);//ǿ����ʾloading page 1s  
-    };
-    loaded();
-})()
- </script></head>
+ </script><meta name="generator" content="Hexo 6.0.0"></head>
 
 
  <div id="loading-container">
@@ -521,7 +395,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/6.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -638,7 +512,7 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/闲谈/" target="_blank">
+                        <a href="/tags/%E9%97%B2%E8%B0%88/" target="_blank">
                             <span class="chip bg-color">闲谈</span>
                         </a>
                         
@@ -707,7 +581,7 @@
 <li><p><strong>MUYIio对应博客教程地址：</strong></p>
 </li>
 </ul>
-<p><a href="https://www.yshawlon.cn/1.html" title="Github + Hexo 搭建个人博客超详细教程" target="_blank" rel="noopener">《Github + Hexo 搭建个人博客超详细教程》</a>   ( By   yzhao )</p>
+<p><a target="_blank" rel="noopener" href="https://www.yshawlon.cn/1.html" title="Github + Hexo 搭建个人博客超详细教程">《Github + Hexo 搭建个人博客超详细教程》</a>   ( By   yzhao )</p>
 <ul>
 <li><p>现在博客的想法也很简单，记录自己的学习上的相关东西，相当于一个变相的笔记整理；然后记录一下自己生活工作中遇到的问题的处理方法，记录一些生活的瞬间和感悟。</p>
 <p>不过还是想法，能不能做到也挺难说的，毕竟人比较懒，喜欢折腾，但坚持总是不易的。</p>
@@ -864,7 +738,7 @@
         </p>
         
             <div class="center-align">
-                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
                     <img alt=""
                          style="border-width:0"
                          src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
@@ -879,7 +753,7 @@
                rel="cc:attributionURL">
                 CHQ
             </a> 采用
-            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+            <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
                 知识共享署名 4.0 国际许可协议
             </a>进行许可。
         
@@ -1171,7 +1045,7 @@ const locale = {
                     <div class="card-image">
                         
                         
-                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/9.jpg" class="responsive-img" alt="无人机基础物理概念">
+                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/3.jpg" class="responsive-img" alt="无人机基础物理概念">
                         
                         <span class="card-title">无人机基础物理概念</span>
                     </div>
@@ -1201,7 +1075,7 @@ const locale = {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/动力学/" target="_blank">
+                    <a href="/tags/%E5%8A%A8%E5%8A%9B%E5%AD%A6/" target="_blank">
                         <span class="chip bg-color">动力学</span>
                     </a>
                     
@@ -1220,7 +1094,7 @@ const locale = {
                     <div class="card-image">
                         
                         
-                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/12.jpg" class="responsive-img" alt="博客首文">
+                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/6.jpg" class="responsive-img" alt="博客首文">
                         
                         <span class="card-title">博客首文</span>
                     </div>
@@ -1251,7 +1125,7 @@ const locale = {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/闲谈/" target="_blank">
+                    <a href="/tags/%E9%97%B2%E8%B0%88/" target="_blank">
                         <span class="chip bg-color">闲谈</span>
                     </a>
                     
@@ -1409,7 +1283,7 @@ const locale = {
            <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
            
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">11k
+            <span class="white-color">11.1k
              丨            
           
 
@@ -1465,7 +1339,7 @@ const locale = {
       <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">11k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">11.1k</span>
     </div>
  </footer>
 

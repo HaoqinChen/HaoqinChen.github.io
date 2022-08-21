@@ -2,11 +2,11 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="P450无人机, 好好学习，天天向上">
-    <meta name="baidu-site-verification" content="code-PTVUufeCmu">
-    <meta name="google-site-verification" content="H_OAfeXJS2dhmFZs88LTRApIS-Jv57k7vLIZVtbvViQ">
+    <meta name="baidu-site-verification" content="code-PTVUufeCmu" />
+    <meta name="google-site-verification" content="H_OAfeXJS2dhmFZs88LTRApIS-Jv57k7vLIZVtbvViQ" />
     <meta name="description" content="P450是阿木实验室出品的无人机。其官方简介为：Prometheus450（简称P450）是一款专为科研工作者及无人机开发者设计的无人机实验平台，适用于无人机专业应用研究和开发。本开发平台基于Prometheus开源项目，提供丰富的demo">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -26,7 +26,12 @@
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
     <style type="text/css">
-        
+        code[class*="language-"],
+            pre[class*="language-"] {
+                white-space: pre !important;
+            }
+
+            
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
@@ -70,7 +75,7 @@
         })();
     </script>
 
-    <meta name="baidu-site-verification" content>
+    <meta name="baidu-site-verification" content="" />
 
 
 
@@ -205,138 +210,7 @@
     };
     loaded();
 })()
- </script><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><style type="text/css" lang="css">
-    #loading-container{
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-height: 100vh;
-        width: 100vw;
-        z-index: 9999;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #FFF;
-        text-align: center;
-        /* loaderҳ����ʧ���ý����ķ�ʽ*/
-        -webkit-transition: opacity 1s ease;
-        -moz-transition: opacity 1s ease;
-        -o-transition: opacity 1s ease;
-        transition: opacity 1s ease;
-    }
-    .loading-image{
-        width: 120px;
-        height: 50px;
-        transform: translate(-50%);
-    }
-
-    .loading-image div:nth-child(2) {
-        -webkit-animation: pacman-balls 1s linear 0s infinite;
-        animation: pacman-balls 1s linear 0s infinite
-    }
-
-    .loading-image div:nth-child(3) {
-        -webkit-animation: pacman-balls 1s linear .33s infinite;
-        animation: pacman-balls 1s linear .33s infinite
-    }
-
-    .loading-image div:nth-child(4) {
-        -webkit-animation: pacman-balls 1s linear .66s infinite;
-        animation: pacman-balls 1s linear .66s infinite
-    }
-
-    .loading-image div:nth-child(5) {
-        -webkit-animation: pacman-balls 1s linear .99s infinite;
-        animation: pacman-balls 1s linear .99s infinite
-    }
-
-   .loading-image div:first-of-type {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
-        animation: rotate_pacman_half_up .5s 0s infinite;
-    }
-    .loading-image div:nth-child(2) {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
-        animation: rotate_pacman_half_down .5s 0s infinite;
-        margin-top: -50px;
-    }
-    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-
-    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-
-    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-
-    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-
-
-    .loading-image div:nth-child(3),
-    .loading-image div:nth-child(4),
-    .loading-image div:nth-child(5),
-    .loading-image div:nth-child(6){
-        background-color: #49b1f5;
-        width: 15px;
-        height: 15px;
-        border-radius: 100%;
-        margin: 2px;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        transform: translateY(-6.25px);
-        top: 25px;
-        left: 100px;
-    }
-    .loading-text{
-        margin-bottom: 20vh;
-        text-align: center;
-        color: #2c3e50;
-        font-size: 2rem;
-        box-sizing: border-box;
-        padding: 0 10px;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    @media only screen and (max-width: 500px) {
-         .loading-text{
-            font-size: 1.5rem;
-         }
-    }
-    .fadeout {
-        opacity: 0;
-        filter: alpha(opacity=0);
-    }
-    /* logo���ֶ��� */
-    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
-    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
- </style>
- <script>
-(function () {
-    const loaded = function(){
-       setTimeout(function(){
-            const loader = document.getElementById("loading-container");
-            loader.className="fadeout" ;//ʹ�ý����ķ�������loading page
-            // document.getElementById("body-wrap").style.display="flex";
-            setTimeout(function(){
-                loader.style.display="none";
-            },1000); 
-        },1000);//ǿ����ʾloading page 1s  
-    };
-    loaded();
-})()
- </script></head>
+ </script><meta name="generator" content="Hexo 6.0.0"></head>
 
 
  <div id="loading-container">
@@ -518,7 +392,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/34.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/4.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -696,7 +570,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>P450是阿木实验室出品的无人机。其官方简介为：Prometheus450（简称P450）是一款专为科研工作者及无人机开发者设计的无人机实验平台，适用于无人机专业应用研究和开发。本开发平台基于Prometheus开源项目，提供丰富的demo例程，涵盖控制模块、slam模块、规划模块以及目标检测模块等多个无人机及机器视觉相关研究方向。</p>
-<p>常用的文档：<br><a href="https://wiki.amovlab.com/public/prometheuswiki/P450%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html" target="_blank" rel="noopener">P450使用手册 - P系列无人机文档</a><br><a href="https://github.com/amov-lab/Prometheus/wiki" target="_blank" rel="noopener">Home · amov-lab/Prometheus Wiki · GitHub</a><br><a href="https://wiki.amovlab.com/public/prometheus-wiki/" target="_blank" rel="noopener">Prometheus-自主无人机开源项目 - Prometheus使用手册</a><br><a href="https://docs.px4.io/master/zh/" target="_blank" rel="noopener">PX4 自动驾驶用户指南</a></p>
+<p>常用的文档：<br><a target="_blank" rel="noopener" href="https://wiki.amovlab.com/public/prometheuswiki/P450%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html">P450使用手册 - P系列无人机文档</a><br><a target="_blank" rel="noopener" href="https://github.com/amov-lab/Prometheus/wiki">Home · amov-lab/Prometheus Wiki · GitHub</a><br><a target="_blank" rel="noopener" href="https://wiki.amovlab.com/public/prometheus-wiki/">Prometheus-自主无人机开源项目 - Prometheus使用手册</a><br><a target="_blank" rel="noopener" href="https://docs.px4.io/master/zh/">PX4 自动驾驶用户指南</a></p>
 <h1 id="软硬件词汇"><a href="#软硬件词汇" class="headerlink" title="软硬件词汇"></a>软硬件词汇</h1><ul>
 <li>Prometheus：无人机开源项目，开源仿真代码以及基础机载飞行代码</li>
 <li>QGroundControl(QGC)：地面站，连接到飞机，监控到飞机本身的状态</li>
@@ -707,7 +581,7 @@
 <li>Flight Control Unit(FCU)：飞行控制单元</li>
 </ul>
 <h1 id="软硬件框架"><a href="#软硬件框架" class="headerlink" title="软硬件框架"></a>软硬件框架</h1><ul>
-<li><p><strong>P450硬件框架</strong><br><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205301204416.png" alt></p>
+<li><p><strong>P450硬件框架</strong><br><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205301204416.png" alt=""></p>
 </li>
 <li><p><em>T265双目相机*</em>：采用优化后的V-SLAM算法</p>
 </li>
@@ -717,7 +591,7 @@
 </li>
 <li><p><em>激光雷达*</em>：测量半径40m</p>
 </li>
-<li><p><strong>Prometheus软件框架</strong><br><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205301211397.png" alt></p>
+<li><p><strong>Prometheus软件框架</strong><br><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205301211397.png" alt=""></p>
 </li>
 </ul>
 <h1 id="遥控器模式"><a href="#遥控器模式" class="headerlink" title="遥控器模式"></a>遥控器模式</h1><ul>
@@ -883,7 +757,7 @@
         </p>
         
             <div class="center-align">
-                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
                     <img alt=""
                          style="border-width:0"
                          src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
@@ -898,7 +772,7 @@
                rel="cc:attributionURL">
                 CHQ
             </a> 采用
-            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+            <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
                 知识共享署名 4.0 国际许可协议
             </a>进行许可。
         
@@ -1190,7 +1064,7 @@ const locale = {
                     <div class="card-image">
                         
                         
-                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/31.jpg" class="responsive-img" alt="ROS工作及通信机制">
+                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/1.jpg" class="responsive-img" alt="ROS工作及通信机制">
                         
                         <span class="card-title">ROS工作及通信机制</span>
                     </div>
@@ -1220,7 +1094,7 @@ const locale = {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/课程/" target="_blank">
+                    <a href="/tags/%E8%AF%BE%E7%A8%8B/" target="_blank">
                         <span class="chip bg-color">课程</span>
                     </a>
                     
@@ -1239,7 +1113,7 @@ const locale = {
                     <div class="card-image">
                         
                         
-                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/33.jpg" class="responsive-img" alt="ROS概念及命令行工具">
+                        <img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/medias/featureimages/27.jpg" class="responsive-img" alt="ROS概念及命令行工具">
                         
                         <span class="card-title">ROS概念及命令行工具</span>
                     </div>
@@ -1269,7 +1143,7 @@ const locale = {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/课程/" target="_blank">
+                    <a href="/tags/%E8%AF%BE%E7%A8%8B/" target="_blank">
                         <span class="chip bg-color">课程</span>
                     </a>
                     
@@ -1427,7 +1301,7 @@ const locale = {
            <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
            
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">11k
+            <span class="white-color">11.1k
              丨            
           
 
@@ -1483,7 +1357,7 @@ const locale = {
       <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">11k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">11.1k</span>
     </div>
  </footer>
 

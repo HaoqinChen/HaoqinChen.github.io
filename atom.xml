@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://haoqin.vip/"/>
-  <updated>2022-08-20T13:25:44.726Z</updated>
+  <updated>2022-08-21T03:05:33.751Z</updated>
   <id>https://haoqin.vip/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://haoqin.vip/posts/bf62b2d6.html"/>
     <id>https://haoqin.vip/posts/bf62b2d6.html</id>
     <published>2022-08-20T13:00:00.000Z</published>
-    <updated>2022-08-20T13:25:44.726Z</updated>
+    <updated>2022-08-21T03:05:33.751Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
       
         
         
-          &lt;p&gt;ROS具有一套自己的工作流程，其文件体系依托在工作空间中，开发的流程如下图所示。&lt;br&gt;&lt;img src=&quot;https://image.haoqin.vip/2022/08/202208201040585.png&quot; alt&gt;&lt;br&gt;如果是 python
+          &lt;p&gt;ROS具有一套自己的工作流程，其文件体系依托在工作空间中，开发的流程如下图所示。&lt;br&gt;&lt;img src=&quot;https://image.haoqin.vip/2022/08/202208201040585.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;如果是 python
         
       
     
@@ -189,7 +189,7 @@
       
         
         
-          &lt;p&gt;&lt;a href=&quot;https://www.coursera.org/learn/robotics-flight/home/week/1&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Robotics: Aerial
+          &lt;p&gt;&lt;a href=&quot;https://www.coursera.org/learn/robotics-flight/home/week/1&quot;&gt;Robotics: Aerial Robotics&lt;/a&gt;是由宾夕法尼亚大学Vijay Kuma开展的无人机课程，本文是1.1节
         
       
     
