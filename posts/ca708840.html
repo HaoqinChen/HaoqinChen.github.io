@@ -574,6 +574,15 @@ url跟站点地图相关，需要填写gi">
             </div>
         </div>
         <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+
+        
+
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>本文主要是记录博客网站搭建过程中遇到的各种问题以及如何进行修改，集中在主题修改和网站加速这些部分，还是踩了不少坑的，记录下来方便查询。</p>
@@ -1188,7 +1197,7 @@ const locale = {
 
         // we need a <pre> tag workaround.
         // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
             newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
         }
 
@@ -1203,6 +1212,31 @@ const locale = {
         window.setTimeout(function () { bodyElement.removeChild(newdiv); }, 200);
     });
 </script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
 
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">

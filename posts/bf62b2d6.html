@@ -568,6 +568,15 @@
             </div>
         </div>
         <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+
+        
+
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>ROS具有一套自己的工作流程，其文件体系依托在工作空间中，开发的流程如下图所示。<br><img src="https://image.haoqin.vip/2022/08/202208201040585.png" alt=""><br>如果是 python 代码则不需要配置编译规则。</p>
@@ -576,12 +585,13 @@
 <li>src：<strong>代码空间</strong>（Source Space）：放置功能包代码</li>
 <li>build：<strong>编译空间</strong>（Build Space）：编译过程中产生的中间文件，不用过多关注</li>
 <li>devel：<strong>开发空间</strong>（Development Space）：放置编译生成的可执行文件、库、脚本</li>
-<li>install：<strong>安装空间</strong>（Install Space）：存放可执行文件，与上面有一定重复<h2 id="创建工作空间"><a href="#创建工作空间" class="headerlink" title="创建工作空间"></a>创建工作空间</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#创建工作空间指令</span>
+<li>install：<strong>安装空间</strong>（Install Space）：存放可执行文件，与上面有一定重复<h2 id="创建工作空间"><a href="#创建工作空间" class="headerlink" title="创建工作空间"></a>创建工作空间</h2></li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#创建工作空间指令</span>
 <span class="token function">mkdir</span> -p ~/catkin_ws/src
 <span class="token builtin class-name">cd</span> ~/catkin_ws/src
 catkin_init_workspace<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-我们先创建一个src文件夹，然后进入该文件夹<br>第3行<code>catkin_init_workspace</code>意为将当前文件夹变为工作空间，使其拥有工作空间的属性<br>注：“~/”意为当前用户名目录；“-p”意为递归创建目录，即直接创建多级目录。<br>src文件夹即代码空间，不能自行用别的名称代替</li>
-</ul>
+<p>我们先创建一个src文件夹，然后进入该文件夹<br>第3行<code>catkin_init_workspace</code>意为将当前文件夹变为工作空间，使其拥有工作空间的属性<br>注：“~/”意为当前用户名目录；“-p”意为递归创建目录，即直接创建多级目录。<br>src文件夹即代码空间，不能自行用别的名称代替</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#编译空的工作空间</span>
 <span class="token builtin class-name">cd</span> ~/catkin_ws/  
 catkin_make <span class="token comment">#将src里的源码进行了编译</span>
@@ -1396,7 +1406,7 @@ const locale = {
 
         // we need a <pre> tag workaround.
         // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
             newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
         }
 
@@ -1411,6 +1421,31 @@ const locale = {
         window.setTimeout(function () { bodyElement.removeChild(newdiv); }, 200);
     });
 </script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
 
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">

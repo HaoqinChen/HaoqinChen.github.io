@@ -567,6 +567,15 @@
             </div>
         </div>
         <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+
+        
+
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>P450是阿木实验室出品的无人机。其官方简介为：Prometheus450（简称P450）是一款专为科研工作者及无人机开发者设计的无人机实验平台，适用于无人机专业应用研究和开发。本开发平台基于Prometheus开源项目，提供丰富的demo例程，涵盖控制模块、slam模块、规划模块以及目标检测模块等多个无人机及机器视觉相关研究方向。</p>
@@ -1178,7 +1187,7 @@ const locale = {
 
         // we need a <pre> tag workaround.
         // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
             newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
         }
 
@@ -1193,6 +1202,31 @@ const locale = {
         window.setTimeout(function () { bodyElement.removeChild(newdiv); }, 200);
     });
 </script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
 
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">

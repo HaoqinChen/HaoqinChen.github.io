@@ -568,6 +568,15 @@
             </div>
         </div>
         <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+
+        
+
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>本文主要是根据21年在成都进行P450的实操培训文稿组织而成的，主要是进行<strong>定点飞行，指点飞行，圆框跟踪，室内避障</strong>这四个基本模块的操作。</p>
@@ -1166,7 +1175,7 @@ const locale = {
 
         // we need a <pre> tag workaround.
         // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
             newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
         }
 
@@ -1181,6 +1190,31 @@ const locale = {
         window.setTimeout(function () { bodyElement.removeChild(newdiv); }, 200);
     });
 </script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
 
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
