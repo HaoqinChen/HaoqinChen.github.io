@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://haoqin.vip/"/>
-  <updated>2022-08-21T07:17:15.912Z</updated>
+  <updated>2022-11-08T14:16:08.122Z</updated>
   <id>https://haoqin.vip/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python语言基本语法元素</title>
+    <link href="https://haoqin.vip/posts/8d216e5f.html"/>
+    <id>https://haoqin.vip/posts/8d216e5f.html</id>
+    <published>2022-11-08T13:00:00.000Z</published>
+    <updated>2022-11-08T14:16:08.122Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;程序的格式框架&quot;&gt;&lt;a href=&quot;#程序的格式框架&quot; class=&quot;headerlink&quot; title=&quot;程序的格式框架&quot;&gt;&lt;/a&gt;程序的格式框架&lt;/h1&gt;&lt;h2 id=&quot;缩进&quot;&gt;&lt;a href=&quot;#缩进&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://haoqin.vip/categories/Python/"/>
+    
+    
+      <category term="教程" scheme="https://haoqin.vip/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>ROS工作及通信机制</title>
