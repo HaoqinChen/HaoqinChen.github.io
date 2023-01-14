@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>工具技巧合集</title>
+      <link href="/posts/cffa0a0a.html"/>
+      <url>/posts/cffa0a0a.html</url>
+      
+        <content type="html"><![CDATA[<p>这一篇博文主要是记录在生活工作中用到的工具和技巧的一些说明合集，在需要的时候能够找到对应的使用说明，避免重复的检索。目前暂定为电脑和手机两大分类，遇到相关的就会进行<strong>持续更新:</strong></p><h1 id="PC"><a href="#PC" class="headerlink" title="PC"></a>PC</h1><h2 id="AudioRelay"><a href="#AudioRelay" class="headerlink" title="AudioRelay"></a>AudioRelay</h2><ul><li><strong>介绍：</strong>  音频软件，将电脑端的音频流传输到安卓设备。使用过，效果不错。</li><li><strong>教程：</strong> 在同一WiFi环境下，获取IP地址，一端作为服务器，一端作为播放器。<a href="https://www.xitongbuluo.com/jiaocheng/69938.html">audiorelay怎么用？audiorelay软件使用方法教程-系统部落</a></li><li><strong>网站：</strong> <a href="https://audiorelay.net/">Stream audio between your devices - AudioRelay</a><h2 id="SpaceSniffer"><a href="#SpaceSniffer" class="headerlink" title="SpaceSniffer"></a>SpaceSniffer</h2></li><li><strong>介绍：</strong> 空间检索软件，运行可以查看磁盘内不同文件的占用空间情况。</li><li><strong>教程：</strong> 在得到不同文件夹的占用情况后，可以复制占用大的文件名进行网络检索，判断其是否可以删除，以此达到减少磁盘空间占用的目的。</li><li><strong>网站：</strong> <a href="https://spacesniffer.en.softonic.com/">spacesniffer</a> ，<a href="http://www.tbtool.cn/">图吧工具箱 - 最纯净的硬件工具箱</a><h2 id="Auto-Mute"><a href="#Auto-Mute" class="headerlink" title="Auto Mute"></a>Auto Mute</h2></li><li><strong>介绍：</strong> 实现电脑在特定场景下（锁定等）自动静音。</li><li><strong>网站：</strong> <a href="https://auto-mute.com/">Auto Mute - Free software for PC and Mac</a><h2 id="Office-Tool-Plus"><a href="#Office-Tool-Plus" class="headerlink" title="Office Tool Plus"></a>Office Tool Plus</h2></li><li><strong>介绍：</strong> 安装office系列软件以及进行激活等。</li><li><strong>教程：</strong> <ul><li>1、以Office365为例，在部署界面选择Office365（企业或者家庭等都可以），64位，其它基本保持默认，选择想要安装的应用程序（基本的三件套：Word、PPT、Excel）。 2、开始部署后，等待安装完成（这个过程估计十分钟），接着进行激活操作，需要安装许可证，选择Office Mondo 2016-批量许可证，然后在KMS主机处输入主机地址（<strong>这一步尤其注意要保存设置</strong>），然后点击激活。</li><li>KMS主机有：Kms.loli.beer；kms.loli.best(端口1688)</li><li>安装前最好在工具箱进行移除Office，确保软件和许可证等都已经卸载干净。</li></ul></li><li><strong>网站：</strong> <a href="https://otp.landian.vip/zh-cn/">Office Tool Plus 官方网站 - 一键部署 Office</a><h1 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h1></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Life </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具技巧 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python语言基本语法元素</title>
       <link href="/posts/8d216e5f.html"/>
       <url>/posts/8d216e5f.html</url>

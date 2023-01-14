@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://haoqin.vip/"/>
-  <updated>2022-11-08T14:16:08.122Z</updated>
+  <updated>2023-01-14T13:16:46.659Z</updated>
   <id>https://haoqin.vip/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>工具技巧合集</title>
+    <link href="https://haoqin.vip/posts/cffa0a0a.html"/>
+    <id>https://haoqin.vip/posts/cffa0a0a.html</id>
+    <published>2022-12-07T13:00:00.000Z</published>
+    <updated>2023-01-14T13:16:46.659Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;这一篇博文主要是记录在生活工作中用到的工具和技巧的一些说明合集，在需要的时候能够找到对应的使用说明，避免重复的检索。目前暂定为电脑和手机两大分类，遇到相关的就会进行&lt;strong&gt;持续更新:&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;PC&quot;&gt;&lt;a href=&quot;#PC&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="https://haoqin.vip/categories/Life/"/>
+    
+    
+      <category term="工具技巧" scheme="https://haoqin.vip/tags/%E5%B7%A5%E5%85%B7%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Python语言基本语法元素</title>
     <link href="https://haoqin.vip/posts/8d216e5f.html"/>
     <id>https://haoqin.vip/posts/8d216e5f.html</id>
     <published>2022-11-08T13:00:00.000Z</published>
-    <updated>2022-11-08T14:16:08.122Z</updated>
+    <updated>2022-11-08T14:19:51.486Z</updated>
     
     <summary type="html">
     
