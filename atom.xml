@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://haoqin.vip/"/>
-  <updated>2023-01-14T13:24:00.535Z</updated>
+  <updated>2023-03-06T11:35:25.166Z</updated>
   <id>https://haoqin.vip/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python二级基础知识</title>
+    <link href="https://haoqin.vip/posts/2aa35565.html"/>
+    <id>https://haoqin.vip/posts/2aa35565.html</id>
+    <published>2023-02-28T11:35:00.000Z</published>
+    <updated>2023-03-06T11:35:25.166Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;此篇记录在学习Python计算机二级时候遇到的一些知识点，希望在这种方式中能够增进自己对这门语言的了解。&lt;/p&gt;
+&lt;h2 id=&quot;程序设计基本方法&quot;&gt;&lt;a href=&quot;#程序设计基本方法&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://haoqin.vip/categories/Python/"/>
+    
+    
+      <category term="知识" scheme="https://haoqin.vip/tags/%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
   
   <entry>
     <title>工具技巧合集</title>
@@ -205,7 +232,7 @@
     <link href="https://haoqin.vip/posts/ca708840.html"/>
     <id>https://haoqin.vip/posts/ca708840.html</id>
     <published>2022-06-11T13:00:00.000Z</published>
-    <updated>2022-08-21T09:18:34.063Z</updated>
+    <updated>2023-03-06T13:38:35.540Z</updated>
     
     <summary type="html">
     

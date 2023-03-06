@@ -4,10 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ROS概念及命令行工具, 好好学习，天天向上">
+    <meta name="keywords" content="Python二级基础知识, 好好学习，天天向上">
     <meta name="baidu-site-verification" content="code-PTVUufeCmu" />
     <meta name="google-site-verification" content="H_OAfeXJS2dhmFZs88LTRApIS-Jv57k7vLIZVtbvViQ" />
-    <meta name="description" content="ROS：Robot Operating System，机器人操作系统。ROS是一种分布式机器人操作系统，依赖于linux（一般支持的linux系统有ubuntu系列与debian系列），由斯坦福发布，目前，很多机器人的研究都是基于它。在古月">
+    <meta name="description" content="此篇记录在学习Python计算机二级时候遇到的一些知识点，希望在这种方式中能够增进自己对这门语言的了解。
+程序设计基本方法
+Python解释器本身并不直接支持自然语言编程，但可以使用各种NLP库和工具来支持自然语言编程
+Python语言是一">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>ROS概念及命令行工具 | Haoqin`s Blog</title>
+    <title>Python二级基础知识 | Haoqin`s Blog</title>
     <link rel="icon" type="image/svg+xml" href="https://image.haoqin.vip/medias/fish32.svg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -392,13 +395,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://image.haoqin.vip/medias/featureimages/28.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://image.haoqin.vip/medias/featureimages/18.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        ROS概念及命令行工具
+                        Python二级基础知识
                     </div>
                 </div>
             </div>
@@ -509,8 +512,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/%E8%AF%BE%E7%A8%8B/" target="_blank">
-                            <span class="chip bg-color">课程</span>
+                        <a href="/tags/%E7%9F%A5%E8%AF%86/" target="_blank">
+                            <span class="chip bg-color">知识</span>
                         </a>
                         
                     </div>
@@ -521,8 +524,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/ROS/" class="post-category" target="_blank">
-                            ROS
+                        <a href="/categories/Python/" class="post-category" target="_blank">
+                            Python
                         </a>
                         
                     </div>
@@ -533,12 +536,12 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-08-13
+                    2023-02-28
                 </div>
 
            <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-08-18
+                    2023-03-06
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -552,14 +555,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    540
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    1 分
                 </div>
                 
                 
@@ -578,91 +581,22 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>ROS：Robot Operating System</strong>，机器人操作系统。ROS是一种分布式机器人操作系统，依赖于linux（一般支持的linux系统有ubuntu系列与debian系列），由斯坦福发布，目前，很多机器人的研究都是基于它。在古月居的定义理解中，ROS = 通信机制 + 开发工具 + 应用功能 + 生态系统。<br>从网上教程数量角度和无人机仿真项目Prometheus的应用角度出发，我学习使用的是<strong>Ubuntu 18.04</strong>长期支持版本，学习教程主要是根据古月居的《ROS入门21讲》。ROS2据说支持windows系统，并未进行尝试。</p>
-<h1 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h1><h2 id="节点（Node）–-执行单元"><a href="#节点（Node）–-执行单元" class="headerlink" title="节点（Node）– 执行单元"></a><strong>节点（Node）</strong>– 执行单元</h2><ul>
-<li>执行具体任务的进程、独立运行的可执行文件；</li>
-<li>不同节点可使用不同的编程语言（c++和python），可分布式运行在不同的主机；</li>
-<li>节点在系统中的名称必须是唯一的。</li>
+                <p>此篇记录在学习Python计算机二级时候遇到的一些知识点，希望在这种方式中能够增进自己对这门语言的了解。</p>
+<h2 id="程序设计基本方法"><a href="#程序设计基本方法" class="headerlink" title="程序设计基本方法"></a>程序设计基本方法</h2><ul>
+<li>Python解释器本身并不直接支持自然语言编程，但可以使用各种NLP库和工具来支持自然语言编程</li>
+<li>Python语言是一种既支持面向过程也支持面向对象的采用解释型方法执行程序的高级脚本语言。解释是将源代码逐条转换成目标代码同时逐条运行目标代码的过程，不是一次性翻译的。</li>
+<li>编译是将源代码转换成目标代码的过程。</li>
 </ul>
-<h2 id="节点管理器（ROS-Master）–-控制中心"><a href="#节点管理器（ROS-Master）–-控制中心" class="headerlink" title="节点管理器（ROS Master）– 控制中心"></a><strong>节点管理器（ROS Master）</strong>– 控制中心</h2><ul>
-<li>为节点提供名命和注册服务；</li>
-<li>跟踪和记录话题 / 服务通信，辅助节点相互查找、建立连接；</li>
-<li>提供参数服务器，节点使用此服务器存储和检索运行时的参数</li>
-<li><img src="https://image.haoqin.vip/2022/08/202208131152785.png" alt=""></li>
+<h2 id="python基本语法"><a href="#python基本语法" class="headerlink" title="python基本语法"></a>python基本语法</h2><ul>
+<li>Python中，变量名的命名规则:以字母或下划线开头，后面跟字母、下划线和数字﹔不能以数字开头。</li>
+<li>常用的注释方法有两种，#注释和三引号注释，其中三引号注释就是将注释内容修饰为字符串类型。</li>
+<li>“unexpected indent”翻译成中文就是意外缩进，也就是程序中含有不符合编码要求的缩进。</li>
+<li>在Python语言中，赋值不需要两侧数据类型一致，在赋值操作之后，左侧变量将会自动变成右侧对应的数据类型。</li>
+<li><code>\\0</code>是一个字符串中的转义字符，表示空字符。空字符在字符串中用于表示字符序列的结束。对于空字符，它在 Unicode 字符集中仍然是一个字符。</li>
+<li>在 Python 中，<code>count()</code>是一个字符串对象的方法（也可用于列表、元组等可迭代对象），用于返回一个指定子字符串在原字符串中出现的次数。</li>
+<li>eval()函数的参数必须是字符串类型</li>
+<li>input()函数获取用户输入的信息，并将信息组成一个字符串处理，input()函数含有参数，用于提示用户输入。用户输入信息时，使用回车也就是想换一行时，会停止输入结束input()函数。本题选择B选项。</li>
 </ul>
-<h1 id="通信机制"><a href="#通信机制" class="headerlink" title="通信机制"></a>通信机制</h1><h2 id="话题（Topic）–-异步通信机制"><a href="#话题（Topic）–-异步通信机制" class="headerlink" title="话题（Topic）– 异步通信机制"></a>话题（Topic）– 异步通信机制</h2><ul>
-<li>节点间用来传输数据的重要总线；</li>
-<li>使用发布 / 订阅模型，数据由<strong>发布者传输到订阅者</strong>，同一个话题的订阅者或发布者可以不唯一。</li>
-<li>消息（Message）：定义数据的类型，具有一定的数据结构定义。使用编程语言无关的 ==.msg== 文件定义，编译过程中生成对应的代码文件。<h2 id="服务-Service-–-同步通信机制"><a href="#服务-Service-–-同步通信机制" class="headerlink" title="服务 (Service) – 同步通信机制"></a>服务 (Service) – 同步通信机制</h2></li>
-<li>使用<strong>客户端 / 服务器</strong>（C/S）模型，客户端发送请求数据，服务器完成处理后返回应答数据；</li>
-<li>使用编程语言无关的 ==.srv==  文件定义请求和应答数据，编译过程中生成对应的代码文件。</li>
-</ul>
-<p><img src="https://image.haoqin.vip/2022/08/202208131207217.png" alt=""></p>
-<h1 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h1><p><img src="https://image.haoqin.vip/2022/08/202208131559632.png" alt=""></p>
-<h1 id="ROS命令行"><a href="#ROS命令行" class="headerlink" title="ROS命令行"></a>ROS命令行</h1><p>在ROS命令行基本操作学习中，以小海龟程序作为示例进行学习。</p>
-<h2 id="运行小海龟程序"><a href="#运行小海龟程序" class="headerlink" title="运行小海龟程序"></a>运行小海龟程序</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 用来启动ros核心，也就是ros master节点。  </span>
-roscore  
-  
-<span class="token comment"># rosrun表示运行一个节点  </span>
-<span class="token comment"># turtlesim表示功能包名为turtlesim，海龟仿真器  </span>
-<span class="token comment"># turtlesim_node表示turtlesim包下的turtlesim_node节点  </span>
-rosrun turtlesim turtlesim_node  
-  
-<span class="token comment"># rosrun表示运行一个节点  </span>
-<span class="token comment"># turtlesim表示功能包名为turtlesim，海龟仿真器  </span>
-<span class="token comment"># turtlesim_node表示turtlesim包下的turtle_teleop_key节点  </span>
-<span class="token comment"># 键盘控制  </span>
-rosrun turtlesim turtle_teleop_key<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="rqt-graph"><a href="#rqt-graph" class="headerlink" title="rqt_graph"></a>rqt_graph</h2><p>ROS的可视化工具<code>rqt_graph</code>,可以清晰的了解系统节点间通信的部分信息。<br><img src="https://image.haoqin.vip/2022/08/202208131618892.png" alt=""><br><code>teleop_turtle</code>节点（键盘控制节点）通过<code>cmd_vel</code>（topic）向<code>turtlesim</code>节点（海龟仿真器节点）发出消息，使得小海龟移动。<br><img src="https://image.haoqin.vip/2022/08/202208131619004.png" alt=""><br><code>/rosout</code> 是 ros master 启动后默认启动的一个节点，会保存所有结点的日志信息。</p>
-<h2 id="rqt-plot"><a href="#rqt-plot" class="headerlink" title="rqt_plot"></a>rqt_plot</h2><p>左上角添加 topic，就可以实时打印某一话题里的数据内容。<br><img src="https://image.haoqin.vip/2022/08/202208131651799.png" alt=""></p>
-<h2 id="rosnode"><a href="#rosnode" class="headerlink" title="rosnode"></a>rosnode</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 打印所有的节点  </span>
-rosnode list  
-
-<span class="token comment"># rosnode info /节点名</span>
-<span class="token comment"># 打印/turtlesim节点信息，如发布的话题，订阅的话题和服务等  </span>
-rosnode info /turtlesim<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="rostopic"><a href="#rostopic" class="headerlink" title="rostopic"></a>rostopic</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 显示topic列表</span>
-rostopic list
-
-<span class="token comment"># 例如，结点/turtlesim正在发布海龟1的位置信息/turtle1/pose（这个是话题）  </span>
-<span class="token comment"># echo是打印某一个话题里的数据内容  </span>
-<span class="token comment"># 打印海龟1的姿势信息  </span>
-<span class="token comment"># 平移单位是米，角度的单位是弧度  </span>
-rostopic <span class="token builtin class-name">echo</span> /turtle1/pose  
-  
-<span class="token comment"># pub 表示publish  </span>
-<span class="token comment"># 格式：rostopic pub (参数) 话题名 消息数据结构 “具体数据”</span>
-<span class="token comment"># /turtle1/cmd_vel是topic名，表示海龟1的速度指令  </span>
-<span class="token comment"># geometry_msgs/Twist是message名，表示线速度和角速度（机器人学中的twist）  </span>
-<span class="token comment"># 键盘的输入的优先级高一些  </span>
-rostopic pub /turtle1/cmd_vel geometry_msgs/Twist +Tab键  
-rostopic pub -r <span class="token number">10</span> /turtle1/cmd_vel geometry_msgs/Twist +Tab键
-rostopic pub /turtle1/cmd_vel geometry_msgs/Twist <span class="token string">"linear:
-  x: 1.0
-  y: 0.0
-  z: 0.0
-angular:
-  x: 0.0
-  y: 0.0
-  z: 0.0"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="rosmsg"><a href="#rosmsg" class="headerlink" title="rosmsg"></a>rosmsg</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 上例我们使用了**消息数据结构**定义了一个消息传给topic，我们可以查看有哪些消息数据结构</span>
-<span class="token comment"># 可以看到geometry_msgs/Twist数据结构的内容</span>
-rosmag show geometry_msgs/Twist<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h2 id="rosservice"><a href="#rosservice" class="headerlink" title="rosservice"></a>rosservice</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看服务列表</span>
-rosservice list
-<span class="token comment"># 在服务列表中，有个/spawn服务，可以产生一只新的海龟</span>
-<span class="token comment"># 格式：`rosservice call (参数) 服务名 “具体数据”`</span>
-rosservice call /spawn +tab<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="rosbag"><a href="#rosbag" class="headerlink" title="rosbag"></a>rosbag</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 话题记录和重现</span>
-<span class="token comment"># 格式：rosbag record -a -O 文件名 。保存在主目录</span>
-rosbag record -a -O cmd_record
-
-<span class="token comment"># 关闭所有打开的ros节点，重新开启roscore，开启海龟节点rosrun turtlesim turtlesim_node</span>
-<span class="token comment"># 复现之前的运动</span>
-rosbag play cmd_record.bag<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -821,9 +755,9 @@ rosbag play cmd_record.bag<span aria-hidden="true" class="line-numbers-rows"><sp
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《ROS概念及命令行工具》
+                    《Python二级基础知识》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/posts/67892806.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/posts/2aa35565.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 CHQ
             </a> 采用
@@ -1111,46 +1045,48 @@ const locale = {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/f59f5b40.html">
+                <a href="/posts/2aa35565.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://image.haoqin.vip/medias/featureimages/3.jpg" class="responsive-img" alt="P450无人机">
+                        <img src="https://image.haoqin.vip/medias/featureimages/18.jpg" class="responsive-img" alt="Python二级基础知识">
                         
-                        <span class="card-title">P450无人机</span>
+                        <span class="card-title">Python二级基础知识</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            P450的相关组成及文档等
+                            总结在Python中遇到的一些不熟悉的基础知识
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-08-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-02-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/UAV/" class="post-category" target="_blank">
-                                    UAV
+                            <a href="/categories/Python/" class="post-category" target="_blank">
+                                    Python
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/P450/" target="_blank">
-                        <span class="chip bg-color">P450</span>
+                    <a href="/tags/%E7%9F%A5%E8%AF%86/" target="_blank">
+                        <span class="chip bg-color">知识</span>
                     </a>
                     
                 </div>
@@ -1164,31 +1100,31 @@ const locale = {
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/53e3ff53.html">
+                <a href="/posts/cffa0a0a.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://image.haoqin.vip/medias/featureimages/10.jpg" class="responsive-img" alt="概率论及数理统计的基本概念">
+                        <img src="https://image.haoqin.vip/medias/featureimages/33.jpg" class="responsive-img" alt="工具技巧合集">
                         
-                        <span class="card-title">概率论及数理统计的基本概念</span>
+                        <span class="card-title">工具技巧合集</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数理统计笔记，也许就一篇
+                            对生活工作中用到的工具和技巧和汇总
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-24
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-12-07
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AD%A6%E7%A7%91/" class="post-category" target="_blank">
-                                    学科
+                            <a href="/categories/Life/" class="post-category" target="_blank">
+                                    Life
                                 </a>
                             
                             
@@ -1198,8 +1134,8 @@ const locale = {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" target="_blank">
-                        <span class="chip bg-color">数理统计</span>
+                    <a href="/tags/%E5%B7%A5%E5%85%B7%E6%8A%80%E5%B7%A7/" target="_blank">
+                        <span class="chip bg-color">工具技巧</span>
                     </a>
                     
                 </div>
