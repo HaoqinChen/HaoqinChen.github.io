@@ -37,7 +37,7 @@ body {
     /* background-color: #eaeaea;
     margin: 0;
     color: #34495e; */
-    background: linear-gradient(60deg, rgba(236, 236, 243, 0.5) 5%, rgb(247, 242, 242,0.5)) 0% 0% / cover, url("https://ae01.alicdn.com/kf/H18a4b998752a4ae68b8e85d432a5aef0l.png"), url("/medias/banner/0.jpg") 0px 0px;
+    background: linear-gradient(60deg, rgba(236, 236, 243, 0.5) 5%, rgb(247, 242, 242,0.5)) 0% 0% / cover, url("https://image.haoqin.vip/medias/banner/0.jpg"), url("https://image.haoqin.vip/medias/banner/0.jpg") 0px 0px;
     background-attachment: fixed;
     margin: 0;
     color: #34495e;
