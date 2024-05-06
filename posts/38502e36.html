@@ -4,10 +4,18 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="P450无人机, 好好学习，天天向上">
+    <meta name="keywords" content="轨迹规划, 好好学习，天天向上">
     <meta name="baidu-site-verification" content="code-PTVUufeCmu" />
     <meta name="google-site-verification" content="H_OAfeXJS2dhmFZs88LTRApIS-Jv57k7vLIZVtbvViQ" />
-    <meta name="description" content="P450是阿木实验室出品的无人机。其官方简介为：Prometheus450（简称P450）是一款专为科研工作者及无人机开发者设计的无人机实验平台，适用于无人机专业应用研究和开发。本开发平台基于Prometheus开源项目，提供丰富的demo">
+    <meta name="description" content="轨迹规划的分类：
+
+搜索:  A*等
+采样: RRT等
+插值曲线: 样条曲线，贝塞尔曲线等
+数值优化:  混合整数规划，二次规划等
+其它方法:  智能算法等
+
+参考浙江大学的高飞团队的划分方法：前端规划（Front End Planning">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +23,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>P450无人机 | chq博客</title>
+    <title>轨迹规划 | chq博客</title>
     <link rel="icon" type="image/svg+xml" href="https://image.haoqin.vip/medias/fish32.svg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -392,13 +400,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://image.haoqin.vip/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://image.haoqin.vip/medias/featureimages/33.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        P450无人机
+                        轨迹规划
                     </div>
                 </div>
             </div>
@@ -509,8 +517,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/P450/" target="_blank">
-                            <span class="chip bg-color">P450</span>
+                        <a href="/tags/%E7%9F%A5%E8%AF%86/" target="_blank">
+                            <span class="chip bg-color">知识</span>
                         </a>
                         
                     </div>
@@ -533,12 +541,12 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-08-17
+                    2023-12-19
                 </div>
 
            <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-04-25
+                    2023-12-19
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -552,14 +560,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    781
+                    144
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
                 
@@ -578,32 +586,18 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>P450是阿木实验室出品的无人机。其官方简介为：Prometheus450（简称P450）是一款专为科研工作者及无人机开发者设计的无人机实验平台，适用于无人机专业应用研究和开发。本开发平台基于Prometheus开源项目，提供丰富的demo例程，涵盖控制模块、slam模块、规划模块以及目标检测模块等多个无人机及机器视觉相关研究方向。</p>
-<p>常用的文档：<br><a target="_blank" rel="noopener" href="https://wiki.amovlab.com/public/prometheuswiki/P450%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html">P450使用手册 - P系列无人机文档</a><br><a target="_blank" rel="noopener" href="https://github.com/amov-lab/Prometheus/wiki">Home · amov-lab/Prometheus Wiki · GitHub</a><br><a target="_blank" rel="noopener" href="https://wiki.amovlab.com/public/prometheus-wiki/">Prometheus-自主无人机开源项目 - Prometheus使用手册</a><br><a target="_blank" rel="noopener" href="https://docs.px4.io/master/zh/">PX4 自动驾驶用户指南</a></p>
-<h1 id="软硬件词汇"><a href="#软硬件词汇" class="headerlink" title="软硬件词汇"></a>软硬件词汇</h1><ul>
-<li>Prometheus：无人机开源项目，开源仿真代码以及基础机载飞行代码</li>
-<li>QGroundControl(QGC)：地面站，连接到飞机，监控到飞机本身的状态</li>
-<li>Nomachine：远程桌面，用作远程连接到板载计算机</li>
-<li>PX4:专业级飞控</li>
-<li>Pixhawk：硬件平台，PX4固件对应硬件</li>
-<li>Mavros：mavlink+ros。mavros是PX4官方提供的一个运行于ROS下收发<strong>mavlink消息</strong>的工具，利用mavros可以发送mavlink消息给飞控（可以控制飞机），并且可以从飞控中接受数据（例如：飞控的位置速度 IMU数据等等）</li>
-<li>Flight Control Unit(FCU)：飞行控制单元</li>
+                <p>轨迹规划的分类：</p>
+<ul>
+<li>搜索:  A*等</li>
+<li>采样: RRT等</li>
+<li>插值曲线: 样条曲线，贝塞尔曲线等</li>
+<li>数值优化:  混合整数规划，二次规划等</li>
+<li>其它方法:  智能算法等</li>
 </ul>
-<h1 id="软硬件框架"><a href="#软硬件框架" class="headerlink" title="软硬件框架"></a>软硬件框架</h1><h2 id="P450硬件框架"><a href="#P450硬件框架" class="headerlink" title="P450硬件框架"></a><strong>P450硬件框架</strong></h2><p><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205301204416.png" alt=""><br><strong>T265双目相机</strong>：采用优化后的V-SLAM算法<br><strong>单目相机</strong>：200w像素，OpenCV图像识别二维码引导降落，基于OpenCV的椭圆、二维码识别及追踪<br><strong>D435i深度相机</strong>：避障，物体检测和识别，大场景和快速移动跟踪<br><strong>激光雷达</strong>：测量半径40m</p>
-<h2 id="Prometheus软件框架"><a href="#Prometheus软件框架" class="headerlink" title="Prometheus软件框架"></a><strong>Prometheus软件框架</strong></h2><p><img src="https://s-gz-3816-tuchuang.oss.dogecdn.com/2022/05/202205301211397.png" alt=""><br><img src="https://image.haoqin.vip/2023/04/879dac9d07bcd7bde1a8de13c35e1aa6.png" alt="image.png"></p>
-<h1 id="遥控器模式"><a href="#遥控器模式" class="headerlink" title="遥控器模式"></a>遥控器模式</h1><ul>
-<li>定点模式：该模式下横滚和俯仰摇杆控制机体的前后左右方向相对于地面的<strong>加速度</strong>（类似于车的油门踏板），油门控制上升下降的速度。 当摇杆释放/居中时，机体将主动制动，保持水平，并<strong>锁定到 3D 空间中的位置</strong> — 补偿风和其他力。</li>
-<li>定高模式：滚转和俯仰杆控制机体在左右和前后方向上的运动（相对于机体的“前方”），偏航杆控制水平面上的旋转速度，油门控制上升 -下降的速度。当杆被释放/回中时，机体将恢复水平并保持当前的高度</li>
-<li>自稳模式：飞控会让飞行器只有保持姿态是稳定的。位置不确定，需要双手操控，保持重力和升力平衡。<u>新手不适宜操作</u>。</li>
-<li>遥控器左下上锁，右下解锁（左边的操作杆）</li>
-</ul>
-<h1 id="电池管理"><a href="#电池管理" class="headerlink" title="电池管理"></a>电池管理</h1><ul>
-<li>上限是4.2V，对4S电池来说上限是16.8V</li>
-<li>电池不能过充过放，使用范围应介于14.4到16.8V之间，在长期未使用的时候要让电池单电芯保持在3.85左右适宜。</li>
-</ul>
-<h1 id="功率监控"><a href="#功率监控" class="headerlink" title="功率监控"></a>功率监控</h1><ul>
-<li>PM接口对应pixhawk4的power module接口</li>
-<li>polybro的px4飞控的电源模块接口是GH1.25，CUAV家的px4飞控的电源模块接口是DF1.3，模块上红色对应5V</li>
+<p>参考浙江大学的高飞团队的划分方法：前端规划（Front End Planning）和后端规划（Back End Planning）：</p>
+<ul>
+<li>前端规划: 找到一条可行路径，离散的路径点，使用A*等算法</li>
+<li>后端规划: 生成连续光滑并满足无人机动力学特性的轨迹，可以使用贝塞尔曲线等方法</li>
 </ul>
 
             </div>
@@ -763,9 +757,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《P450无人机》
+                    《轨迹规划》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/posts/f59f5b40.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/posts/38502e36.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 CHQ
             </a> 采用
@@ -1053,46 +1047,48 @@ const locale = {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/bf62b2d6.html">
+                <a href="/posts/38502e36.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://image.haoqin.vip/medias/featureimages/13.jpg" class="responsive-img" alt="ROS工作及通信机制">
+                        <img src="https://image.haoqin.vip/medias/featureimages/33.jpg" class="responsive-img" alt="轨迹规划">
                         
-                        <span class="card-title">ROS工作及通信机制</span>
+                        <span class="card-title">轨迹规划</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ROS工作空间及通信相关介绍
+                            重新梳理无人机轨迹规划基本内容
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-08-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-12-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/ROS/" class="post-category" target="_blank">
-                                    ROS
+                            <a href="/categories/UAV/" class="post-category" target="_blank">
+                                    UAV
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%AF%BE%E7%A8%8B/" target="_blank">
-                        <span class="chip bg-color">课程</span>
+                    <a href="/tags/%E7%9F%A5%E8%AF%86/" target="_blank">
+                        <span class="chip bg-color">知识</span>
                     </a>
                     
                 </div>
@@ -1106,31 +1102,31 @@ const locale = {
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/67892806.html">
+                <a href="/posts/d79a457e.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://image.haoqin.vip/medias/featureimages/30.jpg" class="responsive-img" alt="ROS概念及命令行工具">
+                        <img src="https://image.haoqin.vip/medias/featureimages/20.jpg" class="responsive-img" alt="片单">
                         
-                        <span class="card-title">ROS概念及命令行工具</span>
+                        <span class="card-title">片单</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ROS核心概念以及常用命令行工具
+                            记录下看过的影视作品
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-08-13
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-08-12
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/ROS/" class="post-category" target="_blank">
-                                    ROS
+                            <a href="/categories/Life/" class="post-category" target="_blank">
+                                    Life
                                 </a>
                             
                             
@@ -1140,8 +1136,8 @@ const locale = {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%AF%BE%E7%A8%8B/" target="_blank">
-                        <span class="chip bg-color">课程</span>
+                    <a href="/tags/record/" target="_blank">
+                        <span class="chip bg-color">record</span>
                     </a>
                     
                 </div>

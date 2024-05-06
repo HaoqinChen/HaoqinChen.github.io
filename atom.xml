@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>科研生活分享</title>
+  <title>chq博客</title>
   
   <subtitle>Robert</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://haoqin.vip/"/>
-  <updated>2023-09-01T07:12:44.000Z</updated>
+  <updated>2023-12-19T07:12:44.000Z</updated>
   <id>https://haoqin.vip/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>轨迹规划</title>
+    <link href="https://haoqin.vip/posts/38502e36.html"/>
+    <id>https://haoqin.vip/posts/38502e36.html</id>
+    <published>2023-12-19T07:12:44.000Z</published>
+    <updated>2023-12-19T07:12:44.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;轨迹规划的分类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;搜索:  A*等&lt;/li&gt;
+&lt;li&gt;采样: RRT等&lt;/li&gt;
+&lt;li&gt;插值曲线: 样条曲线，贝塞尔曲线等&lt;/li&gt;
+&lt;li&gt;数值优化:  混合整数规划，二次规划等&lt;/li&gt;
+&lt;li&gt;其它方法: 
+        
+      
+    
+    </summary>
+    
+      <category term="UAV" scheme="https://haoqin.vip/categories/UAV/"/>
+    
+    
+      <category term="知识" scheme="https://haoqin.vip/tags/%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>片单</title>
     <link href="https://haoqin.vip/posts/d79a457e.html"/>
     <id>https://haoqin.vip/posts/d79a457e.html</id>
     <published>2023-08-12T07:12:44.000Z</published>
-    <updated>2023-09-01T07:12:44.000Z</updated>
+    <updated>2023-12-19T07:12:44.000Z</updated>
     
     <summary type="html">
     
@@ -512,33 +544,6 @@
     
     
       <category term="数理统计" scheme="https://haoqin.vip/tags/%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>无人机实操基本操作</title>
-    <link href="https://haoqin.vip/posts/997c23ab.html"/>
-    <id>https://haoqin.vip/posts/997c23ab.html</id>
-    <published>2022-06-15T03:00:00.000Z</published>
-    <updated>2023-06-15T12:53:58.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;本文主要是根据21年在成都进行P450的实操培训文稿组织而成的，主要是进行&lt;strong&gt;定点飞行，指点飞行，圆框跟踪，室内避障&lt;/strong&gt;这四个基本模块的操作。&lt;/p&gt;
-&lt;h1 id=&quot;实操步骤&quot;&gt;&lt;a href=&quot;#实操步骤&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="UAV" scheme="https://haoqin.vip/categories/UAV/"/>
-    
-    
-      <category term="实操" scheme="https://haoqin.vip/tags/%E5%AE%9E%E6%93%8D/"/>
     
   </entry>
   
