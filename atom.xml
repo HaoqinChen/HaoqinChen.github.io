@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>haoqin&#39;s blog</title>
+  
+  <subtitle>Robert</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://haoqin.vip/"/>
+  <updated>2024-09-13T23:17:42.000Z</updated>
+  <id>https://haoqin.vip/</id>
+  
+  <author>
+    <name>CHQ</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>面向对象</title>
+    <link href="https://haoqin.vip/posts/28239a8d.html"/>
+    <id>https://haoqin.vip/posts/28239a8d.html</id>
+    <published>2024-09-13T23:17:42.000Z</published>
+    <updated>2024-09-13T23:17:42.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;杂七杂八&quot;&gt;&lt;a href=&quot;#杂七杂八&quot; class=&quot;headerlink&quot; title=&quot;杂七杂八&quot;&gt;&lt;/a&gt;杂七杂八&lt;/h1&gt;&lt;p&gt;API（application programming
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://haoqin.vip/categories/Python/"/>
+    
+    
+      <category term="知识" scheme="https://haoqin.vip/tags/%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客迁移</title>
+    <link href="https://haoqin.vip/posts/f2707009.html"/>
+    <id>https://haoqin.vip/posts/f2707009.html</id>
+    <published>2024-08-22T23:12:44.000Z</published>
+    <updated>2024-08-22T23:12:44.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在离开学校后，工位的电脑直接格式化了，想着东西都在github上&lt;br&gt;但是过来还是发现有一些没有及时通过github
+        
+      
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://haoqin.vip/categories/Blog/"/>
+    
+    
+      <category term="闲谈" scheme="https://haoqin.vip/tags/%E9%97%B2%E8%B0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>考公生涯</title>
+    <link href="https://haoqin.vip/posts/379382a9.html"/>
+    <id>https://haoqin.vip/posts/379382a9.html</id>
+    <published>2024-06-02T15:12:44.000Z</published>
+    <updated>2024-06-02T15:12:44.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;5/19 晚
+        
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="https://haoqin.vip/categories/Life/"/>
+    
+    
+      <category term="闲谈" scheme="https://haoqin.vip/tags/%E9%97%B2%E8%B0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>轨迹规划</title>
+    <link href="https://haoqin.vip/posts/38502e36.html"/>
+    <id>https://haoqin.vip/posts/38502e36.html</id>
+    <published>2023-12-19T15:12:44.000Z</published>
+    <updated>2023-12-19T15:12:44.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;轨迹规划的分类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;搜索:  A*等&lt;/li&gt;
+&lt;li&gt;采样: RRT等&lt;/li&gt;
+&lt;li&gt;插值曲线: 样条曲线，贝塞尔曲线等&lt;/li&gt;
+&lt;li&gt;数值优化:  混合整数规划，二次规划等&lt;/li&gt;
+&lt;li&gt;其它方法: 
+        
+      
+    
+    </summary>
+    
+      <category term="UAV" scheme="https://haoqin.vip/categories/UAV/"/>
+    
+    
+      <category term="知识" scheme="https://haoqin.vip/tags/%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>片单</title>
+    <link href="https://haoqin.vip/posts/d79a457e.html"/>
+    <id>https://haoqin.vip/posts/d79a457e.html</id>
+    <published>2023-08-12T15:12:44.000Z</published>
+    <updated>2023-12-19T15:12:44.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;突然想记录下看过的各式影视作品，看了一半和只看了解说不算，不完整记录，不论好坏，不论先后（好多好多&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;)：&lt;/p&gt;
+&lt;h1 id=&quot;动漫&quot;&gt;&lt;a href=&quot;#动漫&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="https://haoqin.vip/categories/Life/"/>
+    
+    
+      <category term="record" scheme="https://haoqin.vip/tags/record/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>排球笔记</title>
+    <link href="https://haoqin.vip/posts/243d023b.html"/>
+    <id>https://haoqin.vip/posts/243d023b.html</id>
+    <published>2023-07-08T23:42:19.000Z</published>
+    <updated>2023-09-01T23:42:19.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;背传&quot;&gt;&lt;a href=&quot;#背传&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="https://haoqin.vip/categories/Life/"/>
+    
+    
+      <category term="运动" scheme="https://haoqin.vip/tags/%E8%BF%90%E5%8A%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>You</title>
+    <link href="https://haoqin.vip/posts/5e263ef6.html"/>
+    <id>https://haoqin.vip/posts/5e263ef6.html</id>
+    <published>2023-06-29T11:21:54.000Z</published>
+    <updated>2025-02-23T23:21:54.000Z</updated>
+    
+    <summary type="html">
+    
+      Here&#39;s something encrypted, password is required to continue reading.
+    
+    </summary>
+    
+      <category term="Life" scheme="https://haoqin.vip/categories/Life/"/>
+    
+    
+      <category term="record" scheme="https://haoqin.vip/tags/record/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>排序算法</title>
+    <link href="https://haoqin.vip/posts/735e5788.html"/>
+    <id>https://haoqin.vip/posts/735e5788.html</id>
+    <published>2023-06-24T17:17:42.000Z</published>
+    <updated>2023-06-24T17:17:42.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;快速排序&quot;&gt;&lt;a href=&quot;#快速排序&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://haoqin.vip/categories/Python/"/>
+    
+    
+      <category term="算法" scheme="https://haoqin.vip/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>二叉树</title>
+    <link href="https://haoqin.vip/posts/e85d694a.html"/>
+    <id>https://haoqin.vip/posts/e85d694a.html</id>
+    <published>2023-06-02T16:17:46.000Z</published>
+    <updated>2023-06-10T16:17:46.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;二叉树的种类：满二叉树、完全二叉树（底层从左到右是连续的）、二叉搜索树（有序数值）、平衡二叉搜索树（高度差的绝对值不超过1）&lt;/li&gt;
+&lt;li&gt;二叉树的存储方式：链式存储，顺序存储&lt;/li&gt;
+&lt;li&gt;二叉树遍历方式：&lt;ul&gt;
+&lt;li&gt;深度优先搜索：前中后序遍历，
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://haoqin.vip/categories/Python/"/>
+    
+    
+      <category term="LeetCode" scheme="https://haoqin.vip/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>栈与队列</title>
+    <link href="https://haoqin.vip/posts/6534ce06.html"/>
+    <id>https://haoqin.vip/posts/6534ce06.html</id>
+    <published>2023-04-26T15:46:04.000Z</published>
+    <updated>2023-05-13T15:46:04.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在Python中可以使用列表（list）来实现队列和堆栈数据结构。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;队列&lt;/strong&gt;（queue）是一种先进先出（First-In-First-Out，FIFO）的数据结构，可以使用列表实现。Python
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://haoqin.vip/categories/Python/"/>
+    
+    
+      <category term="LeetCode" scheme="https://haoqin.vip/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字符串</title>
+    <link href="https://haoqin.vip/posts/fc81fbfd.html"/>
+    <id>https://haoqin.vip/posts/fc81fbfd.html</id>
+    <published>2023-04-21T10:08:12.000Z</published>
+    <updated>2023-05-04T10:08:12.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;反转字符串&quot;&gt;&lt;a href=&quot;#反转字符串&quot; class=&quot;headerlink&quot; title=&quot;反转字符串&quot;&gt;&lt;/a&gt;反转字符串&lt;/h1&gt;&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://haoqin.vip/categories/Python/"/>
+    
+    
+      <category term="LeetCode" scheme="https://haoqin.vip/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>哈希表</title>
+    <link href="https://haoqin.vip/posts/850f2080.html"/>
+    <id>https://haoqin.vip/posts/850f2080.html</id>
+    <published>2023-04-18T16:59:35.000Z</published>
+    <updated>2023-05-06T16:59:35.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;哈希表是一种常见的数据结构，用于实现映射关系。在Python中，哈希表常被实现为字典（dictionary）类型，也就是Python中常用的一种数据类型。&lt;/p&gt;
+&lt;p&gt;哈希表基于哈希函数实现。哈希函数将输入映射到一个固定大小的输出，这个输出通常称为哈希值。哈希函数应该具有
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://haoqin.vip/categories/Python/"/>
+    
+    
+      <category term="LeetCode" scheme="https://haoqin.vip/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>链表</title>
+    <link href="https://haoqin.vip/posts/2362a8ea.html"/>
+    <id>https://haoqin.vip/posts/2362a8ea.html</id>
+    <published>2023-04-12T16:40:14.000Z</published>
+    <updated>2023-05-03T16:40:14.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;链表是由一系列的结点组成，结点可以在运行时动态生成。每个结点包含两部分：&lt;strong&gt;数据域与指针域&lt;/strong&gt;。数据域存储数据元素，指针域存储&lt;strong&gt;下一结点&lt;/strong&gt;的指针。在python中需要通过定义类来实现链表的操作。&lt;br&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://haoqin.vip/categories/Python/"/>
+    
+    
+      <category term="LeetCode" scheme="https://haoqin.vip/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数组</title>
+    <link href="https://haoqin.vip/posts/340249a9.html"/>
+    <id>https://haoqin.vip/posts/340249a9.html</id>
+    <published>2023-04-01T10:32:34.000Z</published>
+    <updated>2023-04-05T10:32:34.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;二分查找&quot;&gt;&lt;a href=&quot;#二分查找&quot; class=&quot;headerlink&quot; title=&quot;二分查找&quot;&gt;&lt;/a&gt;二分查找&lt;/h1&gt;&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://haoqin.vip/categories/Python/"/>
+    
+    
+      <category term="LeetCode" scheme="https://haoqin.vip/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github Actions &amp;&amp; Cloudflare Pages 部署</title>
+    <link href="https://haoqin.vip/posts/519a1be4.html"/>
+    <id>https://haoqin.vip/posts/519a1be4.html</id>
+    <published>2023-03-27T00:35:00.000Z</published>
+    <updated>2023-07-03T16:17:55.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;执行此次部署的初心是看重cloudflare pages的访问速度较快，并且可以通过自动化部署，将本地文件保存在网络端，实现备份工作。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;前期配置参考&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://haoqin.vip/categories/Blog/"/>
+    
+    
+      <category term="网站" scheme="https://haoqin.vip/tags/%E7%BD%91%E7%AB%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>路径规划算法简介</title>
+    <link href="https://haoqin.vip/posts/d510a235.html"/>
+    <id>https://haoqin.vip/posts/d510a235.html</id>
+    <published>2023-03-08T19:35:00.000Z</published>
+    <updated>2023-03-28T16:17:55.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;关于&lt;strong&gt;路径规划&lt;/strong&gt;的定义，在不同的地方有着不同的理解，一般常规的理解是到达不同节点的路径选择，也就是说其在某些场景下可以等价为任务规划，寻找得到任务顺序。&lt;br&gt;&lt;strong&gt;运动规划&lt;/strong&gt;的定义较为广发，涉及到运动体在运动过程中的
+        
+      
+    
+    </summary>
+    
+      <category term="UAV" scheme="https://haoqin.vip/categories/UAV/"/>
+    
+    
+      <category term="知识" scheme="https://haoqin.vip/tags/%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python二级基础知识</title>
+    <link href="https://haoqin.vip/posts/2aa35565.html"/>
+    <id>https://haoqin.vip/posts/2aa35565.html</id>
+    <published>2023-03-06T19:35:00.000Z</published>
+    <updated>2023-03-28T16:17:55.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;此篇记录在学习Python计算机二级时候遇到的一些知识点，希望在这种方式中能够增进自己对这门语言的了解。&lt;/p&gt;
+&lt;h2 id=&quot;1-程序设计基本方法&quot;&gt;&lt;a href=&quot;#1-程序设计基本方法&quot; class=&quot;headerlink&quot; title=&quot;1.
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://haoqin.vip/categories/Python/"/>
+    
+    
+      <category term="知识" scheme="https://haoqin.vip/tags/%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>工具技巧合集</title>
+    <link href="https://haoqin.vip/posts/cffa0a0a.html"/>
+    <id>https://haoqin.vip/posts/cffa0a0a.html</id>
+    <published>2022-12-07T21:00:00.000Z</published>
+    <updated>2023-07-01T16:17:55.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;这一篇博文主要是记录在生活工作中用到的工具和技巧的一些说明合集，在需要的时候能够找到对应的使用说明，避免重复的检索。目前暂定为电脑和手机两大分类，遇到相关的就会进行&lt;strong&gt;持续更新:&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;PC&quot;&gt;&lt;a href=&quot;#PC&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="https://haoqin.vip/categories/Life/"/>
+    
+    
+      <category term="工具技巧" scheme="https://haoqin.vip/tags/%E5%B7%A5%E5%85%B7%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python语言基本语法元素</title>
+    <link href="https://haoqin.vip/posts/8d216e5f.html"/>
+    <id>https://haoqin.vip/posts/8d216e5f.html</id>
+    <published>2022-11-08T21:00:00.000Z</published>
+    <updated>2022-11-10T16:17:55.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;程序的格式框架&quot;&gt;&lt;a href=&quot;#程序的格式框架&quot; class=&quot;headerlink&quot; title=&quot;程序的格式框架&quot;&gt;&lt;/a&gt;程序的格式框架&lt;/h1&gt;&lt;h2 id=&quot;缩进&quot;&gt;&lt;a href=&quot;#缩进&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://haoqin.vip/categories/Python/"/>
+    
+    
+      <category term="教程" scheme="https://haoqin.vip/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ROS工作及通信机制</title>
+    <link href="https://haoqin.vip/posts/bf62b2d6.html"/>
+    <id>https://haoqin.vip/posts/bf62b2d6.html</id>
+    <published>2022-08-20T21:00:00.000Z</published>
+    <updated>2022-08-28T16:17:55.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;ROS具有一套自己的工作流程，其文件体系依托在工作空间中，开发的流程如下图所示。&lt;br&gt;&lt;img src=&quot;https://image.haoqin.vip/2022/08/202208201040585.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;如果是 python
+        
+      
+    
+    </summary>
+    
+      <category term="ROS" scheme="https://haoqin.vip/categories/ROS/"/>
+    
+    
+      <category term="课程" scheme="https://haoqin.vip/tags/%E8%AF%BE%E7%A8%8B/"/>
+    
+  </entry>
+  
+</feed>
