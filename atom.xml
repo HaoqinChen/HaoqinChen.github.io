@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>haoqin&#39;s blog</title>
+  
+  <subtitle>Robert</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://haoqin.vip/"/>
+  <updated>2025-03-19T23:11:00.000Z</updated>
+  <id>https://haoqin.vip/</id>
+  
+  <author>
+    <name>CHQ</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>赌徒心态</title>
+    <link href="https://haoqin.vip/posts/b8264dd.html"/>
+    <id>https://haoqin.vip/posts/b8264dd.html</id>
+    <published>2025-03-19T23:11:00.000Z</published>
+    <updated>2025-03-19T23:11:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;总感觉自己有一种明知道不行或者风险大的赌徒心态尝试心理，像今天的刮刮乐，一开始抽中个20块钱后，其实可以收手，但最后搞着搞着40块钱就没了，明知道这玩意是一个低概率事件，但却总是想要试试，而且怎么说呢，在遇到这种损失的时候，心中却往往是比较无感的&lt;/p&gt;
+&lt;p&gt;在最近的考试
+        
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="https://haoqin.vip/categories/Life/"/>
+    
+    
+      <category term="随记" scheme="https://haoqin.vip/tags/%E9%9A%8F%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>时隔八个月的重返广州</title>
+    <link href="https://haoqin.vip/posts/4b8f471.html"/>
+    <id>https://haoqin.vip/posts/4b8f471.html</id>
+    <published>2025-03-16T22:28:00.000Z</published>
+    <updated>2025-03-16T22:28:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;正文内容&quot;&gt;&lt;a href=&quot;#正文内容&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="https://haoqin.vip/categories/Life/"/>
+    
+    
+      <category term="随记" scheme="https://haoqin.vip/tags/%E9%9A%8F%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>异步？同步？</title>
+    <link href="https://haoqin.vip/posts/2929faf1.html"/>
+    <id>https://haoqin.vip/posts/2929faf1.html</id>
+    <published>2025-03-12T23:13:00.000Z</published>
+    <updated>2025-03-12T23:13:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;在很长一段时间里，因为是外行人，我看到js里面的同步/异步的概念，还一直以为 同步 就是多任务并行，而 异步
+        
+      
+    
+    </summary>
+    
+      <category term="语言" scheme="https://haoqin.vip/categories/%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="JavaScript" scheme="https://haoqin.vip/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>周末加大班的傻子</title>
+    <link href="https://haoqin.vip/posts/ab440ddf.html"/>
+    <id>https://haoqin.vip/posts/ab440ddf.html</id>
+    <published>2025-03-09T23:24:00.000Z</published>
+    <updated>2025-03-09T23:24:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;正文内容&quot;&gt;&lt;a href=&quot;#正文内容&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="https://haoqin.vip/categories/Life/"/>
+    
+    
+      <category term="随记" scheme="https://haoqin.vip/tags/%E9%9A%8F%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>逻辑等价性</title>
+    <link href="https://haoqin.vip/posts/c5145f13.html"/>
+    <id>https://haoqin.vip/posts/c5145f13.html</id>
+    <published>2025-03-09T00:29:00.000Z</published>
+    <updated>2025-03-09T00:29:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;A推出B&quot;&gt;&lt;a href=&quot;#A推出B&quot; class=&quot;headerlink&quot; title=&quot;A推出B&quot;&gt;&lt;/a&gt;A推出B&lt;/h1&gt;&lt;p&gt;在逻辑学中，“A推出B”（即蕴含式 $A \rightarrow B$）与“非A或B”（即 $\neg A \vee
+        
+      
+    
+    </summary>
+    
+      <category term="学科" scheme="https://haoqin.vip/categories/%E5%AD%A6%E7%A7%91/"/>
+    
+    
+      <category term="知识" scheme="https://haoqin.vip/tags/%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>傲慢与偏见</title>
+    <link href="https://haoqin.vip/posts/58d19a95.html"/>
+    <id>https://haoqin.vip/posts/58d19a95.html</id>
+    <published>2025-03-05T22:52:00.000Z</published>
+    <updated>2025-03-05T22:52:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;傲慢者的心理与神色&quot;&gt;&lt;a href=&quot;#傲慢者的心理与神色&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="https://haoqin.vip/categories/Life/"/>
+    
+    
+      <category term="随记" scheme="https://haoqin.vip/tags/%E9%9A%8F%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>许多的一个人行为</title>
+    <link href="https://haoqin.vip/posts/4f909950.html"/>
+    <id>https://haoqin.vip/posts/4f909950.html</id>
+    <published>2025-03-02T01:19:00.000Z</published>
+    <updated>2025-03-02T01:19:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;哈哈这个其实也是想测试下图床的上传功能是否正常&lt;br&gt;今天解锁了 一个人火锅行为 40块钱能吃两盘肉和一份牛肉粿条，属实在深圳是很amazing的事了&lt;br&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="https://haoqin.vip/categories/Life/"/>
+    
+    
+      <category term="随记" scheme="https://haoqin.vip/tags/%E9%9A%8F%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>比重_平均值</title>
+    <link href="https://haoqin.vip/posts/9c610bdc.html"/>
+    <id>https://haoqin.vip/posts/9c610bdc.html</id>
+    <published>2025-03-01T18:03:00.000Z</published>
+    <updated>2025-03-08T18:03:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;比重变化&quot;&gt;&lt;a href=&quot;#比重变化&quot; class=&quot;headerlink&quot; title=&quot;比重变化&quot;&gt;&lt;/a&gt;比重变化&lt;/h1&gt;&lt;p&gt;今天在看资料分析的时候，注意到平均值和比重这一概念，其实两个还是一致的&lt;/p&gt;
+&lt;p&gt;A/B
+        
+      
+    
+    </summary>
+    
+      <category term="学科" scheme="https://haoqin.vip/categories/%E5%AD%A6%E7%A7%91/"/>
+    
+    
+      <category term="知识" scheme="https://haoqin.vip/tags/%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>模板and工作</title>
+    <link href="https://haoqin.vip/posts/e9e819b5.html"/>
+    <id>https://haoqin.vip/posts/e9e819b5.html</id>
+    <published>2025-03-01T01:01:00.000Z</published>
+    <updated>2025-03-01T01:01:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;模板&quot;&gt;&lt;a href=&quot;#模板&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="https://haoqin.vip/categories/Life/"/>
+    
+    
+      <category term="随记" scheme="https://haoqin.vip/tags/%E9%9A%8F%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面向对象</title>
+    <link href="https://haoqin.vip/posts/28239a8d.html"/>
+    <id>https://haoqin.vip/posts/28239a8d.html</id>
+    <published>2024-09-13T23:17:42.000Z</published>
+    <updated>2024-09-13T23:17:42.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;杂七杂八&quot;&gt;&lt;a href=&quot;#杂七杂八&quot; class=&quot;headerlink&quot; title=&quot;杂七杂八&quot;&gt;&lt;/a&gt;杂七杂八&lt;/h1&gt;&lt;p&gt;API（application programming
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://haoqin.vip/categories/Python/"/>
+    
+    
+      <category term="知识" scheme="https://haoqin.vip/tags/%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客迁移</title>
+    <link href="https://haoqin.vip/posts/f2707009.html"/>
+    <id>https://haoqin.vip/posts/f2707009.html</id>
+    <published>2024-08-22T23:12:44.000Z</published>
+    <updated>2024-08-22T23:12:44.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在离开学校后，工位的电脑直接格式化了，想着东西都在github上&lt;br&gt;但是过来还是发现有一些没有及时通过github
+        
+      
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://haoqin.vip/categories/Blog/"/>
+    
+    
+      <category term="闲谈" scheme="https://haoqin.vip/tags/%E9%97%B2%E8%B0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>考公生涯</title>
+    <link href="https://haoqin.vip/posts/379382a9.html"/>
+    <id>https://haoqin.vip/posts/379382a9.html</id>
+    <published>2024-06-02T15:12:44.000Z</published>
+    <updated>2024-06-02T15:12:44.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;5/19 晚
+        
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="https://haoqin.vip/categories/Life/"/>
+    
+    
+      <category term="闲谈" scheme="https://haoqin.vip/tags/%E9%97%B2%E8%B0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>轨迹规划</title>
+    <link href="https://haoqin.vip/posts/38502e36.html"/>
+    <id>https://haoqin.vip/posts/38502e36.html</id>
+    <published>2023-12-19T15:12:44.000Z</published>
+    <updated>2023-12-19T15:12:44.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;轨迹规划的分类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;搜索:  A*等&lt;/li&gt;
+&lt;li&gt;采样: RRT等&lt;/li&gt;
+&lt;li&gt;插值曲线: 样条曲线，贝塞尔曲线等&lt;/li&gt;
+&lt;li&gt;数值优化:  混合整数规划，二次规划等&lt;/li&gt;
+&lt;li&gt;其它方法: 
+        
+      
+    
+    </summary>
+    
+      <category term="UAV" scheme="https://haoqin.vip/categories/UAV/"/>
+    
+    
+      <category term="知识" scheme="https://haoqin.vip/tags/%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>片单</title>
+    <link href="https://haoqin.vip/posts/d79a457e.html"/>
+    <id>https://haoqin.vip/posts/d79a457e.html</id>
+    <published>2023-08-12T15:12:44.000Z</published>
+    <updated>2023-12-19T15:12:44.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;突然想记录下看过的各式影视作品，看了一半和只看了解说不算，不完整记录，不论好坏，不论先后（好多好多&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;)：&lt;/p&gt;
+&lt;h1 id=&quot;动漫&quot;&gt;&lt;a href=&quot;#动漫&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="https://haoqin.vip/categories/Life/"/>
+    
+    
+      <category term="record" scheme="https://haoqin.vip/tags/record/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>排球笔记</title>
+    <link href="https://haoqin.vip/posts/243d023b.html"/>
+    <id>https://haoqin.vip/posts/243d023b.html</id>
+    <published>2023-07-08T23:42:19.000Z</published>
+    <updated>2023-09-01T23:42:19.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;背传&quot;&gt;&lt;a href=&quot;#背传&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Life" scheme="https://haoqin.vip/categories/Life/"/>
+    
+    
+      <category term="运动" scheme="https://haoqin.vip/tags/%E8%BF%90%E5%8A%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>You</title>
+    <link href="https://haoqin.vip/posts/5e263ef6.html"/>
+    <id>https://haoqin.vip/posts/5e263ef6.html</id>
+    <published>2023-06-29T11:21:54.000Z</published>
+    <updated>2025-02-23T23:21:54.000Z</updated>
+    
+    <summary type="html">
+    
+      Here&#39;s something encrypted, password is required to continue reading.
+    
+    </summary>
+    
+      <category term="Life" scheme="https://haoqin.vip/categories/Life/"/>
+    
+    
+      <category term="record" scheme="https://haoqin.vip/tags/record/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>排序算法</title>
+    <link href="https://haoqin.vip/posts/735e5788.html"/>
+    <id>https://haoqin.vip/posts/735e5788.html</id>
+    <published>2023-06-24T17:17:42.000Z</published>
+    <updated>2023-06-24T17:17:42.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;快速排序&quot;&gt;&lt;a href=&quot;#快速排序&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://haoqin.vip/categories/Python/"/>
+    
+    
+      <category term="算法" scheme="https://haoqin.vip/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>二叉树</title>
+    <link href="https://haoqin.vip/posts/e85d694a.html"/>
+    <id>https://haoqin.vip/posts/e85d694a.html</id>
+    <published>2023-06-02T16:17:46.000Z</published>
+    <updated>2023-06-10T16:17:46.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;二叉树的种类：满二叉树、完全二叉树（底层从左到右是连续的）、二叉搜索树（有序数值）、平衡二叉搜索树（高度差的绝对值不超过1）&lt;/li&gt;
+&lt;li&gt;二叉树的存储方式：链式存储，顺序存储&lt;/li&gt;
+&lt;li&gt;二叉树遍历方式：&lt;ul&gt;
+&lt;li&gt;深度优先搜索：前中后序遍历，
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://haoqin.vip/categories/Python/"/>
+    
+    
+      <category term="LeetCode" scheme="https://haoqin.vip/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>栈与队列</title>
+    <link href="https://haoqin.vip/posts/6534ce06.html"/>
+    <id>https://haoqin.vip/posts/6534ce06.html</id>
+    <published>2023-04-26T15:46:04.000Z</published>
+    <updated>2023-05-13T15:46:04.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在Python中可以使用列表（list）来实现队列和堆栈数据结构。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;队列&lt;/strong&gt;（queue）是一种先进先出（First-In-First-Out，FIFO）的数据结构，可以使用列表实现。Python
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://haoqin.vip/categories/Python/"/>
+    
+    
+      <category term="LeetCode" scheme="https://haoqin.vip/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字符串</title>
+    <link href="https://haoqin.vip/posts/fc81fbfd.html"/>
+    <id>https://haoqin.vip/posts/fc81fbfd.html</id>
+    <published>2023-04-21T10:08:12.000Z</published>
+    <updated>2023-05-04T10:08:12.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;反转字符串&quot;&gt;&lt;a href=&quot;#反转字符串&quot; class=&quot;headerlink&quot; title=&quot;反转字符串&quot;&gt;&lt;/a&gt;反转字符串&lt;/h1&gt;&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://haoqin.vip/categories/Python/"/>
+    
+    
+      <category term="LeetCode" scheme="https://haoqin.vip/tags/LeetCode/"/>
+    
+  </entry>
+  
+</feed>
