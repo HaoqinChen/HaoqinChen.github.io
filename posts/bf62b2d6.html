@@ -1,0 +1,1771 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="ROS工作及通信机制, 好好学习，天天向上">
+    <meta name="baidu-site-verification" content="code-PTVUufeCmu" />
+    <meta name="google-site-verification" content="H_OAfeXJS2dhmFZs88LTRApIS-Jv57k7vLIZVtbvViQ" />
+    <meta name="description" content="ROS具有一套自己的工作流程，其文件体系依托在工作空间中，开发的流程如下图所示。如果是 python 代码则不需要配置编译规则。
+工作空间工作空间（Workspace）：存放工程开发相关文件的文件夹。类似一个IDE（例如Pycharm）新建">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>ROS工作及通信机制 | haoqin&#39;s blog</title>
+    <link rel="icon" type="image/svg+xml" href="/medias/fish32.svg">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        code[class*="language-"],
+            pre[class*="language-"] {
+                white-space: pre !important;
+            }
+
+            
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?4d1d73af45a62734730491a6b6c41da4";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+    })();
+   </script>
+
+
+  
+
+
+    
+        <script>
+            (function(){
+                var bp = document.createElement('script');
+                var curProtocol = window.location.protocol.split(':')[0];
+                if (curProtocol === 'https') {
+                    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+                }
+                else {
+                    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                }
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(bp, s);
+            })();
+        </script>
+    
+
+    <script>
+        (function(){
+        var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+        document.write('<script src="' + src + '" id="sozz"><\/script>');
+        })();
+    </script>
+
+    <meta name="baidu-site-verification" content="" />
+
+
+
+
+<style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFF;
+        text-align: center;
+        /* loaderҳ����ʧ���ý����ķ�ʽ*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo���ֶ��� */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
+    const loaded = function(){
+       setTimeout(function(){
+            const loader = document.getElementById("loading-container");
+            loader.className="fadeout" ;//ʹ�ý����ķ�������loading page
+            // document.getElementById("body-wrap").style.display="flex";
+            setTimeout(function(){
+                loader.style.display="none";
+            },1000); 
+        },1000);//ǿ����ʾloading page 1s  
+    };
+    loaded();
+})()
+ </script><meta name="generator" content="Hexo 6.0.0"></head>
+
+
+ <div id="loading-container">
+     <p class="loading-text"></p> 
+     <div class="loading-image">
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div> 
+         <div></div>
+     </div>
+ </div><body>
+
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">haoqin's blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/contact" class="waves-effect waves-light">
+            
+            <span>留言板</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">haoqin's blog</div>
+        <div class="logo-desc">
+            
+            Life | Study | UAV
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        <li>
+            <a href="/contact" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                留言板
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        ROS工作及通信机制
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                        <a href="/tags/%E8%AF%BE%E7%A8%8B/" target="_blank">
+                            <span class="chip bg-color">课程</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                        <a href="/categories/ROS/" class="post-category" target="_blank">
+                            ROS
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-08-20
+                </div>
+
+           <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-08-28
+                </div>
+
+                <div class="post-author info-break-policy">
+                    <i class="fa fa-user-o fa-fw"></i>作者:&nbsp;&nbsp;
+                    
+                    CHQ
+                    
+                </div>
+
+                
+                
+                <div class="info-break-policy">
+                    <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.5k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    10 分
+                </div>
+                
+                
+
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>ROS具有一套自己的工作流程，其文件体系依托在工作空间中，开发的流程如下图所示。<br><img src="https://image.haoqin.vip/2022/08/202208201040585.png" alt=""><br>如果是 python 代码则不需要配置编译规则。</p>
+<h1 id="工作空间"><a href="#工作空间" class="headerlink" title="工作空间"></a>工作空间</h1><p><strong>工作空间</strong>（Workspace）：存放工程开发相关文件的文件夹。类似一个IDE（例如Pycharm）新建一个工程，就是一个工作空间。包含4个文件夹：</p>
+<ul>
+<li>src：<strong>代码空间</strong>（Source Space）：放置功能包代码</li>
+<li>build：<strong>编译空间</strong>（Build Space）：编译过程中产生的中间文件，不用过多关注</li>
+<li>devel：<strong>开发空间</strong>（Development Space）：放置编译生成的可执行文件、库、脚本</li>
+<li>install：<strong>安装空间</strong>（Install Space）：存放可执行文件，与上面有一定重复<h2 id="创建工作空间"><a href="#创建工作空间" class="headerlink" title="创建工作空间"></a>创建工作空间</h2></li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#创建工作空间指令</span>
+<span class="token function">mkdir</span> -p ~/catkin_ws/src
+<span class="token builtin class-name">cd</span> ~/catkin_ws/src
+catkin_init_workspace<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>我们先创建一个src文件夹，然后进入该文件夹<br>第3行<code>catkin_init_workspace</code>意为将当前文件夹变为工作空间，使其拥有工作空间的属性<br>注：“~/”意为当前用户名目录；“-p”意为递归创建目录，即直接创建多级目录。<br>src文件夹即代码空间，不能自行用别的名称代替</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#编译空的工作空间</span>
+<span class="token builtin class-name">cd</span> ~/catkin_ws/  
+catkin_make <span class="token comment">#将src里的源码进行了编译</span>
+<span class="token comment">#生成了build和devel两个新文件夹，devel存放了编译完成的内容</span>
+
+<span class="token comment">#设置环境变量</span>
+<span class="token builtin class-name">source</span> devel/setup.bash
+
+<span class="token comment">#如果要生成install文件夹</span>
+catkin_make <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>为了不每次打开终端都设置环境变量（即都执行一遍 <code>$ source devel/setup.bash</code>），可以把这句话添加到系统环境变量<code>.bashrc</code> 中。</p>
+<ol>
+<li>通过 <code>$ sudo vim ~/.bashrc</code> 打开<code>.bashrc</code> 文件。</li>
+<li>在文件最后添加：<code>source ~/catkin_ws/devel/setup.bash</code></li>
+<li>保存，关闭。<h2 id="创建功能包"><a href="#创建功能包" class="headerlink" title="创建功能包"></a>创建功能包</h2></li>
+</ol>
+<ul>
+<li><strong>功能包</strong>是放置ROS源码的最小单元。<br><img src="https://image.haoqin.vip/2022/08/202208201111649.png" alt=""></li>
+</ul>
+<p>1, <strong>package</strong>文件夹为功能包，也就是我们开发ROS工程主要编辑的地方<br>2, <strong>package</strong>文件夹下<strong>package.xml</strong>文件主要是描述整个功能包的属性。<br>3, <strong>package</strong>文件夹下<strong>CMakeLists.txt</strong>文件主要作用是描述整个功能包的编译规则，依赖库等等。<br>4, <strong>package</strong>文件夹下的<strong>src</strong>文件夹为功能包源文件所在。<br>5, <strong>package</strong>文件夹下的<strong>include</strong>文件夹为功能包源文件的头文件所在。<br>6, <strong>package</strong>文件夹下的<strong>script</strong>文件夹为python脚本和bash脚本所在，即无需编译即可运行的文件。<br>7, <strong>package</strong>文件夹下的<strong>launch</strong>文件夹为launch文件所在<br>8, <strong>package</strong>文件夹下的<strong>msg</strong>文件夹为msg文件所在<br>9, <strong>package</strong>文件夹下的<strong>srv</strong>文件夹为srv文件所在<br>9, <strong>package</strong>文件夹下的<strong>action</strong>文件夹为action文件所在</p>
+<ul>
+<li>上面我们创建了一个空的工作空间，src文件夹里面没写东西，现在我们创建一个自己的功能包。  注意同一工作空间下，不允许存在同名功能包；不同工作空间下，允许存在同名功能包。<br>指令格式：<code>catkin_create_pkg &lt;package_name&gt; [depend1] [depend2] [depend3]</code><br><code>&lt;package_name&gt;</code>为包名<br><code>[depend]</code>为依赖，即指明编译的时候需要ROS中的其他功能包，如需要调用python、C++库，就要指明rospy、roscpp。<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> ~/catkin_ws/src 
+<span class="token comment"># 创建一个名叫learning_communication的功能包  </span>
+<span class="token comment"># 这个功能包实现的接口有python接口，C++接口，标准定义的消息与服务接口</span>
+catkin_create_pkg learning_communication rospy roscpp std_msgs std_srvs
+
+<span class="token comment"># 编译功能包</span>
+<span class="token builtin class-name">cd</span> ~/catkin_ws
+catkin_make
+<span class="token builtin class-name">source</span> ~/catkin_ws/devel/setup.bash<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="Topic-通信机制"><a href="#Topic-通信机制" class="headerlink" title="Topic 通信机制"></a>Topic 通信机制</h1><img src="https://image.haoqin.vip/2022/08/202208202024525.png" alt=""></li>
+</ul>
+<h2 id="发布者Publisher"><a href="#发布者Publisher" class="headerlink" title="发布者Publisher"></a>发布者Publisher</h2><ul>
+<li>初始化ROS节点</li>
+<li>向ROS Master注册节点信息，包括发布的话题名和话题中的消息类型</li>
+<li>创建消息数据</li>
+<li>按照一定的频率循环发布消息<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;**  
+ * 该例程将发布chatter话题，消息类型String  
+ *&#x2F;  
+  
+&#x2F;&#x2F; 字符串的流的数据转换  
+#include &lt;sstream&gt;  
+&#x2F;&#x2F; 包含ros头文件，一般都会写  
+#include &quot;ros&#x2F;ros.h&quot;  
+&#x2F;&#x2F; 后面会用到ROS中string的消息类型  
+#include &quot;std_msgs&#x2F;String.h&quot;  
+  
+int main(int argc, char **argv)  
+&#123;  
+    &#x2F;&#x2F; ROS节点初始化，声明节点名，这个名字不能和其他节点重名  
+    ros::init(argc, argv, &quot;string_publisher&quot;);  
+  
+    &#x2F;&#x2F; 创建节点句柄，完成ROS核心资源的管理。  
+    &#x2F;&#x2F; 在节点初始化和关闭一节中,使用句柄管理节点的内部引用,使启动和关闭一个节点变得简单。  
+  
+    ros::NodeHandle n;  
+  
+    &#x2F;&#x2F; 创建一个Publisher，发布名为chatter的topic，消息类型为std_msgs::String。  
+    &#x2F;&#x2F; 在ros::Publisher类下实例化一个chatter_pub对象。  
+    &#x2F;&#x2F; 1000表示缓冲区大小，超过1000会把时间戳最老的删除掉。  
+    &#x2F;&#x2F; advertise( ) 返回一个 Publisher 对象。 通过调用对象的 publish( )函数可以在这个topic上发布 message。  
+    ros::Publisher chatter_pub &#x3D; n.advertise&lt;std_msgs::String&gt;(&quot;chatter&quot;, 1000);  
+	  
+    &#x2F;&#x2F; 设置循环的频率  
+    &#x2F;&#x2F; loop_rate()是ros::Rate类可定制频率的函数，接受一个int型参数，通过调用主函数末尾的上来sleep（）函数，将该参数置为发布频率。  
+    ros::Rate loop_rate(10);  
+  
+    int count &#x3D; 0;  
+      
+    &#x2F;&#x2F; ros::ok()会设置一个SIGINT监听，函数返回True，仅当以下四种情况发生时，该函数返回False：  
+　　 &#x2F;&#x2F; 1. SIGINT被触发（Ctrl+c）  
+　　 &#x2F;&#x2F; 2.被另一同名节点踢出  
+　　 &#x2F;&#x2F; 3.函数ros::shutdown（）被程序另一部分调用  
+　　 &#x2F;&#x2F; 4.程序所有句柄被销毁  
+    while (ros::ok())  
+    &#123;  
+        &#x2F;&#x2F; 初始化std_msgs::String类型的消息  
+        std_msgs::String msg;  
+        &#x2F;&#x2F; 初始化字符串流  
+        std::stringstream ss;  
+        &#x2F;&#x2F; 把信息放到字节流里  
+        ss &lt;&lt; &quot;hello world &quot; &lt;&lt; count;  
+        &#x2F;&#x2F; msg中的data是存储信息的，直接赋值  
+        msg.data &#x3D; ss.str();  
+  
+        &#x2F;&#x2F; 发布消息  
+        &#x2F;&#x2F; 输出一个字符串变量,ROS_INFO其实就是printf  
+        &#x2F;&#x2F; c_str()：将C++的string转化为C的字符串数组，c_str()生成一个const char *指针，指向字符串的首地址。  
+        ROS_INFO(&quot;%s&quot;, msg.data.c_str());  
+        &#x2F;&#x2F; 通过调用对象的 publish( )函数发布数据  
+        chatter_pub.publish(msg);  
+  
+        &#x2F;&#x2F; 按照循环频率延时  
+        loop_rate.sleep();  
+        ++count;  
+    &#125;  
+  
+    return 0;  
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+这个cpp文件创建在src文件夹下,有了源码之后需要在CMakeLists.txt中添加<strong>编译规则：</strong><pre class="line-numbers language-CMAKE" data-language="CMAKE"><code class="language-CMAKE"># 设置需要编译的代码和生成的可执行文件  
+# 让string_publish.cpp这个cpp文件编译生成string_publish  
+add_executable(string_publisher src&#x2F;string_publisher.cpp)  
+# 设置string_publisher与库catkin_LIBRARIES的连接  
+target_link_libraries(string_publisher $&#123;catkin_LIBRARIES&#125;)
+
+# 后面的Subscriber也是如此
+add_executable(string_subscriber src&#x2F;string_subscriber.cpp)  
+target_link_libraries(string_subscriber $&#123;catkin_LIBRARIES&#125;)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+回到工作空间目录，执行<strong>编译</strong>.<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token builtin class-name">cd</span> ~/catkin_ws  
+$ catkin_make  
+  
+<span class="token comment"># 配置系统环境变量后这步可以省略  </span>
+$ <span class="token builtin class-name">source</span> devel/setup.bash  
+  
+$ roscore  
+$ rosrun learning_communication string_publisher  
+$ rosrun learning_communication string_subscriber<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<ul>
+<li><strong>python</strong>的源代码，放在功能包文件夹下的scripts目录下的。<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 该例程将发布turtle1/cmd_vel话题，消息类型geometry_msgs::Twist</span>
+
+<span class="token keyword">import</span> rospy
+<span class="token keyword">from</span> geometry_msgs<span class="token punctuation">.</span>msg <span class="token keyword">import</span> Twist
+
+<span class="token keyword">def</span> <span class="token function">velocity_publisher</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token comment"># ROS节点初始化</span>
+    rospy<span class="token punctuation">.</span>init_node<span class="token punctuation">(</span><span class="token string">'velocity_publisher'</span><span class="token punctuation">,</span> anonymous<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+	<span class="token comment"># 创建一个Publisher，发布名为/turtle1/cmd_vel的topic，消息类型为geometry_msgs::Twist，队列长度10</span>
+    turtle_vel_pub <span class="token operator">=</span> rospy<span class="token punctuation">.</span>Publisher<span class="token punctuation">(</span><span class="token string">'/turtle1/cmd_vel'</span><span class="token punctuation">,</span> Twist<span class="token punctuation">,</span> queue_size<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span>
+
+	<span class="token comment">#设置循环的频率</span>
+    rate <span class="token operator">=</span> rospy<span class="token punctuation">.</span>Rate<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> 
+
+    <span class="token keyword">while</span> <span class="token keyword">not</span> rospy<span class="token punctuation">.</span>is_shutdown<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+		<span class="token comment"># 初始化geometry_msgs::Twist类型的消息</span>
+        vel_msg <span class="token operator">=</span> Twist<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        vel_msg<span class="token punctuation">.</span>linear<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">0.5</span>
+        vel_msg<span class="token punctuation">.</span>angular<span class="token punctuation">.</span>z <span class="token operator">=</span> <span class="token number">0.2</span>
+
+		<span class="token comment"># 发布消息</span>
+        turtle_vel_pub<span class="token punctuation">.</span>publish<span class="token punctuation">(</span>vel_msg<span class="token punctuation">)</span>
+    	rospy<span class="token punctuation">.</span>loginfo<span class="token punctuation">(</span><span class="token string">"Publsh turtle velocity command[%0.2f m/s, %0.2f rad/s]"</span><span class="token punctuation">,</span> 
+				vel_msg<span class="token punctuation">.</span>linear<span class="token punctuation">.</span>x<span class="token punctuation">,</span> vel_msg<span class="token punctuation">.</span>angular<span class="token punctuation">.</span>z<span class="token punctuation">)</span>
+
+		<span class="token comment"># 按照循环频率延时</span>
+        rate<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        velocity_publisher<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">except</span> rospy<span class="token punctuation">.</span>ROSInterruptException<span class="token punctuation">:</span>
+        <span class="token keyword">pass</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+</li>
+</ul>
+<p>需要打开py文件的<strong>可执行权限</strong>。</p>
+<h2 id="订阅者Subscriber"><a href="#订阅者Subscriber" class="headerlink" title="订阅者Subscriber"></a>订阅者Subscriber</h2><ul>
+<li>初始化ROS节点</li>
+<li>订阅需要的话题</li>
+<li>循环等待话题消息，接收到消息后进入回调函数</li>
+<li>在回调函数中完成消息处理<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">&#x2F;**  
+ * 该例程将订阅chatter话题，消息类型String  
+ *&#x2F;  
+   
+&#x2F;&#x2F; ros头文件  
+#include &quot;ros&#x2F;ros.h&quot;  
+&#x2F;&#x2F; 后面会用到ROS中string的消息类型  
+#include &quot;std_msgs&#x2F;String.h&quot;  
+  
+&#x2F;&#x2F; 接收到订阅的消息后，会进入消息回调函数  
+&#x2F;&#x2F; 定义一个指针常量的引用msg  
+void chatterCallback(const std_msgs::String::ConstPtr&amp; msg)  
+&#123;  
+    &#x2F;&#x2F; 将接收到的消息打印出来  
+    ROS_INFO(&quot;I heard: [%s]&quot;, msg-&gt;data.c_str());  
+&#125;  
+  
+int main(int argc, char **argv)  
+&#123;  
+    &#x2F;&#x2F; 初始化ROS节点  
+    ros::init(argc, argv, &quot;string_subscriber&quot;);  
+  
+    &#x2F;&#x2F; 创建节点句柄  
+    ros::NodeHandle n;  
+  
+    &#x2F;&#x2F; 创建一个Subscriber，订阅名为chatter的topic，注册回调函数chatterCallback  
+    ros::Subscriber sub &#x3D; n.subscribe(&quot;chatter&quot;, 1000, chatterCallback);  
+  
+    &#x2F;&#x2F; 循环等待回调函数  
+    &#x2F;&#x2F; spin本身的循环条件就是ros::ok()  
+    ros::spin();  
+  
+    return 0;  
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+配置<strong>编译规则和环境变量</strong>，进行<strong>编译</strong>。</li>
+</ul>
+<ul>
+<li>python版本</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 该例程将订阅/turtle1/pose话题，消息类型turtlesim::Pose</span>
+
+<span class="token keyword">import</span> rospy
+<span class="token keyword">from</span> turtlesim<span class="token punctuation">.</span>msg <span class="token keyword">import</span> Pose
+
+<span class="token keyword">def</span> <span class="token function">poseCallback</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    rospy<span class="token punctuation">.</span>loginfo<span class="token punctuation">(</span><span class="token string">"Turtle pose: x:%0.6f, y:%0.6f"</span><span class="token punctuation">,</span> msg<span class="token punctuation">.</span>x<span class="token punctuation">,</span> msg<span class="token punctuation">.</span>y<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">pose_subscriber</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token comment"># ROS节点初始化</span>
+    rospy<span class="token punctuation">.</span>init_node<span class="token punctuation">(</span><span class="token string">'pose_subscriber'</span><span class="token punctuation">,</span> anonymous<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+	<span class="token comment"># 创建一个Subscriber，订阅名为/turtle1/pose的topic，注册回调函数poseCallback</span>
+    rospy<span class="token punctuation">.</span>Subscriber<span class="token punctuation">(</span><span class="token string">"/turtle1/pose"</span><span class="token punctuation">,</span> Pose<span class="token punctuation">,</span> poseCallback<span class="token punctuation">)</span>
+
+	<span class="token comment"># 循环等待回调函数</span>
+    rospy<span class="token punctuation">.</span>spin<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    pose_subscriber<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="消息"><a href="#消息" class="headerlink" title="消息"></a>消息</h2><p>我们通过自定义msg文件来自定义话题消息。在功能包根目录下新建文件夹msg，并<code>touch Person.msg</code>,文件内容</p>
+<pre class="line-numbers language-msg" data-language="msg"><code class="language-msg">string name  
+uint8 age  
+uint8 sex  
+  
+uint8 unknown &#x3D; 0  
+uint8 male    &#x3D; 1  
+uint8 female  &#x3D; 2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在package.xml中添加功能包依赖：</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build_depend</span><span class="token punctuation">></span></span>message_generation<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build_depend</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exec_depend</span><span class="token punctuation">></span></span>message_runtime<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exec_depend</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>build_depend为编译依赖，这里依赖的是一个会动态产生message的功能包<br>exer_depend为执行依赖，这里依赖的是一个动态runtime运行的功能包</p>
+<p>在CMakeLists.txt中添加编译选项：</p>
+<ol>
+<li><code>find_package(…… message_generation)</code></li>
+<li>添加：<code>add_message_files(FILES PersonMsg.msg)</code> 和 <code>generate_messages(DEPENDENCIES std_msgs)</code>（前一句话是编译生成头文件，后一句话是调用了 ros 的标准数据类型）</li>
+<li><code>catkin_package(…… message_runtime)</code><br>回到根目录，编译<code>catkin_make</code>,编译完成后，我们可以在devel/include/learning_topic/ 下找到这个C++的头文件</li>
+</ol>
+<h1 id="Service通信机制"><a href="#Service通信机制" class="headerlink" title="Service通信机制"></a>Service通信机制</h1><p><img src="https://image.haoqin.vip/2022/08/202208202123416.png" alt=""><br>详细步骤懒得摘录了，跟Topic机制有一定的<strong>类似</strong>。直接见<a target="_blank" rel="noopener" href="https://hljmssjg.github.io/2022/01/01/ROS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B003/#4-1-%E8%AF%B7%E6%B1%82-%E6%9C%8D%E5%8A%A1-Hello-worl">ROS学习笔记 03 ROS通信编程 | 孙健耕的博客</a></p>
+
+            </div>
+            <hr />
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">写作不易，客官能否打赏一杯奶茶？</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>转载规则</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                    <img alt=""
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
+                </a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">
+                    《ROS工作及通信机制》
+                </span> 由
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/posts/bf62b2d6.html" property="cc:attributionName"
+               rel="cc:attributionURL">
+                CHQ
+            </a> 采用
+            <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                知识共享署名 4.0 国际许可协议
+            </a>进行许可。
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+   
+
+    
+    <style>
+    .waline-card {
+        margin: 1.5rem auto;
+    }
+    .waline-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #waline p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+    #waline blockquote p {
+        text-indent: 0.2rem;
+    }
+    #waline a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    #waline img {
+        max-width: 100%;
+        cursor: pointer;
+    }
+    #waline ol li {
+        list-style-type: decimal;
+    }
+    #waline ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+    #waline ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+    #waline ul li {
+        list-style-type: disc;
+    }
+    #waline ul ul li {
+        list-style-type: circle;
+    }
+    #waline table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+    #waline table, th, td {
+        border: 0;
+    }
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+    #waline table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+    #waline table td {
+        min-width: 80px;
+    }
+    #waline h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+    #waline h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+    #waline h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+    #waline h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+    #waline h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+    #waline h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+    #waline p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    #waline hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+    #waline blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+    #waline pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+    #waline code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+    #waline pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+    #waline pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+    #waline code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+    #waline [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+    #waline b,
+    strong {
+        font-weight: bold;
+    }
+    #waline dfn {
+        font-style: italic;
+    }
+    #waline small {
+        font-size: 85%;
+    }
+    #waline cite {
+        font-style: normal;
+    }
+    #waline mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+    #waline table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+    #waline table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+    #waline table td {
+        min-width: 80px;
+    }
+    #waline [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+  </style>
+  
+  <div class="card waline-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+       
+    </div>
+    <div id="waline" class="card-content" style="display: grid">
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+  />
+
+  <div id="waline"></div>
+  <script>
+const locale = {
+  nick: '昵称',
+  nickError: '昵称不能少于3个字符',
+  mail: '邮箱',
+  mailError: '请填写正确的邮件地址',
+  link: '网址（选填）',
+  placeholder: '来评论吧！可以不用登录，填下昵称和邮箱吧，方便收到回复；审核后就会显示的~~',
+  sofa: '来发评论吧~',
+  submit: '提交',
+  reply: '回复',
+  cancelReply: '取消回复',
+  comment: '评论',
+  more: '加载更多...',
+  preview: '预览',
+  emoji: '表情',
+  uploadImage: '上传图片',
+  seconds: '秒前',
+  minutes: '分钟前',
+  hours: '小时前',
+  days: '天前',
+  now: '刚刚',
+  uploading: '正在上传',
+  login: '登录',
+  logout: '退出',
+  admin: '博主',
+  word: '字',
+  wordHint: '评论字数应在 $0 到 $1 字之间！\n当前字数：$2',
+};
+    Waline.init({
+      el: '#waline',
+      serverURL: 'https://waline.haoqin.vip',
+      avatar: 'monsterid' ,
+      locale,
+    });
+  </script>
+
+
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/8d216e5f.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/30.jpg" class="responsive-img" alt="Python语言基本语法元素">
+                        
+                        <span class="card-title">Python语言基本语法元素</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Python教程第二章
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-11-08
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category" target="_blank">
+                                    Python
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%99%E7%A8%8B/" target="_blank">
+                        <span class="chip bg-color">教程</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/f59f5b40.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="P450无人机">
+                        
+                        <span class="card-title">P450无人机</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            P450的相关组成及文档等
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-08-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/UAV/" class="post-category" target="_blank">
+                                    UAV
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/P450/" target="_blank">
+                        <span class="chip bg-color">P450</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: haoqin's blog<br />'
+            + '作者: CHQ<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () { bodyElement.removeChild(newdiv); }, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align">
+       <div class="Copy-right">
+            &copy; 2022 ChenHaoqin. All Rights Reserved.
+
+                    
+           <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
+           
+            &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+            <span class="white-color">39.9k
+             丨            
+          
+
+            <span id="sitetime"></span>
+
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                <i class="fa fa-users"></i>
+                本站总访问量 <span id="busuanzi_value_site_pv" class="red-color"></span>
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv" style='display:none'>
+               人次,&nbsp;<i class="fa fa-user"></i>访客数 <span id="busuanzi_value_site_uv" class="blue-color"></span> 人.
+            </span>
+            
+            
+      
+
+       
+  <br>
+
+<img src="/medias/icp.png">
+        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011302003572"  style="color:#ffffff;vertical-align: text-bottom;" target="_blank"> 粤公网安备 44011302003572号</a>
+		 
+
+        &nbsp&nbsp&nbsp&nbsp<a href="https://beian.miit.gov.cn/"  style="color:#ffffff;vertical-align: text-bottom;" target="_blank"> 粤ICP备2022065613号-1</a>
+
+    </div>        
+
+    <div class="container row center-align">
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
+      <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://github.com/" target="_blank" title="静态网页托管于 GitHub Pages和Cloudflare Pages">
+      <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub & Cloudflare</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr & DogeCloud提供 CDN 加速服务">
+      <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr & DogeCloud</span></a>
+    </div>
+    <div class="github-badge">
+        <a style="color: #fff" rel="license" href="https://github.com/blinkfox/hexo-theme-matery/" target="_blank" title="站点使用 Matery 主题">
+      <span class="badge-subject">Theme</span><span class="badge-value bg-blue">Matery</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可">
+      <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">39.9k</span>
+    </div>
+ </footer>
+
+<div class="progress-bar"></div>
+
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+    $(document).ready(function () {
+
+        var int = setInterval(fixCount, 50);
+        var pvcountOffset = 0;
+        var uvcountOffset = 0;
+
+        function fixCount() {
+            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                clearInterval(int);
+            }
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                clearInterval(int);
+            }
+        }
+    });
+</script>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2022, 04, 17, 00, 00, 00); //北京时间2018-2-13 00:00:00
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    }/*因为建站时间还没有一年，+ diffYears + " 年 " ，就将之注释掉了。需要的可以取消*/
+    siteTime();
+</script>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <script type="text/javascript"> var OriginTitile = document.title, st; document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "(๑╹ヮ╹๑)ﾉ下次再来！", clearTimeout(st)) : (document.title = "٩(๑❛ᴗ❛๑)۶欢迎光临！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) })
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YNHBVS1VEH"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-YNHBVS1VEH');
+</script>
+
+
+
+    
+    <script src="/libs/others/explosion.min.js"></script>    
+    
+
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    <!-- 雪花特效 -->
+    <!--  -->
+
+   <!--单击显示文字-->
+   <!-- <script type="text/javascript" src="/js/click_show_text.js"></script>  -->
+   
+   <!-- 星星礼花跟随 -->
+   <script src="/js/lihua.js"></script>
+   <script src="/js/cursor.js"></script>
+
+
+
+   <!--动态线条背景-->
+   <script type="text/javascript"
+   color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+   </script>
+
+   <script async src ="https://fastly.jsdelivr.net/npm/perfops-rom"> </ script>
+
+  // <!--自定义看板娘-->
+  <script src="https://fastly.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <script src="/live2d-widget/autoload.js"></script>
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+
+
+<!-- hexo injector body_end start -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const inputs = document.querySelectorAll('.hbe-input-field');
+  inputs.forEach(input => {
+    input.setAttribute('enterkeyhint', 'done');
+    // 若需同时修改类型（如数字键盘），可添加：
+    // input.setAttribute('inputmode', 'numeric');
+  });
+});
+</script>
+<!-- hexo injector body_end end --></body>
+
+</html>

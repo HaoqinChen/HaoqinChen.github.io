@@ -1,0 +1,1600 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Python语言基本语法元素, 好好学习，天天向上">
+    <meta name="baidu-site-verification" content="code-PTVUufeCmu" />
+    <meta name="google-site-verification" content="H_OAfeXJS2dhmFZs88LTRApIS-Jv57k7vLIZVtbvViQ" />
+    <meta name="description" content="程序的格式框架缩进
+python使用严格的“缩进”来表示程序逻辑
+在if、else、while、for、def、try、except等保留字所在完成语句后通过英文冒号（：）结尾并在之后行行进行缩进，表明后续代码与紧邻无缩进语句的从属关系。
+">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Python语言基本语法元素 | haoqin&#39;s blog</title>
+    <link rel="icon" type="image/svg+xml" href="/medias/fish32.svg">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        code[class*="language-"],
+            pre[class*="language-"] {
+                white-space: pre !important;
+            }
+
+            
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?4d1d73af45a62734730491a6b6c41da4";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+    })();
+   </script>
+
+
+  
+
+
+    
+        <script>
+            (function(){
+                var bp = document.createElement('script');
+                var curProtocol = window.location.protocol.split(':')[0];
+                if (curProtocol === 'https') {
+                    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+                }
+                else {
+                    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                }
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(bp, s);
+            })();
+        </script>
+    
+
+    <script>
+        (function(){
+        var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+        document.write('<script src="' + src + '" id="sozz"><\/script>');
+        })();
+    </script>
+
+    <meta name="baidu-site-verification" content="" />
+
+
+
+
+<style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFF;
+        text-align: center;
+        /* loaderҳ����ʧ���ý����ķ�ʽ*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo���ֶ��� */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
+    const loaded = function(){
+       setTimeout(function(){
+            const loader = document.getElementById("loading-container");
+            loader.className="fadeout" ;//ʹ�ý����ķ�������loading page
+            // document.getElementById("body-wrap").style.display="flex";
+            setTimeout(function(){
+                loader.style.display="none";
+            },1000); 
+        },1000);//ǿ����ʾloading page 1s  
+    };
+    loaded();
+})()
+ </script><meta name="generator" content="Hexo 6.0.0"></head>
+
+
+ <div id="loading-container">
+     <p class="loading-text"></p> 
+     <div class="loading-image">
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div> 
+         <div></div>
+     </div>
+ </div><body>
+
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">haoqin's blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/contact" class="waves-effect waves-light">
+            
+            <span>留言板</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">haoqin's blog</div>
+        <div class="logo-desc">
+            
+            Life | Study | UAV
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        <li>
+            <a href="/contact" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                留言板
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/30.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        Python语言基本语法元素
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                        <a href="/tags/%E6%95%99%E7%A8%8B/" target="_blank">
+                            <span class="chip bg-color">教程</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                        <a href="/categories/Python/" class="post-category" target="_blank">
+                            Python
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-11-08
+                </div>
+
+           <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-11-10
+                </div>
+
+                <div class="post-author info-break-policy">
+                    <i class="fa fa-user-o fa-fw"></i>作者:&nbsp;&nbsp;
+                    
+                    CHQ
+                    
+                </div>
+
+                
+                
+                <div class="info-break-policy">
+                    <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.9k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    7 分
+                </div>
+                
+                
+
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="程序的格式框架"><a href="#程序的格式框架" class="headerlink" title="程序的格式框架"></a>程序的格式框架</h1><h2 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h2><ul>
+<li>python使用严格的“缩进”来表示程序逻辑</li>
+<li>在if、else、while、for、def、try、except等保留字所在完成语句后通过英文冒号（：）结尾并在之后行行进行缩进，表明<strong>后续代码与紧邻无缩进语句的从属关系</strong>。</li>
+<li>缩进用Tab实现，或者是多个空格（一般是4个空格）<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2></li>
+<li>注释是代码中的辅助性文字，会被编译器或解释器略去，不被计算机执行，一般用于程序员对代码的说明；python使用‘# 单行注释’、’’’ 多行注释’’’</li>
+</ul>
+<p>  单行注释：‘<strong>#</strong>’符号,表示一行注释的开始，注释可以在一行的任意位置通过‘#’开始，其符号后面的一行内容中全部会被当成注释，而前面的内容依旧会被当成代码执行；</p>
+<p>  多行注释：<strong>‘’’多行注释’’’</strong>，位于三对<u>单引号（双引号）</u>中的内容，无论是否换行，都是注释，不会被python解释器所执行；</p>
+<h2 id="续航符"><a href="#续航符" class="headerlink" title="续航符"></a>续航符</h2><ul>
+<li>python程序是逐行编写的，每行代码并无限制，但是从程序员的角度，单行代码太长并不方便阅读，这个时候就可以采用续航符将单行代码分割为多行表达。</li>
+<li>python中的续航符为‘\’。续航符之后不允许再空格，也就是说续航符之后直接换行；<h1 id="语法元素的名称"><a href="#语法元素的名称" class="headerlink" title="语法元素的名称"></a>语法元素的名称</h1><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2>变量是保存和表示数据值的一种语法元素，变量的值是可以改变的，通过赋值运算符‘=’方式被修改，python中变量可以随时命名、随时使用、随时赋值<h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2></li>
+<li>采用大小写字母、数组、下划线和汉字等字符及其组合来进行命名，但<strong>名字的首字符不能是数字</strong>，中间不能出现空格</li>
+<li>标识符对大小写敏感，一般不采用中文来进行命名。<h2 id="保留字"><a href="#保留字" class="headerlink" title="保留字"></a>保留字</h2></li>
+<li>保留字（keyword），又称关键字，指被编程语言内部定义并保留使用的标识符。</li>
+<li><img src="https://image.haoqin.vip/2022/11/011a8cbcea71c7389e25d5926250a8b9.png" alt=""></li>
+<li>保留字对大小写敏感<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><h2 id="数字类型"><a href="#数字类型" class="headerlink" title="数字类型"></a>数字类型</h2></li>
+<li>表示数字或数值的数据类型成为数字类型，有3中数字类型：整数、浮点数和复数</li>
+<li>整数类型，可正可负，表示为十进制、二进制、八进制和十六进制</li>
+<li>浮点数类型，科学计数法： 1.23456e2<h2 id="字符串类型"><a href="#字符串类型" class="headerlink" title="字符串类型"></a>字符串类型</h2>字符串是字符的有序集合，可以使用一对单引号或一对双引号，或者3对双引号来创建，python字符串的索引有正向索引和反向索引之分，通过索引你可以随机访问字符串</li>
+<li>字符串序号体系<img src="https://image.haoqin.vip/2022/11/7ce65abe206fbf4da117c0813d8a9ea9.png" alt=""></li>
+<li>字符串索引<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">&gt;&gt;&gt;&quot;abc,def&quot;[1]
+&#39;b&#39;
+&gt;&gt;&gt;&quot;abc,def&quot;[-4]
+&#39;,&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>可以通过采用[N:M]格式获取字符串的子串，这种操作被称为<strong>切片</strong>操作。[N,M]获取字符串中从N到M <strong>（但不包括M）</strong> 的连续的子字符串。N和M都表示的是索引序号，可以混合使用正向递增和反向递减序号；<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">&gt;&gt;&gt; a &#x3D; &#39;python&#39;
+&gt;&gt;&gt; a[1:3]
+&#39;yt&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h1 id="程序的语句元素"><a href="#程序的语句元素" class="headerlink" title="程序的语句元素"></a>程序的语句元素</h1><h2 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h2>产生或计算新数据值的代码片段成为表达式；类似于数学中的公式，一般由数据和操作符构成；<h2 id="赋值语句"><a href="#赋值语句" class="headerlink" title="赋值语句"></a>赋值语句</h2></li>
+<li>对变量进行赋值的一行代码叫赋值语句；在python中使用一个‘=’表示‘赋值’，也就是说把等号右边的表达式运算之后的结果值赋给左边的变量；</li>
+<li>同步赋值，可以同时给多个变量赋值，还可以应用于互换变量的值<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">&gt;&gt;&gt;x,y &#x3D; y,x<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2></li>
+<li>python程序会经常使用到当前程序以外的已有的功能代码，这个过程叫引用，python语言使用import这个保留字引用当前程序以外的<strong>功能库(模块)</strong></li>
+<li>引用功能库之后<code>功能库.函数名()</code>的方式调用基本功能，这种方式称为‘A.B()’方式</li>
+<li>如何在program_count.py 文件中使用utils.py文件中的函数呢？使用import，直接导入utils模块，使用get_file_lst函数时，则需要用<code>utils.get_file_lst</code>这种方法来调用函数。</li>
+<li>import 会将整个模块的内容全部导入，但有时，我们不需要那么多，只需要其中一个两个就可以了。于是，我们也可以这样写<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> utils <span class="token keyword">import</span> get_file_lst
+<span class="token keyword">def</span> <span class="token function">get_py_program_count</span><span class="token punctuation">(</span>py_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    file_lst <span class="token operator">=</span> get_file_lst<span class="token punctuation">(</span>py_path<span class="token punctuation">,</span> <span class="token string">'.py'</span><span class="token punctuation">)</span>
+    count <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> file_name <span class="token keyword">in</span> file_lst<span class="token punctuation">:</span>
+        count <span class="token operator">+=</span> get_program_line_count<span class="token punctuation">(</span>file_name<span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> count<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>如果你想全部导入，也可以写成from … import * 的形式，* 表示全部导入。这种写法和import的区别在于，import一个模块A后，调用A里的函数是必须写成<strong>A.func</strong>的形式，而from … import … 的方法，就可以不用模块去调用方法了，可以<strong>直接调用函数</strong><h2 id="分支语句"><a href="#分支语句" class="headerlink" title="分支语句"></a>分支语句</h2></li>
+<li>分支语句（判断语句）是控制程序运行的一种语句，它的作用是根据判断条件选择程序执行路径。<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">if</span> <span class="token operator">&lt;</span>条件判断<span class="token number">1</span><span class="token operator">></span><span class="token punctuation">:</span>
+    <span class="token operator">&lt;</span>执行<span class="token number">1</span><span class="token operator">></span>
+<span class="token keyword">elif</span> <span class="token operator">&lt;</span>条件判断<span class="token number">2</span><span class="token operator">></span><span class="token punctuation">:</span>
+    <span class="token operator">&lt;</span>执行<span class="token number">2</span><span class="token operator">></span>
+<span class="token keyword">elif</span> <span class="token operator">&lt;</span>条件判断<span class="token number">3</span><span class="token operator">></span><span class="token punctuation">:</span>
+    <span class="token operator">&lt;</span>执行<span class="token number">3</span><span class="token operator">></span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token operator">&lt;</span>执行<span class="token number">4</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h2></li>
+<li>Python的循环有两种，一种是for…in循环，依次把list或tuple中的每个元素迭代出来，<pre class="line-numbers language-python" data-language="python"><code class="language-python">names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Michael'</span><span class="token punctuation">,</span> <span class="token string">'Bob'</span><span class="token punctuation">,</span> <span class="token string">'Tracy'</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> name <span class="token keyword">in</span> names<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+<span class="token comment"># 依次打印三个姓名</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>第二种循环是while循环，只要条件满足，就不断循环，条件不满足时退出循环<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">sum</span> <span class="token operator">=</span> <span class="token number">0</span>
+n <span class="token operator">=</span> <span class="token number">99</span>
+<span class="token keyword">while</span> n <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">:</span>
+    <span class="token builtin">sum</span> <span class="token operator">=</span> <span class="token builtin">sum</span> <span class="token operator">+</span> n
+    n <span class="token operator">=</span> n <span class="token operator">-</span> <span class="token number">2</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="基本输入-输出函数"><a href="#基本输入-输出函数" class="headerlink" title="基本输入/输出函数"></a>基本输入/输出函数</h1><h2 id="input-函数"><a href="#input-函数" class="headerlink" title="input()函数"></a>input()函数</h2></li>
+<li>input函数是从控制台获取用户的一行输入，无论用户输入什么内容，input函数都以<strong>字符串类型</strong>返回；input函数可以包含一些提示性文字，用来提示用户；</li>
+<li>变量 = input(“提示性文字”)<h2 id="eval-函数"><a href="#eval-函数" class="headerlink" title="eval()函数"></a>eval()函数</h2></li>
+<li>eval(str)函数将去掉字符串最外侧的引号，并按照python语句方式去<strong>执行</strong>去掉引号之后的字符内容，说白了就是一个可以将内容当成python语言执行的函数</li>
+<li>当你输入一个错误格式的python语句进去后，他会将其当成变量，并查找相关变量的值，如果没有查到，就会报错，如果查到则执行；</li>
+<li>eval()与input()函数还可以一起联动使用<pre class="line-numbers language-python" data-language="python"><code class="language-python">abc <span class="token operator">=</span> <span class="token number">123</span>
+a <span class="token operator">=</span> <span class="token builtin">eval</span><span class="token punctuation">(</span><span class="token string">"abc"</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> a
+<span class="token number">123</span>
+
+<span class="token operator">>></span><span class="token operator">></span>value <span class="token operator">=</span> <span class="token builtin">eval</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"请输入："</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+请输入： <span class="token number">520</span>
+<span class="token operator">>></span><span class="token operator">></span><span class="token keyword">print</span><span class="token punctuation">(</span>value<span class="token operator">*</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token number">1040</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="print-函数"><a href="#print-函数" class="headerlink" title="print()函数"></a>print()函数</h2></li>
+<li>当print输出字符串时，字符串统一使用单引号表达，在[ ]中的字符串都使用了双引号，但是在采用print输出时，输出结果都采用了单引号；<img src="https://image.haoqin.vip/2022/11/bcb0cd6cdbc53c5964c69d1f521aa774.png" alt=""></li>
+<li><code>print()</code>函数也可以接受多个字符串，用逗号“,”隔开，就可以连成一串输出：<code>print()</code>会依次打印每个字符串，遇到逗号“,”会输出一个空格。</li>
+<li>用于混合输出字符串与变量的值，其中字符串模板使用{ }表示一个槽位，每个槽位对应.format()中的一个变量；<code>print(&quot;这是&#123; &#125;，那是&#123; &#125;，最后是&#123; &#125;&quot;.format(变量1, 变量2, 变量3))</code></li>
+<li>print()函数输出文本时默认会再最后增加一个换行，如果不希望进行换行的话，可以对print()函数的end参数进行赋值：<code>print(&quot;待输出内容&quot;, end=&#39;增加的结尾&#39;)</code></li>
+</ul>
+<h1 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h1><p> <a target="_blank" rel="noopener" href="https://www.cnblogs.com/huxiaoyao/p/16517169.html">计算机二级python（第二阶段） - 狐小妖 - 博客园</a><br> <a target="_blank" rel="noopener" href="http://www.coolpython.net/python_primary/python_primary_tutorial.html">python基础入门教程—基于python3版本, 免费且专业, 通俗易懂 | 酷python</a><br> <a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/1016959663602400">Python教程 - 廖雪峰的官方网站</a></p>
+
+            </div>
+            <hr />
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">写作不易，客官能否打赏一杯奶茶？</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>转载规则</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                    <img alt=""
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
+                </a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">
+                    《Python语言基本语法元素》
+                </span> 由
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/posts/8d216e5f.html" property="cc:attributionName"
+               rel="cc:attributionURL">
+                CHQ
+            </a> 采用
+            <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                知识共享署名 4.0 国际许可协议
+            </a>进行许可。
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+   
+
+    
+    <style>
+    .waline-card {
+        margin: 1.5rem auto;
+    }
+    .waline-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #waline p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+    #waline blockquote p {
+        text-indent: 0.2rem;
+    }
+    #waline a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    #waline img {
+        max-width: 100%;
+        cursor: pointer;
+    }
+    #waline ol li {
+        list-style-type: decimal;
+    }
+    #waline ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+    #waline ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+    #waline ul li {
+        list-style-type: disc;
+    }
+    #waline ul ul li {
+        list-style-type: circle;
+    }
+    #waline table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+    #waline table, th, td {
+        border: 0;
+    }
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+    #waline table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+    #waline table td {
+        min-width: 80px;
+    }
+    #waline h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+    #waline h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+    #waline h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+    #waline h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+    #waline h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+    #waline h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+    #waline p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    #waline hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+    #waline blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+    #waline pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+    #waline code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+    #waline pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+    #waline pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+    #waline code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+    #waline [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+    #waline b,
+    strong {
+        font-weight: bold;
+    }
+    #waline dfn {
+        font-style: italic;
+    }
+    #waline small {
+        font-size: 85%;
+    }
+    #waline cite {
+        font-style: normal;
+    }
+    #waline mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+    #waline table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+    #waline table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+    #waline table td {
+        min-width: 80px;
+    }
+    #waline [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+  </style>
+  
+  <div class="card waline-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+       
+    </div>
+    <div id="waline" class="card-content" style="display: grid">
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+  />
+
+  <div id="waline"></div>
+  <script>
+const locale = {
+  nick: '昵称',
+  nickError: '昵称不能少于3个字符',
+  mail: '邮箱',
+  mailError: '请填写正确的邮件地址',
+  link: '网址（选填）',
+  placeholder: '来评论吧！可以不用登录，填下昵称和邮箱吧，方便收到回复；审核后就会显示的~~',
+  sofa: '来发评论吧~',
+  submit: '提交',
+  reply: '回复',
+  cancelReply: '取消回复',
+  comment: '评论',
+  more: '加载更多...',
+  preview: '预览',
+  emoji: '表情',
+  uploadImage: '上传图片',
+  seconds: '秒前',
+  minutes: '分钟前',
+  hours: '小时前',
+  days: '天前',
+  now: '刚刚',
+  uploading: '正在上传',
+  login: '登录',
+  logout: '退出',
+  admin: '博主',
+  word: '字',
+  wordHint: '评论字数应在 $0 到 $1 字之间！\n当前字数：$2',
+};
+    Waline.init({
+      el: '#waline',
+      serverURL: 'https://waline.haoqin.vip',
+      avatar: 'monsterid' ,
+      locale,
+    });
+  </script>
+
+
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/cffa0a0a.html">
+                    <div class="card-image">
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="工具技巧合集">
+                        
+                        <span class="card-title">工具技巧合集</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            对生活工作中用到的工具和技巧和汇总
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-12-07
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Life/" class="post-category" target="_blank">
+                                    Life
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%B7%A5%E5%85%B7%E6%8A%80%E5%B7%A7/" target="_blank">
+                        <span class="chip bg-color">工具技巧</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/bf62b2d6.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="ROS工作及通信机制">
+                        
+                        <span class="card-title">ROS工作及通信机制</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            ROS工作空间及通信相关介绍
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-08-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/ROS/" class="post-category" target="_blank">
+                                    ROS
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AF%BE%E7%A8%8B/" target="_blank">
+                        <span class="chip bg-color">课程</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: haoqin's blog<br />'
+            + '作者: CHQ<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () { bodyElement.removeChild(newdiv); }, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align">
+       <div class="Copy-right">
+            &copy; 2022 ChenHaoqin. All Rights Reserved.
+
+                    
+           <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
+           
+            &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+            <span class="white-color">39.9k
+             丨            
+          
+
+            <span id="sitetime"></span>
+
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                <i class="fa fa-users"></i>
+                本站总访问量 <span id="busuanzi_value_site_pv" class="red-color"></span>
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv" style='display:none'>
+               人次,&nbsp;<i class="fa fa-user"></i>访客数 <span id="busuanzi_value_site_uv" class="blue-color"></span> 人.
+            </span>
+            
+            
+      
+
+       
+  <br>
+
+<img src="/medias/icp.png">
+        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011302003572"  style="color:#ffffff;vertical-align: text-bottom;" target="_blank"> 粤公网安备 44011302003572号</a>
+		 
+
+        &nbsp&nbsp&nbsp&nbsp<a href="https://beian.miit.gov.cn/"  style="color:#ffffff;vertical-align: text-bottom;" target="_blank"> 粤ICP备2022065613号-1</a>
+
+    </div>        
+
+    <div class="container row center-align">
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
+      <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://github.com/" target="_blank" title="静态网页托管于 GitHub Pages和Cloudflare Pages">
+      <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub & Cloudflare</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr & DogeCloud提供 CDN 加速服务">
+      <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr & DogeCloud</span></a>
+    </div>
+    <div class="github-badge">
+        <a style="color: #fff" rel="license" href="https://github.com/blinkfox/hexo-theme-matery/" target="_blank" title="站点使用 Matery 主题">
+      <span class="badge-subject">Theme</span><span class="badge-value bg-blue">Matery</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可">
+      <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">39.9k</span>
+    </div>
+ </footer>
+
+<div class="progress-bar"></div>
+
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+    $(document).ready(function () {
+
+        var int = setInterval(fixCount, 50);
+        var pvcountOffset = 0;
+        var uvcountOffset = 0;
+
+        function fixCount() {
+            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                clearInterval(int);
+            }
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                clearInterval(int);
+            }
+        }
+    });
+</script>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2022, 04, 17, 00, 00, 00); //北京时间2018-2-13 00:00:00
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    }/*因为建站时间还没有一年，+ diffYears + " 年 " ，就将之注释掉了。需要的可以取消*/
+    siteTime();
+</script>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <script type="text/javascript"> var OriginTitile = document.title, st; document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "(๑╹ヮ╹๑)ﾉ下次再来！", clearTimeout(st)) : (document.title = "٩(๑❛ᴗ❛๑)۶欢迎光临！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) })
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YNHBVS1VEH"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-YNHBVS1VEH');
+</script>
+
+
+
+    
+    <script src="/libs/others/explosion.min.js"></script>    
+    
+
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    <!-- 雪花特效 -->
+    <!--  -->
+
+   <!--单击显示文字-->
+   <!-- <script type="text/javascript" src="/js/click_show_text.js"></script>  -->
+   
+   <!-- 星星礼花跟随 -->
+   <script src="/js/lihua.js"></script>
+   <script src="/js/cursor.js"></script>
+
+
+
+   <!--动态线条背景-->
+   <script type="text/javascript"
+   color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+   </script>
+
+   <script async src ="https://fastly.jsdelivr.net/npm/perfops-rom"> </ script>
+
+  // <!--自定义看板娘-->
+  <script src="https://fastly.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <script src="/live2d-widget/autoload.js"></script>
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+
+
+<!-- hexo injector body_end start -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const inputs = document.querySelectorAll('.hbe-input-field');
+  inputs.forEach(input => {
+    input.setAttribute('enterkeyhint', 'done');
+    // 若需同时修改类型（如数字键盘），可添加：
+    // input.setAttribute('inputmode', 'numeric');
+  });
+});
+</script>
+<!-- hexo injector body_end end --></body>
+
+</html>
